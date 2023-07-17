@@ -12,10 +12,9 @@
       // 半角スペースを開けてるから子要素の指定になる
       display: inline-block; // translateが無視されてしまう
       // transformはインライン要素では効かない
-      @include title-animation($name: title-kf, //keyframesの名前を入れる
+      @include animation($name: title-kf, //keyframesの名前を入れる
         $duration: 0.7s, // アニメーションの間隔
         $timing-function: ease-in-out,
-        // cubic-bezier(0.39, 1.57, 0.58, 1),
         $fill-mode: both // アニメーションの状態を維持する
       );
 
@@ -39,7 +38,7 @@
   // 初めの状態
   0% {
     opacity: 0; // 文字列が表示されていない状態にする
-    transform: translateY(-50%); // もとある位置から上に50%ずれた状態
+    transform: translateY(-40%); // もとある位置から上に50%ずれた状態
   }
 
   100% {

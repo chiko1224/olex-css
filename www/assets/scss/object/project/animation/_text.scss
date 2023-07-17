@@ -1,0 +1,38 @@
+@charset 'UTF-8';
+@use "sass:math";
+@use "../../../global" as *;
+
+.p-content__title {
+  & .char {
+    opacity: 0;
+  }
+
+  &.is-animate {
+    & .char {
+      display: inline-block;
+      @include animation($name: heading-kf,
+        $duration: 0.4s,
+        $timing-function: ease-in-out,
+        $fill-mode: both);
+
+      @for $i from 1 through 9 {
+        &:nth-child(#{$i}) {
+          animation-delay: $i * 0.08s;
+        }
+      }
+    }
+  }
+}
+
+// title-kf
+@keyframes heading-kf {
+  0% {
+    opacity: 0;
+    transform: translateY(-7%); // もとある位置から上に50%ずれた状態
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0); // 上から下の場所に降りてくる
+  }
+}

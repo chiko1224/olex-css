@@ -7,7 +7,7 @@
 .p-card {
   position: relative;
   z-index: 2;
-  margin-top: -100px;
+  margin-top: -104px;
 
   &__body {
     width: 100%;
@@ -33,6 +33,12 @@
     font-weight: bold;
     letter-spacing: .04em;
     line-height: calc(24 / 14);
+  }
+}
+
+@include mq(md) {
+  .p-card {
+    margin-top: -140px;
   }
 }
 
