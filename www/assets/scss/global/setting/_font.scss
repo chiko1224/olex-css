@@ -1,0 +1,13 @@
+@charset 'UTF-8';
+@use "color" as *;
+
+// font-type
+// -----------------
+body {
+  color: $black;
+  font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "Noto Sans JP", sans-serif;
+}
+
+[lang="en"] {
+  font-family: "Montserrat", "roboto";
+}

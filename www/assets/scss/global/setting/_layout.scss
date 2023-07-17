@@ -1,0 +1,15 @@
+@charset 'UTF-8';
+@use "sass:map";
+
+// Layout
+// -----------------
+
+// content
+$contentWidth: 1200px !default;
+
+// comp-size
+$compWidth: (
+  sp: 375px,
+  tab: 768px,
+  pc: 1366px,
+  ) !default;

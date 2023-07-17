@@ -1,0 +1,295 @@
+@charset 'UTF-8';
+@use "sass:math";
+@use "../../global" as *;
+
+// Main
+// -----------------
+body {
+  background-color: $white;
+
+  & .-white {
+    color: $white;
+  }
+}
+
+.p-contents {
+  &__card {
+    position: relative;
+  }
+
+  &.-bgWhite {
+    position: relative;
+    z-index: 0;
+    background-color: $white;
+  }
+
+  &.-bgGray {
+    background-color: $whiteGray;
+  }
+
+  &.-bgBlack {
+    background-color: $darkGray;
+  }
+
+  &.-overview {
+    margin: 0 calc(50% - 50vw);
+  }
+}
+
+.p-content {
+  &__title {
+    font-size: pxToRem(32);
+    letter-spacing: .03em;
+    text-align: center;
+
+    &-sub {
+      font-size: pxToRem(24);
+      font-weight: bold;
+      letter-spacing: .04em;
+
+      &.-left {
+        text-align: left;
+      }
+
+      &.-right {
+        text-align: right;
+      }
+    }
+  }
+
+  &__text {
+    font-size: pxToRem(14);
+    font-weight: bold;
+    line-height: calc(28 / 14);
+    text-align: center;
+
+    &-sub {
+      font-size: pxToRem(14);
+      font-weight: bold;
+      letter-spacing: .03em;
+      line-height: calc(28 / 14);
+
+      &.-left {
+        text-align: left;
+      }
+
+      &.-right {
+        text-align: right;
+      }
+    }
+  }
+}
+
+.p-list__photo img {
+  width: 100%;
+  filter: grayscale(100%);
+}
+
+.p-aligment {
+  height: pxToRem(108);
+  background-color: $black;
+  font-size: pxToRem(8);
+  font-weight: bold;
+  text-align: center;
+
+  & img {
+    padding-bottom: pxToRem(6);
+  }
+
+  &__item {
+    padding: pxToRem(10);
+    background-color: $white;
+
+    &.-hr {
+      width: pxToRem(56);
+      padding: pxToRem(30) pxToRem(10);
+    }
+  }
+}
+
+.p-direction {
+  display: inline-block;
+  padding: pxToRem(43.5) 0;
+  font-weight: bold;
+  text-align: center;
+
+  &.-normal {
+    background-color: $lightGray;
+    font-size: 1rem;
+  }
+
+  &.-reverse {
+    background-color: $whiteGray;
+    font-size: 1rem;
+  }
+
+  &__photo {
+    position: relative;
+    z-index: 3;
+    margin-top: -34px;
+  }
+
+  &__text {
+    color: $white;
+    font-size: pxToRem(21);
+    font-weight: bold;
+    line-height: 2;
+    text-align: center;
+  }
+}
+
+@include mq(md) {
+  .p-contents {
+
+    &.-bgHarfGray::after {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      width: 50%;
+      background-color: $gray;
+    }
+  }
+
+  .p-content {
+    &__title {
+      font-size: pxToRem(48);
+
+      &-sub {
+        font-size: pxToRem(36);
+
+        & img {
+          width: pxToRem(24);
+          height: auto;
+        }
+      }
+    }
+  }
+
+  .p-grid {
+    padding: 0 pxToRem(20);
+
+    &__head {
+      position: sticky;
+      top: 0;
+    }
+
+    &__body {
+      height: 100%;
+    }
+  }
+
+  // .p-direction {
+  //   &__photo {
+  //     margin-top: -10px;
+  //   }
+  // }
+}
+
+@include mq(lg) {
+  .p-content {
+    &__title {
+      font-size: pxToRem(56);
+    }
+  }
+
+  .p-list__photo {
+    overflow: hidden;
+
+    & img:hover {
+      transform: scale(1.1);
+      transition: .55s ease-in-out;
+      filter: grayscale(0);
+    }
+  }
+
+  .p-direction {
+    &__text {
+      font-size: pxToRem(28);
+    }
+
+    &__photo {
+      margin-top: -24px;
+    }
+
+  }
+}
+
+@include mq(xl) {
+  .p-contents {
+    &.-overview {
+      width: calc(.3965 * 100vw);
+      height: 620px;
+      margin-right: 0;
+      margin-left: min(-5vw, calc(600px - 50vw));
+    }
+  }
+
+  .p-content {
+    &__overview {
+      position: relative;
+      width: 100%;
+
+      &-inner {
+        width: pxToRem(282);
+      }
+
+      & .p-content__title-sub {
+        position: absolute;
+        top: 120px;
+        left: 0;
+      }
+
+      & .p-content__text-sub {
+        position: absolute;
+        top: 220px;
+        left: 0;
+      }
+    }
+
+    &__grid {
+      padding: 0 pxToRem(36);
+    }
+
+    &__title {
+      font-size: pxToRem(64);
+
+      &-sub {
+        font-size: pxToRem(48);
+
+        & img {
+          width: pxToRem(32);
+          height: auto;
+        }
+      }
+    }
+
+    &__text {
+      font-size: pxToRem(16);
+      line-height: calc(32 / 16);
+
+      &-sub {
+        font-size: pxToRem(16);
+        letter-spacing: .04em;
+        line-height: calc(32 / 16);
+      }
+    }
+  }
+
+  .p-aligment {
+    height: pxToRem(180);
+    font-size: pxToRem(12);
+
+    &__item.-hr {
+      padding: pxToRem(66) pxToRem(10);
+    }
+  }
+
+  .p-direction {
+    &__text {
+      font-size: pxToRem(32);
+    }
+  }
+}

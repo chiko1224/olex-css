@@ -1,0 +1,102 @@
+@charset 'UTF-8';
+@use "sass:math";
+@use "../../global" as *;
+
+// Hero
+// -----------------
+.p-hero {
+  &__title {
+    font-size: pxToRem(44);
+    letter-spacing: .04em;
+    line-height: calc(54 / 44);
+  }
+
+  &__lead {
+    padding: pxToRem(24) 0 pxToRem(40);
+    font-size: pxToRem(14);
+    font-weight: bold;
+    line-height: calc(28 / 14);
+  }
+
+
+  &__bg {
+    margin: 0 -10vw;
+    padding: pxToRem(40) 0;
+    background-color: $black;
+
+    & .olex {
+      flex-wrap: nowrap;
+    }
+  }
+
+  &__text-area {
+    margin-bottom: pxToRem(108);
+  }
+
+  &__photo img {
+    max-width: 100%;
+    height: auto;
+    filter: grayscale(100%);
+  }
+}
+
+@include mq(sm) {
+  .p-hero {
+    &__title {
+      font-size: pxToRem(48);
+      line-height: calc(60 / 50);
+    }
+  }
+}
+
+@include mq(md) {
+  .p-hero {
+    &__bg {
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      width: 50vw;
+      margin: -148px 0 0;
+      padding: 148px 0 0;
+      background-color: $darkGray;
+      mix-blend-mode: multiply;
+    }
+
+    &__title {
+      font-size: pxToRem(40);
+    }
+
+    &__text-area {
+      margin-bottom: pxToRem(48);
+    }
+  }
+}
+
+@include mq(lg) {
+  .p-hero {
+    &__title {
+      font-size: pxToRem(60);
+      line-height: calc(70 / 58);
+    }
+
+    &__lead {
+      padding: pxToRem(64) pxToRem(24) pxToRem(48) 0;
+      padding-right: pxToRem(24);
+    }
+
+    &__text-area {
+      margin-bottom: pxToRem(88);
+    }
+  }
+}
+
+@include mq(xl) {
+  .p-hero {
+    &__title {
+      font-size: pxToRem(72);
+      line-height: calc(87 / 72);
+    }
+  }
+}

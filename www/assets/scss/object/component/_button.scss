@@ -1,0 +1,105 @@
+@charset 'UTF-8';
+@use "sass:math";
+@use "../../global" as *;
+
+// Button
+// -----------------
+.c-btn__primary {
+  position: relative;
+  z-index: 1;
+  width: 148px;
+  height: 50px;
+  margin: auto;
+  border: 1px solid $white;
+  border-radius: 5em;
+  background-color: transparent;
+  transition: all 0.3s ease-in-out 0.3s;
+
+  &.-drawer {
+    margin: pxToRem(40) auto;
+  }
+
+  &-link {
+    position: relative;
+    z-index: 2;
+    display: block;
+    height: 100%;
+    padding: pxToRem(16);
+    color: $white;
+    font-size: pxToRem(14);
+    font-weight: bold;
+    letter-spacing: .04em;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.4s 0.17s ease-in-out;
+  }
+}
+
+.c-btn__sub {
+  position: relative;
+  width: 174px;
+  height: 50px;
+  margin: auto;
+  border-radius: 5em;
+  border: 1px solid $darkGray;
+  background-color: $darkGray;
+
+  &-link {
+    display: block;
+    position: relative;
+    z-index: 1;
+    padding: pxToRem(16) pxToRem(30);
+    color: $white;
+    font-size: pxToRem(14);
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.4s 0.12s ease-in-out;
+  }
+}
+
+@include mq(lg) {
+  .c-btn__primary {
+    width: 222px;
+    height: 77px;
+
+    &.-drawer {
+      width: 128px;
+      height: 46px;
+      margin: 0;
+    }
+
+    &-link {
+      padding: pxToRem(24) pxToRem(22);
+      font-size: pxToRem(24);
+
+      &.-drawer {
+        padding: pxToRem(12) 0;
+        font-size: pxToRem(14);
+      }
+    }
+  }
+
+  .c-btn__sub {
+    &-link {
+      font-size: pxToRem(16);
+    }
+  }
+}
+
+@include mq(xl) {
+  .c-btn__primary {
+    &.-drawer {
+      width: 148px;
+      height: 50px;
+      margin: 0;
+    }
+
+    &-link {
+      &.-drawer {
+        padding: pxToRem(14);
+        font-size: pxToRem(16);
+      }
+    }
+  }
+}

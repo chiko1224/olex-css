@@ -1,0 +1,163 @@
+@charset 'UTF-8';
+@use "sass:math";
+@use "../../global" as *;
+
+// Hamburger
+// -----------------
+
+.p-hamburger__btn {
+  position: relative;
+  display: inline-block;
+  z-index: 10;
+  width: 40px;
+  height: 40px;
+  background-color: $black;
+  border: 2px solid $white;
+
+  &:hover {
+    background-color: $white;
+  }
+
+
+  &-line {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 18px;
+    height: 2px;
+    margin: auto;
+    background-color: $white;
+    transition: background-color 0.3s ease-in-out 0.3s;
+
+    &:hover {
+      background-color: $black;
+    }
+
+
+
+    &::before,
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: inherit;
+
+      &:hover {
+        background-color: inherit;
+      }
+    }
+
+    &::before {
+      top: -5px;
+    }
+
+    &::after {
+      top: 5px;
+    }
+  }
+}
+
+// hamburger
+.is-active-btn.is-active-hamburger .p-hamburger__btn-line {
+  background-color: transparent;
+
+  &::before,
+  &::after {
+    background-color: $white;
+  }
+
+  &::before {
+    animation: active-overLine 0.8s ease-in-out forwards;
+  }
+
+  &::after {
+    animation: active-underLine 0.8s ease-in-out forwards;
+  }
+}
+
+@keyframes active-overLine {
+
+  0% {
+    transform: rotate(0);
+    top: -5;
+  }
+
+  60% {
+    transform: rotate(0);
+    top: 0;
+  }
+
+  100% {
+    transform: rotate(45deg);
+    top: 0;
+  }
+}
+
+@keyframes active-underLine {
+
+  0% {
+    transform: rotate(0);
+    top: 5px;
+  }
+
+  60% {
+    transform: rotate(0);
+    top: 0;
+  }
+
+  100% {
+    transform: rotate(-45deg);
+    top: 0;
+  }
+}
+
+.is-active-btn .p-hamburger__btn-line {
+
+  &::before {
+    animation: overLine 0.85s ease-in-out forwards;
+  }
+
+  &::after {
+    animation: underLine 0.85s ease-in-out forwards;
+  }
+}
+
+// ハンバーガー閉じる時
+@keyframes overLine {
+
+  0%,
+  50% {
+    transform: rotate(0);
+    top: 0;
+  }
+
+  100% {
+    transform: rotate(0);
+    top: -5;
+  }
+}
+
+@keyframes underLine {
+
+  0%,
+  50% {
+    transform: rotate(0);
+    top: 0;
+  }
+
+  100% {
+    transform: rotate(0);
+    top: 5;
+  }
+}
+
+@include mq(lg) {
+  .p-header__nav-btn {
+    display: none;
+  }
+}

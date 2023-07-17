@@ -1,0 +1,25 @@
+@charset 'UTF-8';
+@use "sass:math";
+@use "../../global" as *;
+
+// Drawer
+// -----------------
+
+.p-header__nav-list.is-active {
+  z-index: 3;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 120vh;
+  width: 100%;
+  opacity: 1;
+  padding-top: pxToRem(127);
+  transform: translateX(0);
+}
+
+.p-header.is-active-header {
+  background-color: $black;
+  height: 120%;
+  mix-blend-mode: normal;
+}

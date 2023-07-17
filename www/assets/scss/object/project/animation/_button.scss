@@ -1,0 +1,48 @@
+@charset 'UTF-8';
+@use "sass:math";
+@use "../../../global" as *;
+
+.c-btn__primary::after {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transform-origin: center;
+  transform: scale(0);
+  transition: all 0.43s ease-in-out;
+}
+
+.c-btn__primary:hover::after {
+  background-color: $white;
+  border-radius: 5em;
+  transform: scale(1);
+}
+
+.c-btn__primary-link:hover {
+  color: $darkGray;
+}
+
+.c-btn__sub::after {
+  position: absolute;
+  z-index: 0;
+  content: '';
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transform-origin: center;
+  transform: scale(0);
+  transition: all 0.43s ease-in-out;
+}
+
+.c-btn__sub:hover::after {
+  border-radius: 5em;
+  transform: scale(1);
+  background-color: $white;
+}
+
+.c-btn__sub-link:hover {
+  color: $darkGray;
+}

@@ -1,0 +1,101 @@
+@charset 'UTF-8';
+@use "sass:math";
+@use "../../global" as *;
+
+// Footer
+// -----------------
+
+.p-footer {
+  margin-top: -350px;
+  padding-top: 350px;
+  background-color: $darkGray;
+  font-weight: bold;
+  letter-spacing: .04em;
+
+  &__logo {
+    color: $white;
+    font-size: pxToRem(24);
+  }
+
+  &__title {
+    color: $white;
+    font-size: pxToRem(10);
+    padding-top: .5rem;
+  }
+
+  &__address {
+    padding-bottom: 1rem;
+
+    &-mail {
+      display: inline-block;
+      height: 100%;
+      color: $white;
+      font-size: pxToRem(16);
+      font-style: normal;
+      text-decoration: none;
+    }
+  }
+
+  &__social {
+    display: inline-block;
+    height: 100%;
+  }
+
+  &__copy {
+    color: $white;
+    font-size: pxToRem(10);
+  }
+}
+
+@include mq(xs) {
+  .p-footer {
+    margin-top: -370px;
+    padding-top: 370px;
+  }
+}
+
+@include mq(sm) {
+  .p-footer {
+    margin-top: -390px;
+    padding-top: 390px;
+  }
+}
+
+@include mq(md) {
+  .p-footer {
+    margin-top: -450px;
+    padding-top: 450px;
+
+    &__address {
+      margin-right: 1rem;
+      padding: pxToRem(4) 0;
+    }
+
+    &__copy {
+      text-align: right;
+    }
+  }
+}
+
+@include mq(lg) {
+  .p-footer {
+    margin-top: -550px;
+    padding-top: 550px;
+
+    &__logo {
+      font-size: pxToRem(48);
+      letter-spacing: .05em;
+    }
+
+    &__title {
+      font-size: pxToRem(12);
+    }
+  }
+}
+
+@include mq(xl) {
+  .p-footer {
+    margin-top: -750px;
+    padding-top: 750px;
+  }
+}

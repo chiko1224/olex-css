@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Olex.css｜flexを使ったグリッドシステム</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/common.css">
+  <!-- <script src="assets/js/gsap.min.js" defer></script> -->
+  <script src="assets/js/app.js" defer></script>
+</head>
+<body>
+  <header class="l-header p-header js-header">
+    <div class="l-container">
+      <div class="p-header__content">
+        <div class="olex" data-align="min:justify">
+          <div class="olex__item">
+            <h1 class="l-header__logo p-header__logo" data-align="min:middle" lang="en">
+                    Olex.css
+                  </h1>
+          </div>
+          <!-- /.olex__item -->
+          <div class="olex__item">
+            <nav class="l-header__nav p-header__nav">
+              <h2 class="screen-reader-text">サイトメニュー</h2>
+              <div class="p-header__nav-btn">
+                <button type="button" class="p-hamburger__btn js-btn" aria-controls="header__nav" aria-expanded="false">
+                  <span class="p-hamburger__btn-line">
+                    <span class="screen-reader-text">メニューを開閉する</span>
+                  </span>
+                </button>
+              </div>
+              <!-- /.p-header-nav__btn -->
+              <a href="#main" class="screen-reader-text">本文までスキップ</a>
+              <!-- <div class="p-header__nav-content"> -->
+              <ul id="header__nav" class="olex l-header__nav-list p-header__nav-list js-drawer" lang="en" data-align="lg:middle lg:end" data-gutter="md:xxsmall lg:medium">
+                <li class="olex__item p-header__nav-item">
+                  <a href="#overview" class="p-header__nav-link" lang="en">Overview</a>
+                </li>
+                <li class="olex__item p-header__nav-item">
+                  <a href="#grid" class="p-header__nav-link" lang="en">Grid</a>
+                </li>
+                <li class="olex__item p-header__nav-item">
+                  <a href="#alignment" class="p-header__nav-link" lang="en">Alignment</a>
+                </li>
+                <li class="olex__item p-header__nav-item">
+                  <a href="#direction" class="p-header__nav-link" lang="en">Direction</a>
+                </li>
+                <li class="olex__item p-header__nav-item">
+                  <div class="l-spacer">
+                    <p class="c-btn__primary -drawer" lang="en">
+                              <a href="#" class="c-btn__primary-link -drawer">How to Make</a>
+                            </p>
+                  </div>
+                </li>
+              </ul>
+              <!-- </div> -->
+            </nav>
+          </div>
+          <!-- /.olex__item -->
+        </div>
+        <!-- /.olex -->
+      </div>
+      <!-- /.p-header__content -->
+    </div>
+    <!-- /.l-container -->
+  </header>
+  <main id="main" class="l-main p-main">
+    <section class="p-contents -bgWhite">
+      <div class="p-hero">
+        <div class="l-container">
+          <div class="olex">
+            <div class="olex__item" data-cols="xxs:12 md:6">
+              <div class="p-hero__text-area">
+                <h2 class="p-hero__title" lang="en"><span class="char">O</span><span class="char">r</span><span class="char">e</span> <span class="char">n</span><span class="char">o</span><span class="u-wbr"></span><span><span class="char">F</span><span class="char">l</span><span class="char">e</span><span class="char">x</span><span class="char">i</span><span class="char">b</span><span class="char">l</span><span class="char">e</span> <span class="char">C</span><span class="char">S</span><span class="char">S</span></span><span class="u-wbr"></span><span><span class="char">G</span><span class="char">r</span><span class="char">i</span><span class="char">d</span> <span class="char">S</span><span class="char">y</span><span class="char">s</span><span class="char">t</span><span class="char">e</span><span class="char">m</span><span class="char">.</span></span></h2>
+                <p class="p-hero__lead">
+                  <em class="em">俺流</em>のフレキシブルCSSグリッドシステム<span class="u-wbr -lg"></span>
+                  <em class="em">「Olex」</em>のデモページ。<br>
+                  <em class="em">「Olex」</em>はFlexboxを利用した<span class="u-wbr -lg"></span>
+                  単なるグリッドシステムなので、<span class="u-wbr"></span>
+                  気になった方は、解説ページを参考に<span class="u-wbr -lg"></span>自分で作ってもらえたらと思います。
+                </p>
+                <p class="c-btn__sub" lang="en"><a href="#" class="c-btn__sub-link">How to Make</a></p>
+              </div>
+              <!-- /.p-hero__text-area -->
+            </div>
+            <!-- /.olex__item -->
+            <div class="olex__item" data-cols="xxs:12 md:6">
+              <div class="p-hero__bg">
+                <div class="olex l-container" data-enabled="xxs" data-align="min:center">
+                  <div class="olex__item">
+                    <picture class="p-hero__photo">
+                      <source type="image/webp" srcset="assets/img/hero/sp/01.jpg.webp, assets/img/hero/sp/01@2x.jpg.webp 2x" media="(max-width: 767px)">
+                      <img src="assets/img/hero/01.jpg" srcset="assets/img/hero/pc/01.jpg, assets/img/hero/pc/01@2x.jpg 2x" alt="" decoding="async">
+                    </picture>
+                  </div>
+                  <div class="olex__item">
+                    <picture class="p-hero__photo">
+                      <source type="image/webp" srcset="assets/img/hero/sp/02.jpg.webp, assets/img/hero/sp/02@2x.jpg.webp 2x" media="(max-width: 767px)">
+                      <img src="assets/img/hero/pc/02.jpg" srcset="assets/img/hero/pc/02.jpg, assets/img/hero/pc/02@2x.jpg 2x" alt="" decoding="async">
+                    </picture>
+                  </div>
+                  <div class="olex__item">
+                    <picture class="p-hero__photo">
+                      <source type="image/webp" srcset="assets/img/hero/sp/03.jpg.webp, assets/img/hero/sp/03@2x.jpg.webp 2x" media="(max-width: 767px)">
+                      <img src="assets/img/hero/pc/03.jpg" srcset="assets/img/hero/pc/03.jpg, assets/img/hero/pc/03@2x.jpg 2x" alt="" decoding="async">
+                    </picture>
+                  </div>
+                </div>
+                <!-- /.olex -->
+              </div>
+              <!-- /.p-hero__bg -->
+            </div>
+            <!-- /.olex -->
+          </div>
+          <!-- /.olex__item -->
+        </div>
+        <!-- /.olex -->
+      </div>
+      <!-- /.p-hero -->
+    </section>
+    <section class="p-contents -bgGray">
+      <div class="l-spacer" data-space="min:largeBottom xl:maxBottom">
+        <div class="l-container">
+          <div class="l-spacer" data-space="min:xxlargeTop min:largeBottom lg:max">
+            <div class="l-spacer" data-space="min:xxsmallBottom xl:xsmallBottom">
+              <h3 id="overview" class="p-content__title js-headingAnimate" lang="en">Overview</h3>
+            </div>
+            <p class="p-content__text">
+              <em class="em">12カラム</em>を基準として<span class="u-wbr -md"></span>必要なカラム数を指定するグリッドシステム。<br>間隔を開けるも閉じるも、その大きさも選択できる。<br>位置揃えや順番の入れ替えも可能。<span class="u-wbr -md"></span>後は自分でカスタマイズして下さい。
+            </p>
+          </div>
+          <div class="olex" data-align="lg:middle" data-gutter="lg:medium">
+            <div class="olex__item" data-cols="xxs:12 md:12 xl:3">
+              <div class="p-content__overview">
+                <div class="p-contents -bgBlack -overview">
+                  <div class="p-content__overview-inner">
+                    <div class="l-container l-spacer" data-space="min:large">
+                      <h4 class="p-content__title-sub -white" lang="en">Feature</h4>
+                      <div class="l-spacer" data-space="min:xxsmallTop min:largeBottom">
+                        <p class="p-content__text-sub -white"><em class="em">Flexbox</em>を利用したグリッドシステムで、単なる横並びや12カラムをベースとしたグリッドレイアウトも可能です。<span class="u-wbr__xl"></span>グリッド間のスペースにはborderを利用していて間隔の調整が容易にできます。<span class="u-wbr__xl"></span>もちろんこのページのレイアウトは<em class="em">「Olex.css」</em>を使っているので、詳しくはデベロッパーツールで。</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="olex__item" data-cols="xxs:12 md:12 xl:9">
+              <div class="p-card">
+                <div class="olex" data-gutter="min:medium">
+                  <div class="olex__item" data-cols="xxs:12 md:4 xl:4">
+                    <dl class="p-card__body">
+                      <dt lang="en"><img src="assets/img/icon/symbol/grid.png" srcset="assets/img/icon/symbol/grid.png, assets/img/icon/symbol/grid@2x.png 2x" alt=""><span class="p-card__item" lang="en">Grid</span></dt>
+                      <dd class="p-card__text">
+                        12カラムを基準とした<span class="u-wbr"></span>グリッドシステム。
+                      </dd>
+                    </dl>
+                  </div>
+                  <!-- /.olex__item -->
+                  <div class="olex__item" data-cols="xxs:12 md:4 xl:4">
+                    <dl class="p-card__body">
+                      <dt lang="en"><img src="assets/img/icon/symbol/alignment.png" srcset="assets/img/icon/symbol/alignment.png, assets/img/icon/symbol/alignment@2x.png 2x" alt=""><span class="p-card__item" lang="en">Alignment</span></dt>
+                      <dd class="p-card__text">
+                        各アイテムの位置を揃える<span class="u-wbr"></span>こともできる。
+                      </dd>
+                    </dl>
+                  </div>
+                  <!-- /.olex__item -->
+                  <div class="olex__item" data-cols="xxs:12 md:4 xl:4">
+                    <dl class="p-card__body">
+                      <dt><img src="assets/img/icon/symbol/direction.png" srcset="assets/img/icon/symbol/direction.png, assets/img/icon/symbol/direction@2x.png 2x" alt=""><span class="p-card__item" lang="en">Direction</span></dt>
+                      <dd class="p-card__text">
+                        アイテムの並び順を<span class="u-wbr"></span>逆順に変更できる。
+                      </dd>
+                    </dl>
+                  </div>
+                  <!-- /.olex__item -->
+                </div>
+                <!-- /.olex -->
+              </div>
+              <!-- /.p-card -->
+            </div>
+            <!-- /.olex__item -->
+          </div>
+          <!-- /.olex -->
+        </div>
+        <!-- /.l-container -->
+      </div>
+      <!-- /.l-spacer -->
+    </section>
+    <section class="p-contents -bgWhite">
+      <div class="l-spacer" data-space="min:large xl:max">
+        <div class="l-container">
+          <h3 id="grid" class="p-content__title js-textAnimate" lang="en">Grid</h3>
+          <div class="l-spacer" data-space="min:xxsmall xl:xsmallTop xl:maxBottom">
+            <p class="p-content__text">
+            スマホは<em class="em">2列</em>PCは<em class="em">4列</em>なども<span class="u-wbr -md"></span>属性値の付け替えでOK。<br>間隔を開けるも閉じるも、属性で調整。<br>間隔の大きさも拡張可能。
+            </p>
+          </div>
+        </div>
+        <!-- /.l-content__center -->
+        <section class="p-contents">
+          <div class="l-container">
+            <div class="olex" data-dir="md:reverse" data-gutter="md:small xl:medium">
+              <div class="olex__item p-grid__head" data-cols="xxs:12 md:4">
+                <div class="p-content p-grid">
+                  <div class="l-spacer" data-space="xl:xxlargeTop">
+                    <h4 class="p-content__title-sub" lang="en">Flexible</h4>
+                  </div>
+                  <div class="l-spacer" data-space="min:xxsmall xl:medium">
+                    <p class="p-content__text-sub">スマホ、タブレット、PCで異なるカラムのレイアウトも容易に対応できます。 12カラムをベースとして、必要なカラム数を<em class="em">カスタムデータ属性</em>で指定するだけでレイアウトが可能。</p>
+                  </div>
+                </div>
+              </div>
+              <div class="olex__item p-grid__body" data-cols="xxs:12 md:8">
+                <ul class="olex">
+                  <li class="olex__item" data-cols="xxs:6 lg:6">
+                    <figure class="p-list__photo"><img src="assets/image/flex/kyoto-flex01.jpg" srcset="assets/img/flex/kyoto-flex01.jpg, assets/img/flex/kyoto-flex01@2x.jpg 2x" alt="五重塔"></figure>
+                  </li>
+                  <li class="olex__item" data-cols="xxs:6 lg:6">
+                    <figure class="p-list__photo"><img src="assets/image/flex/kyoto-flex02.jpg" srcset="assets/img/flex/kyoto-flex02.jpg, assets/img/flex/kyoto-flex02@2x.jpg 2x" alt="清水寺"></figure>
+                  </li>
+                  <li class="olex__item" data-cols="xxs:6 lg:3">
+                    <figure class="p-list__photo"><img src="assets/image/flex/kyoto-flex03.jpg" srcset="assets/img/flex/kyoto-flex03.jpg, assets/img/flex/kyoto-flex03@2x.jpg 2x" alt="椋の木"></figure>
+                  </li>
+                  <li class="olex__item" data-cols="xxs:6 lg:3">
+                    <figure class="p-list__photo"><img src="assets/image/flex/kyoto-flex04.jpg" srcset="assets/img/flex/kyoto-flex04.jpg, assets/img/flex/kyoto-flex04@2x.jpg 2x" alt="提灯"></figure>
+                  </li>
+                  <li class="olex__item" data-cols="xxs:6 lg:3">
+                    <figure class="p-list__photo"><img src="assets/image/flex/kyoto-flex05.jpg" srcset="assets/img/flex/kyoto-flex05.jpg, assets/img/flex/kyoto-flex05@2x.jpg 2x" alt="石塀小路"></figure>
+                  </li>
+                  <li class="olex__item" data-cols="xxs:6 lg:3">
+                    <figure class="p-list__photo"><img src="assets/image/flex/kyoto-flex06.jpg" srcset="assets/img/flex/kyoto-flex06.jpg, assets/img/flex/kyoto-flex06@2x.jpg 2x" alt="手水舎"></figure>
+                  </li>
+                  <li class="olex__item" data-cols="xxs:12 lg:8">
+                    <figure class="p-list__photo"><img src="assets/img/flex/kyoto-flex07.jpg" srcset="assets/img/flex/kyoto-flex07.jpg, assets/img/flex/kyoto-flex07@2x.jpg 2x" alt="平等院"></figure>
+                  </li>
+                  <li class="olex__item" data-cols="xxs:6 lg:4">
+                    <figure class="p-list__photo"><img src="assets/img/flex/kyoto-flex08.jpg" srcset="assets/img/flex/kyoto-flex08.jpg, assets/img/flex/kyoto-flex08@2x.jpg 2x" alt="花見小路"></figure>
+                  </li>
+                  <li class="olex__item" data-cols="xxs:6 lg:4">
+                    <figure class="p-list__photo"><img src="assets/img/flex/kyoto-flex09.jpg" srcset="assets/img/flex/kyoto-flex09.jpg, assets/img/flex/kyoto-flex09@2x.jpg 2x" alt="紅葉"></figure>
+                  </li>
+                  <li class="olex__item" data-cols="xxs:12 lg:8">
+                    <figure class="p-list__photo"><img src="assets/img/flex/kyoto-flex10.jpg" srcset="assets/img/flex/kyoto-flex10.jpg, assets/img/flex/kyoto-flex10@2x.jpg 2x" alt="十石橋"></figure>
+                  </li>
+                  <li class="olex__item" data-cols="xxs:4 lg:4">
+                    <figure class="p-list__photo"><img src="assets/img/flex/kyoto-flex11.jpg" srcset="assets/img/flex/kyoto-flex11.jpg, assets/img/flex/kyoto-flex11@2x.jpg 2x" alt="銀閣寺"></figure>
+                  </li>
+                  <li class="olex__item" data-cols="xxs:4 lg:4">
+                    <figure class="p-list__photo"><img src="assets/img/flex/kyoto-flex12.jpg" srcset="assets/img/flex/kyoto-flex12.jpg, assets/img/flex/kyoto-flex12@2x.jpg 2x" alt="和傘"></figure>
+                  </li>
+                  <li class="olex__item" data-cols="xxs:4 lg:4">
+                    <figure class="p-list__photo"><img src="assets/img/flex/kyoto-flex13.jpg" srcset="assets/img/flex/kyoto-flex13.jpg, assets/img/flex/kyoto-flex13@2x.jpg 2x" alt="永観堂の臥龍廊"></figure>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!-- /.olex -->
+          </div>
+          <!-- /.l-container -->
+        </section>
+        <section class="p-contents l-spacer" data-space="min:largeTop">
+          <div class="l-container">
+            <div class="olex" data-gutter="md:xsmall xl:medium">
+              <div class="olex__item p-grid__head" data-cols="xxs:12 md:4">
+                <div class="p-content p-grid">
+                  <div class="l-spacer" data-space="xl:xxlargeTop">
+                    <h4 class="p-content__title-sub" lang="en">Gutter</h4>
+                  </div>
+                  <div class="l-spacer" data-space="min:xxsmall xl:medium">
+                    <p class="p-content__text-sub">各アイテム間のスペースも<em class="em">カスタムデータ属性</em>を指定するだけで、スペースの有無はもちろん、その大きさも選択できます。また、このスペースには border プロパティを使っているので、スペースのサイズを拡張するのも容易です。</p>
+                  </div>
+                </div>
+              </div>
+              <div class="olex__item" data-cols="xxs:12 md:8">
+                <ul class="olex p-grid__body" data-gutter="xxs:xxsmall md:xsmall lg:medium">
+                  <li class="olex__item" data-cols="xxs:6 lg:6">
+                    <figure class="p-list__photo"><img src="assets/img/gutter/kyoto-gutter01.jpg" srcset="assets/img/gutter/kyoto-gutter01.jpg, assets/img/gutter/kyoto-gutter01@2x.jpg 2x" alt="ライトアップされた五重塔"></figure>
+                  </li>
+                  <li class="olex__item" data-cols="xxs:6 lg:6">
+                    <figure class="p-list__photo"><img src="assets/img/gutter/kyoto-gutter02.jpg" srcset="assets/img/gutter/kyoto-gutter02.jpg, assets/img/gutter/kyoto-gutter02@2x.jpg 2x" alt="夕日に照らされた清水寺"></figure>
+                  </li>
+                  <li class="olex__item" data-cols="xxs:6 lg:3">
+                    <figure class="p-list__photo"><img src="assets/img/gutter/kyoto-gutter03.jpg" srcset="assets/img/gutter/kyoto-gutter03.jpg, assets/img/gutter/kyoto-gutter03@2x.jpg 2x" alt="石庭"></figure>
+                  </li>
+                  <li class="olex__item" data-cols="xxs:6 lg:3">
+                    <figure class="p-list__photo"><img src="assets/img/gutter/kyoto-gutter04.jpg" srcset="assets/img/gutter/kyoto-gutter04.jpg, assets/img/gutter/kyoto-gutter04@2x.jpg 2x" alt="嵐山の竹林"></figure>
+                  </li>
+                  <li class="olex__item" data-cols="xxs:6 lg:3">
+                    <figure class="p-list__photo"><img src="assets/img/gutter/kyoto-gutter05.jpg" srcset="assets/img/gutter/kyoto-gutter05.jpg, assets/img/gutter/kyoto-gutter05@2x.jpg 2x" alt="寺の庭園"></figure>
+                  </li>
+                  <li class="olex__item" data-cols="xxs:6 lg:3">
+                    <figure class="p-list__photo"><img src="assets/img/gutter/kyoto-gutter06.jpg" srcset="assets/img/gutter/kyoto-gutter06.jpg, assets/img/gutter/kyoto-gutter06@2x.jpg 2x" alt="稲荷伏見の鳥居"></figure>
+                  </li>
+                  <li class="olex__item" data-cols="xxs:12 lg:8">
+                    <figure class="p-list__photo"><img src="assets/img/gutter/kyoto-gutter07.jpg" srcset="assets/img/gutter/kyoto-gutter07.jpg, assets/img/gutter/kyoto-gutter07@2x.jpg 2x" alt="朝焼けの五重塔"></figure>
+                  </li>
+                  <li class="olex__item" data-cols="xxs:6 lg:4">
+                    <figure class="p-list__photo"><img src="assets/img/gutter/kyoto-gutter08.jpg" srcset="assets/img/gutter/kyoto-gutter08.jpg, assets/img/gutter/kyoto-gutter08@2x.jpg 2x" alt="晴れの日の渡月橋"></figure>
+                  </li>
+                  <li class="olex__item" data-cols="xxs:6 lg:4">
+                    <figure class="p-list__photo"><img src="assets/img/gutter/kyoto-gutter09.jpg" srcset="assets/img/gutter/kyoto-gutter09.jpg, assets/img/gutter/kyoto-gutter09@2x.jpg 2x" alt="桜の見える川"></figure>
+                  </li>
+                  <li class="olex__item" data-cols="xxs:12 lg:8">
+                    <figure class="p-list__photo"><img src="assets/img/gutter/kyoto-gutter10.jpg" srcset="assets/img/gutter/kyoto-gutter10.jpg, assets/img/gutter/kyoto-gutter10@2x.jpg 2x" alt="金閣寺"></figure>
+                  </li>
+                  <li class="olex__item" data-cols="xxs:4 lg:4">
+                    <figure class="p-list__photo"><img src="assets/img/gutter/kyoto-gutter11.jpg" srcset="assets/img/gutter/kyoto-gutter11.jpg, assets/img/gutter/kyoto-gutter11@2x.jpg 2x" alt="京都の景色を一望できる"></figure>
+                  </li>
+                  <li class="olex__item" data-cols="xxs:4 lg:4">
+                    <figure class="p-list__photo"><img src="assets/img/gutter/kyoto-gutter12.jpg" srcset="assets/img/gutter/kyoto-gutter12.jpg, assets/img/gutter/kyoto-gutter12@2x.jpg 2x" alt="法観寺"></figure>
+                  </li>
+                  <li class="olex__item" data-cols="xxs:4 lg:4">
+                    <figure class="p-list__photo"><img src="assets/img/gutter/kyoto-gutter13.jpg" srcset="assets/img/gutter/kyoto-gutter13.jpg, assets/img/gutter/kyoto-gutter13@2x.jpg 2x" alt="平等院"></figure>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!-- /.olex -->
+          </div>
+          <!-- /.l-container -->
+        </section>
+      </div>
+      <!-- /.l-spacer -->
+    </section>
+    <section class="p-contents -bgBlack">
+      <div class="l-spacer" data-space="min:large xl:max">
+        <div class="l-container">
+          <h3 id="alignment" class="p-content__title -white js-textAnimate" lang="en">Alignment</h3>
+          <div class="l-spacer" data-space="min:xxsmall xl:xsmallTop xl:maxBottom">
+            <p class="p-content__text -white">
+                    <em class="em">水平方向</em>の位置揃えや<span class="u-wbr -md"></span><em class="em">垂直方向</em>の位置揃えもできます。<br>
+                    左のカラムに大きな写真、右のカラムにはテキストを<span class="u-wbr"></span><em class="em">天地中央</em>に配置なんてことも可能です。
+                  </p>
+          </div>
+          <div class="l-spacer" data-space="min:largeBottom lg:maxBottom">
+            <ul class="olex" data-gutter="min:xxsmall">
+              <li class="olex__item p-aligment" data-cols="xxs:4 md:2" data-align="min:start">
+                <div class="p-aligment__item -hr" lang="en">
+                  <img src="assets/img/icon/symbol/left.png" srcset="assets/img/icon/symbol/left.png, assets/img/icon/symbol/left@2x.png 2x" alt="左揃えを表示するシンボル" whidth="20" height="20">
+                  <br>Left
+                </div>
+              </li>
+              <li class="olex__item p-aligment" data-cols="xxs:4 md:2" data-align="min:center">
+                <div class="p-aligment__item -hr" lang="en">
+                  <img src="assets/img/icon/symbol/center.png" srcset="assets/img/icon/symbol/center.png, assets/img/icon/symbol/center@2x.png 2x" alt="中央揃えを表示するシンボル" whidth="20" height="20">
+                  <br>Center
+                </div>
+              </li>
+              <li class="olex__item p-aligment" data-cols="xxs:4 md:2" data-align="min:end">
+                <div class="p-aligment__item -hr" lang="en">
+                  <img src="assets/img/icon/symbol/right.png" srcset="assets/img/icon/symbol/right.png, assets/img/icon/symbol/right@2x.png 2x" alt="右揃えを表示するシンボル" whidth="20" height="20">
+                  <br>Right
+                </div>
+              </li>
+              <li class="olex__item p-aligment" data-cols="xxs:4 md:2" data-align="min:top">
+                <div class="p-aligment__item" lang="en">
+                  <img src="assets/img/icon/symbol/top.png" srcset="assets/img/icon/symbol/top.png, assets/img/icon/symbol/top@2x.png 2x" alt="上揃えを表示するシンボル" whidth="20" height="20">
+                  <br>Top
+                </div>
+              </li>
+              <li class="olex__item p-aligment" data-cols="xxs:4 md:2" data-align="min:middle">
+                <div class="p-aligment__item" lang="en">
+                  <img src="assets/img/icon/symbol/middle.png" srcset="assets/img/icon/symbol/middle.png, assets/img/icon/symbol/middle@2x.png 2x" alt="天地中央を表示するシンボル" whidth="20" height="20">
+                  <br>Middle
+                </div>
+              </li>
+              <li class="olex__item p-aligment" data-cols="xxs:4 md:2" data-align="min:bottom">
+                <div class="p-aligment__item" lang="en">
+                  <img src="assets/img/icon/symbol/bottom.png" srcset="assets/img/icon/symbol/bottom.png, assets/img/icon/symbol/bottom@2x.png 2x" alt="下揃えを表示するシンボル" whidth="20" height="20">
+                  <br>Bottom
+                </div>
+              </li>
+            </ul>
+          </div>
+          <!-- /.l-spacer -->
+        </div>
+        <!-- /.l-content__center -->
+      </div>
+      <!-- /.l-spacer -->
+    </section>
+    <section class="p-contents -bgHarfGray">
+      <div class="l-container">
+        <div class="l-spacer" data-space="min:large xl:max">
+          <h3 id="direction" class="p-content__title js-textAnimate" lang="en">Direction</h3>
+          <div class="l-spacer" data-space="min:xxsmall xl:xsmallTop xl:maxBottom">
+            <p class="p-content__text">
+              <em class="em">カラムの並び順</em>も変更可能。<br>カスタマイズ次第では、<span class="u-wbr -md"></span>個別に順番を入れ替えることだってできる。</p>
+          </div>
+          <div class="l-spacer" data-space="min:xxxsmallTop">
+            <div class="olex" data-gutter="min:xsmall md:small xl:medium">
+              <div class="olex__item" data-cols="xxs:12 md:6">
+                <section class="p-content__direction">
+                  <div class="l-spacer" data-space="min:xxxsmallBottom">
+                    <h4 class="p-content__title-sub -left" lang="en">
+                          Normal
+                          <img src="assets/img/icon/symbol/arrow-right.png" srcset="assets/img/icon/symbol/arrow-right.png, assets/img/icon/symbol/arrow-right@2x.png 2x" alt="">
+                          </h4>
+                  </div>
+                  <ol class="olex" data-gutter="xxs:xxsmall sm:xsmall md:xxsmall lg:xsmall xl:medium">
+                    <li class="olex__item" data-cols="xxs:2">
+                      <span class="p-direction -normal" lang="en">1</span>
+                    </li>
+                    <li class="olex__item" data-cols="xxs:2">
+                      <span class="p-direction -normal" lang="en">2</span>
+                    </li>
+                    <li class="olex__item" data-cols="xxs:2">
+                      <span class="p-direction -normal" lang="en">3</span>
+                    </li>
+                    <li class="olex__item" data-cols="xxs:2">
+                      <span class="p-direction -normal" lang="en">4</span>
+                    </li>
+                    <li class="olex__item" data-cols="xxs:2">
+                      <span class="p-direction -normal" lang="en">5</span>
+                    </li>
+                    <li class="olex__item" data-cols="xxs:2">
+                      <span class="p-direction -normal" lang="en">6</span>
+                    </li>
+                    <li class="olex__item" data-cols="xxs:2">
+                      <span class="p-direction -normal" lang="en">7</span>
+                    </li>
+                    <li class="olex__item" data-cols="xxs:2">
+                      <span class="p-direction -normal" lang="en">8</span>
+                    </li>
+                    <li class="olex__item" data-cols="xxs:2">
+                      <span class="p-direction -normal" lang="en">9</span>
+                    </li>
+                    <li class="olex__item" data-cols="xxs:2">
+                      <span class="p-direction -normal" lang="en">10</span>
+                    </li>
+                    <li class="olex__item" data-cols="xxs:2">
+                      <span class="p-direction -normal" lang="en">11</span>
+                    </li>
+                    <li class="olex__item" data-cols="xxs:2">
+                      <span class="p-direction -normal" lang="en">12</span>
+                    </li>
+                    <li class="olex__item" data-cols="xxs:2">
+                      <span class="p-direction -normal" lang="en">13</span>
+                    </li>
+                    <li class="olex__item" data-cols="xxs:2">
+                      <span class="p-direction -normal" lang="en">14</span>
+                    </li>
+                    <li class="olex__item" data-cols="xxs:2">
+                      <span class="p-direction -normal" lang="en">15</span>
+                    </li>
+                    <li class="olex__item" data-cols="xxs:2">
+                      <span class="p-direction -normal" lang="en">16</span>
+                    </li>
+                    <li class="olex__item" data-cols="xxs:2">
+                      <span class="p-direction -normal" lang="en">17</span>
+                    </li>
+                    <li class="olex__item" data-cols="xxs:2">
+                      <span class="p-direction -normal" lang="en">18</span>
+                    </li>
+                    <li class="olex__item" data-cols="xxs:2">
+                      <span class="p-direction -normal" lang="en">19</span>
+                    </li>
+                    <li class="olex__item" data-cols="xxs:2">
+                      <span class="p-direction -normal" lang="en">20</span>
+                    </li>
+                    <li class="olex__item" data-cols="xxs:2">
+                      <span class="p-direction -normal" lang="en">21</span>
+                    </li>
+                    <li class="olex__item" data-cols="xxs:2">
+                      <span class="p-direction -normal" lang="en">22</span>
+                    </li>
+                    <li class="olex__item" data-cols="xxs:2">
+                      <span class="p-direction -normal" lang="en">23</span>
+                    </li>
+                    <li class="olex__item" data-cols="xxs:2">
+                      <span class="p-direction -normal" lang="en">24</span>
+                    </li>
+                  </ol>
+                </section>
+              </div>
+              <!-- /.olex__item -->
+              <div class="olex__item" data-cols="xxs:12 md:6">
+                <section class="p-content__direction">
+                  <div class="l-spacer" data-space="min:xxxsmallBottom">
+                    <h4 class="p-content__title-sub -right" lang="en">
+                            <img src="assets/img/icon/symbol/arrow-left.png" srcset="assets/img/icon/symbol/arrow-left.png, assets/img/icon/symbol/arrow-left@2x.png 2x" alt="">
+                            Reverse
+                          </h4>
+                  </div>
+                  <ol class="olex" data-gutter="xxs:xxsmall sm:xsmall md:xxsmall lg:xsmall xl:medium" data-dir="min:reverse">
+                    <li class="olex__item" data-cols="xxs:2">
+                      <span class="p-direction -reverse" lang="en">1</span>
+                    </li>
+                    <li class="olex__item" data-cols="xxs:2">
+                      <span class="p-direction -reverse" lang="en">2</span>
+                    </li>
+                    <li class="olex__item" data-cols="xxs:2">
+                      <span class="p-direction -reverse" lang="en">3</span>
+                    </li>
+                    <li class="olex__item" data-cols="xxs:2">
+                      <span class="p-direction -reverse" lang="en">4</span>
+                    </li>
+                    <li class="olex__item" data-cols="xxs:2">
+                      <span class="p-direction -reverse" lang="en">5</span>
+                    </li>
+                    <li class="olex__item" data-cols="xxs:2">
+                      <span class="p-direction -reverse" lang="en">6</span>
+                    </li>
+                    <li class="olex__item" data-cols="xxs:2">
+                      <span class="p-direction -reverse" lang="en">7</span>
+                    </li>
+                    <li class="olex__item" data-cols="xxs:2">
+                      <span class="p-direction -reverse" lang="en">8</span>
+                    </li>
+                    <li class="olex__item" data-cols="xxs:2">
+                      <span class="p-direction -reverse" lang="en">9</span>
+                    </li>
+                    <li class="olex__item" data-cols="xxs:2">
+                      <span class="p-direction -reverse" lang="en">10</span>
+                    </li>
+                    <li class="olex__item" data-cols="xxs:2">
+                      <span class="p-direction -reverse" lang="en">11</span>
+                    </li>
+                    <li class="olex__item" data-cols="xxs:2">
+                      <span class="p-direction -reverse" lang="en">12</span>
+                    </li>
+                    <li class="olex__item" data-cols="xxs:2">
+                      <span class="p-direction -reverse" lang="en">13</span>
+                    </li>
+                    <li class="olex__item" data-cols="xxs:2">
+                      <span class="p-direction -reverse" lang="en">14</span>
+                    </li>
+                    <li class="olex__item" data-cols="xxs:2">
+                      <span class="p-direction -reverse" lang="en">15</span>
+                    </li>
+                    <li class="olex__item" data-cols="xxs:2">
+                      <span class="p-direction -reverse" lang="en">16</span>
+                    </li>
+                    <li class="olex__item" data-cols="xxs:2">
+                      <span class="p-direction -reverse" lang="en">17</span>
+                    </li>
+                    <li class="olex__item" data-cols="xxs:2">
+                      <span class="p-direction -reverse" lang="en">18</span>
+                    </li>
+                    <li class="olex__item" data-cols="xxs:2">
+                      <span class="p-direction -reverse" lang="en">19</span>
+                    </li>
+                    <li class="olex__item" data-cols="xxs:2">
+                      <span class="p-direction -reverse" lang="en">20</span>
+                    </li>
+                    <li class="olex__item" data-cols="xxs:2">
+                      <span class="p-direction -reverse" lang="en">21</span>
+                    </li>
+                    <li class="olex__item" data-cols="xxs:2">
+                      <span class="p-direction -reverse" lang="en">22</span>
+                    </li>
+                    <li class="olex__item" data-cols="xxs:2">
+                      <span class="p-direction -reverse" lang="en">23</span>
+                    </li>
+                    <li class="olex__item" data-cols="xxs:2">
+                      <span class="p-direction -reverse" lang="en">24</span>
+                    </li>
+                  </ol>
+                </section>
+              </div>
+              <!-- /.olex__item -->
+            </div>
+            <!-- /.olex -->
+          </div>
+          <!-- /.l-spacer -->
+        </div>
+        <!-- /.l-spacer -->
+        <div class="p-direction__photo">
+          <div class="olex" data-align="min:justify">
+            <div class="olex__item" data-cols="xxs:2">
+              <figure class="p-list__photo">
+                <img src="assets/img/grid/kyoto01.jpg" srcset="assets/img/grid/kyoto01.jpg, assets/img/grid/kyoto01@2x.jpg 2x" alt="">
+              </figure>
+            </div>
+            <div class="olex__item" data-cols="xxs:2">
+              <figure class="p-list__photo">
+                <img src="assets/img/grid/kyoto02.jpg" srcset="assets/img/grid/kyoto02.jpg, assets/img/grid/kyoto02@2x.jpg 2x" alt="">
+              </figure>
+            </div>
+            <div class="olex__item" data-cols="xxs:2">
+              <figure class="p-list__photo">
+                <img src="assets/img/grid/kyoto03.jpg" srcset="assets/img/grid/kyoto03.jpg, assets/img/grid/kyoto03@2x.jpg 2x" alt="">
+              </figure>
+            </div>
+            <div class="olex__item" data-cols="xxs:2">
+              <figure class="p-list__photo">
+                <img src="assets/img/grid/kyoto04.jpg" srcset="assets/img/grid/kyoto04.jpg, assets/img/grid/kyoto04@2x.jpg 2x" alt="">
+              </figure>
+            </div>
+            <div class="olex__item" data-cols="xxs:2">
+              <figure class="p-list__photo">
+                <img src="assets/img/grid/kyoto05.jpg" srcset="assets/img/grid/kyoto05.jpg, assets/img/grid/kyoto05@2x.jpg 2x" alt="">
+              </figure>
+            </div>
+          </div>
+          <!-- /.olex -->
+        </div>
+        <!-- /.p-direction__photo -->
+        <div class="p-content">
+          <div class="l-spacer" data-space="min:smallTop">
+            <p class="p-direction__text js-textAnimate">さぁ、あなたも自分の<span class="u-wbr -md"></span><em class="em">CSSグリッドシステム</em>を作ろう。</p>
+          </div>
+          <!-- /.l-spacer -->
+        </div>
+        <!-- /.p-content -->
+        <div class="l-spacer" data-space="min:small">
+          <p class="c-btn__primary" lang="en"><a href="#" class="c-btn__primary-link">How to Make</a></p>
+        </div>
+      </div>
+      <!-- /.l-container -->
+    </section>
+  </main>
+  <footer class="p-footer -bgBlack">
+    <div class="l-spacer" data-space="min:smallBottom">
+      <div class="l-container">
+        <div class="olex" data-align="min:center md:justify md:bottom">
+          <div class="olex__item" data-cols="min:12 md:6" data-align="min:center md:start">
+            <p class="p-footer__logo" lang="en">Olex.css</p>
+            <p class="p-footer__title" lang="en">Ore no Flexible CSS Grid System.</p>
+          </div>
+          <div class="olex__item" data-cols="min:12 md:6" data-align="min:center md:end">
+            <div class="l-spacer" data-space="min:largeTop">
+              <div class="olex">
+                <div class="l-content__inner">
+                  <address class="p-footer__address" lang="en"><a href="mailto:olex@css.com" class="p-footer__address-mail">Follow Me</a></address>
+                  <ul class="olex" data-align="min:center" data-gutter="min:xsmall">
+                    <li class="olex__item">
+                      <a href="#" class="p-footer__social">
+                        <img src="assets/img/icon/sns/twitter.png" srcset="assets/img/icon/sns/twitter.png, assets/img/icon/sns/twitter@2x.png 2x" alt="twitterのロゴ" width="24" height="24">
+                      </a>
+                    </li>
+                    <li class="olex__item">
+                      <a href="#" class="p-footer__social">
+                        <img src="assets/img/icon/sns/instagram.png" srcset="assets/img/icon/sns/instagram.png, assets/img/icon/sns/instagram@2x.png 2x" alt="instagramのロゴ" width="24" height="24">
+                      </a>
+                    </li>
+                  </ul>
+                  <!-- /.l-spacer -->
+                </div>
+                <!-- /.l-content__inner -->
+              </div>
+              <div class="l-spacer" data-space="min:smallTop md:minTop">
+                <p class="p-footer__copy"><small lang="en">&copy; 2021 Shibata Hironori</small></p>
+              </div>
+              <!-- /.l-spacer -->
+            </div>
+            <!-- /.l-spacer -->
+          </div>
+          <!-- /.olex__item -->
+        </div>
+        <!-- /.olex -->
+      </div>
+      <!-- /.l-container -->
+    </div>
+    <!-- /.l-spacer -->
+  </footer>
+</body>
+</html>

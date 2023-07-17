@@ -1,0 +1,16 @@
+@charset 'UTF-8';
+@use "../global" as *;
+@use "sass:math";
+
+// Main
+// -----------------
+
+.l-main {
+  padding-top: pxToRem(116);
+}
+
+@include mq(lg) {
+  .l-main {
+    padding-top: pxToRem(134);
+  }
+}

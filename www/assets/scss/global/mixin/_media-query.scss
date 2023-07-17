@@ -1,0 +1,21 @@
+@charset 'UTF-8';
+@use "../setting" as *;
+@use "sass:map";
+
+// @mixin tab {
+//   @media screen and (min-width: 768px) {
+//     @content;
+//   }
+// }
+
+// @mixin lap {
+//   @media screen and (min-width: 992px) {
+//     @content;
+//   }
+// }
+
+@mixin mq($breakpoint) {
+  @media screen and (min-width: #{map.get($breakpoints, $breakpoint)}) {
+    @content;
+  }
+}

@@ -1,0 +1,10 @@
+@charset 'UTF-8';
+@use "sass:math";
+
+
+// Size
+// -----------------
+
+@function pxToRem($size, $baseFontSize: 16px) {
+  @return calc($size / 16) * 1rem;
+}

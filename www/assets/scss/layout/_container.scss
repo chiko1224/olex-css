@@ -1,0 +1,34 @@
+@charset 'UTF-8';
+@use "../global" as *;
+@use "sass:map";
+
+
+/*
+container
+----------------------------*/
+
+.l-container:not([data-enabled]) {
+  width: 90%;
+  max-width: $contentWidth;
+  margin: 0 auto;
+}
+
+.l-container[data-enabled~="xxs"] {
+  width: 85%;
+  max-width: $contentWidth;
+  margin: 0 auto;
+}
+
+@include mq(lg) {
+  .l-container[data-enabled~="xl"] {
+    width: 87.5%;
+    max-width: $contentWidth;
+    margin: 0 auto;
+  }
+
+  .l-container[data-disabled~="xl"] {
+    width: auto;
+    max-width: none;
+    margin: 0;
+  }
+}

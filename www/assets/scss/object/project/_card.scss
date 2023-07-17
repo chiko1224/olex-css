@@ -1,0 +1,48 @@
+@charset 'UTF-8';
+@use "sass:math";
+@use "../../global" as *;
+
+// Card
+// -----------------
+.p-card {
+  position: relative;
+  z-index: 2;
+  margin-top: -100px;
+
+  &__body {
+    width: 100%;
+    // height: pxToRem(310);
+    margin: 0 auto;
+    padding: pxToRem(70) 0;
+    background-color: $white;
+    text-align: center;
+  }
+
+  &__item {
+    display: block;
+    margin: 0 auto;
+    padding-top: pxToRem(33);
+    padding-bottom: pxToRem(26);
+    font-size: pxToRem(24);
+    font-weight: bold;
+    letter-spacing: .04em;
+  }
+
+  &__text {
+    font-size: pxToRem(12);
+    font-weight: bold;
+    letter-spacing: .04em;
+    line-height: calc(24 / 14);
+  }
+}
+
+
+@include mq(xl) {
+  .p-card {
+    margin-top: -60px;
+
+    &__item {
+      width: 100%;
+    }
+  }
+}

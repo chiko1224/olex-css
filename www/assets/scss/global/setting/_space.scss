@@ -1,0 +1,42 @@
+@charset 'UTF-8';
+@use "sass:map";
+@use "olex" as *;
+
+
+/*
+  space
+--------------------------------- */
+
+
+$spaces: (
+  min: 8,
+  xxxsmall: 16,
+  xxsmall: 24,
+  xsmall: 32,
+  small: 40,
+  medium: 48,
+  large: 64,
+  xlarge: 72,
+  xxlarge: 80,
+  max: 120,
+  ) !default;
+
+@each $device,
+$breakpoint in $breakpoints {
+
+  @each $size,
+  $val in $spaces {
+    .l-spacer[data-space~="#{$device}:#{$size}"] {
+      padding: calc((#{map.get($spaces, $size)} / 16) * 1rem) 0;
+    }
+
+    .l-spacer[data-space~="#{$device}:#{$size}Top"] {
+      padding-top: calc((#{map.get($spaces, $size)} / 16) * 1rem
+    );
+  }
+
+  .l-spacer[data-space~="#{$device}:#{$size}Bottom"] {
+    padding-bottom: calc((#{map.get($spaces, $size)} / 16) * 1rem);
+  }
+}
+}

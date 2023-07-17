@@ -1,0 +1,108 @@
+@charset 'UTF-8';
+@use "sass:math";
+@use "../../global" as *;
+
+// Navigation
+// -----------------
+.p-header {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  right: 0;
+  left: 0;
+  color: $white;
+  mix-blend-mode: difference;
+  transition: background-color 0.5s;
+
+  &__content {
+    margin: pxToRem(38) 0;
+  }
+
+  &__logo {
+    position: fixed;
+    font-size: pxToRem(20);
+    padding: pxToRem(8) 0;
+    letter-spacing: .04em;
+    color: $white;
+    z-index: 10;
+  }
+
+  &__nav-list {
+    flex-direction: column;
+    position: fixed;
+    z-index: 2;
+    top: pxToRem(127);
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 120%;
+    opacity: 0;
+    background-color: $black;
+    transform: translateX(100%);
+    transition: opacity 0.38s ease-in-out;
+  }
+
+
+  &__nav-item {
+    position: relative;
+    margin: pxToRem(24) 0;
+    padding-left: 5vw;
+    height: auto;
+  }
+
+  &__nav-link {
+    position: relative;
+    display: block;
+    z-index: 3;
+    color: inherit;
+    background-color: rgba(0, 0, 0, 0);
+    font-size: pxToRem(30);
+    font-weight: 700;
+    letter-spacing: .04;
+    text-decoration: none;
+  }
+}
+
+@include mq(lg) {
+  .p-header {
+    &__content {
+      margin: pxToRem(48) 0 pxToRem(40);
+    }
+
+    &__logo {
+      padding: pxToRem(3.5) 0;
+    }
+
+    &__nav-list {
+      flex-direction: row;
+      position: static;
+      margin: 0;
+      padding-top: 0;
+      background-color: transparent;
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    &__nav-item {
+      padding-left: 0;
+      margin: 0;
+    }
+
+    &__logo {
+      font-size: pxToRem(32);
+    }
+
+    &__nav-link {
+      font-size: pxToRem(14);
+    }
+  }
+}
+
+
+@include mq(xl) {
+  .p-header {
+    &__nav-link {
+      font-size: pxToRem(16);
+    }
+  }
+}
