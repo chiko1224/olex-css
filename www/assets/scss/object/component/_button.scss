@@ -7,8 +7,8 @@
 .c-btn__primary {
   position: relative;
   z-index: 1;
-  width: 148px;
-  height: 50px;
+  width: 174px;
+  height: 54px;
   margin: auto;
   border: 1px solid $white;
   border-radius: 5em;
@@ -37,8 +37,8 @@
 
 .c-btn__sub {
   position: relative;
-  width: 174px;
-  height: 50px;
+  width: 178px;
+  height: 58px;
   margin: auto;
   border-radius: 5em;
   border: 1px solid $darkGray;
@@ -48,7 +48,7 @@
     display: block;
     position: relative;
     z-index: 1;
-    padding: pxToRem(16) pxToRem(30);
+    padding: pxToRem(17) pxToRem(30);
     color: $white;
     font-size: pxToRem(14);
     font-weight: bold;
@@ -64,8 +64,8 @@
     height: 77px;
 
     &.-drawer {
-      width: 128px;
-      height: 46px;
+      width: 160px;
+      height: 54px;
       margin: 0;
     }
 
@@ -74,13 +74,15 @@
       font-size: pxToRem(24);
 
       &.-drawer {
-        padding: pxToRem(12) 0;
+        padding: pxToRem(17) 0;
         font-size: pxToRem(14);
       }
     }
   }
 
   .c-btn__sub {
+    margin: 0 72% 0 28%;
+
     &-link {
       font-size: pxToRem(16);
     }

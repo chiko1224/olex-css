@@ -3,30 +3,10 @@
 @use "../../../global" as *;
 
 .p-header__nav-link {
-  transition: padding-left 0.42s ease-in-out;
+  transition: padding-left 0.2s ease;
 
   &:hover {
-    padding-left: 20px;
-  }
-
-  &::before {
-    display: block;
-    position: absolute;
-    top: 20%;
-    left: 0;
-    bottom: 0;
-    content: '';
-    width: 4px;
-    height: 22px;
-    background-color: transparent;
-    transform-origin: center;
-    transform: scale(1, 0);
-    transition: all 0.4s ease-in-out;
-  }
-
-  &:hover::before {
-    background-color: $white;
-    transform: scale(1, 1);
+    padding-left: 1rem;
   }
 }
 

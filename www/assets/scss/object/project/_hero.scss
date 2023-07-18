@@ -6,7 +6,7 @@
 // -----------------
 .p-hero {
   &__title {
-    font-size: pxToRem(44);
+    font-size: pxToRem(60);
     letter-spacing: .04em;
     line-height: calc(54 / 44);
   }
@@ -15,13 +15,14 @@
     padding: pxToRem(24) 0 pxToRem(40);
     font-size: pxToRem(14);
     font-weight: bold;
+    letter-spacing: .04em;
     line-height: calc(28 / 14);
   }
 
 
   &__bg {
-    margin: 0 -10vw;
-    padding: pxToRem(40) 0;
+    margin: 0 -5vw;
+    padding: pxToRem(60) 0;
     background-color: $black;
 
     & .olex {
@@ -34,22 +35,26 @@
   }
 
   &__photo img {
-    max-width: 100%;
+    width: 100%;
     height: auto;
     filter: grayscale(100%);
   }
 }
 
-@include mq(sm) {
+@include mq(md) {
   .p-hero {
     &__title {
-      font-size: pxToRem(48);
-      line-height: calc(60 / 50);
+      font-size: pxToRem(80);
+    }
+
+    &__lead {
+      font-size: pxToRem(16);
     }
   }
 }
 
-@include mq(md) {
+
+@include mq(lg) {
   .p-hero {
     &__bg {
       position: absolute;
@@ -65,23 +70,12 @@
     }
 
     &__title {
-      font-size: pxToRem(40);
-    }
-
-    &__text-area {
-      margin-bottom: pxToRem(48);
-    }
-  }
-}
-
-@include mq(lg) {
-  .p-hero {
-    &__title {
-      font-size: pxToRem(60);
+      font-size: pxToRem(58);
       line-height: calc(70 / 58);
     }
 
     &__lead {
+      width: pxToRem(420);
       padding: pxToRem(64) pxToRem(24) pxToRem(48) 0;
       padding-right: pxToRem(24);
     }

@@ -27,9 +27,12 @@
               <h2 class="screen-reader-text">サイトメニュー</h2>
               <div class="p-header__nav-btn">
                 <button type="button" class="p-hamburger__btn js-btn" aria-controls="header__nav" aria-expanded="false">
-                  <span class="p-hamburger__btn-line">
-                    <span class="screen-reader-text">メニューを開閉する</span>
-                  </span>
+                  <div class="p-hamburger__btn-inner">
+                    <span class="p-hamburger__btn-line">
+                      <span class="screen-reader-text">メニューを開閉する</span>
+                    </span>
+                  </div>
+                  <!-- /.p-hamburger__btn-inner -->
                 </button>
               </div>
               <!-- /.p-header-nav__btn -->
@@ -72,40 +75,34 @@
       <div class="p-hero">
         <div class="l-container">
           <div class="olex">
-            <div class="olex__item" data-cols="xxs:12 md:6">
+            <div class="olex__item" data-cols="xxs:12 lg:6">
               <div class="p-hero__text-area">
                 <h2 class="p-hero__title" lang="en"><span class="char">O</span><span class="char">r</span><span class="char">e</span> <span class="char">n</span><span class="char">o</span><span class="u-wbr"></span><span><span class="char">F</span><span class="char">l</span><span class="char">e</span><span class="char">x</span><span class="char">i</span><span class="char">b</span><span class="char">l</span><span class="char">e</span> <span class="char">C</span><span class="char">S</span><span class="char">S</span></span><span class="u-wbr"></span><span><span class="char">G</span><span class="char">r</span><span class="char">i</span><span class="char">d</span> <span class="char">S</span><span class="char">y</span><span class="char">s</span><span class="char">t</span><span class="char">e</span><span class="char">m</span><span class="char">.</span></span></h2>
-                <p class="p-hero__lead">
-                  <em class="em">俺流</em>のフレキシブルCSSグリッドシステム<span class="u-wbr -lg"></span>
-                  <em class="em">「Olex」</em>のデモページ。<br>
-                  <em class="em">「Olex」</em>はFlexboxを利用した<span class="u-wbr -lg"></span>
-                  単なるグリッドシステムなので、<span class="u-wbr"></span>
-                  気になった方は、解説ページを参考に<span class="u-wbr -lg"></span>自分で作ってもらえたらと思います。
+                <p class="p-hero__lead" lang="en">
+                  <em class="em">俺流</em>のフレキシブルCSSグリッドシステム<em class="em"><span class="u-wbr -lg"></span>「Olex」</em>のデモページ。<em class="em">「Olex」</em>はFlexboxを利用した単なるグリッドシステムなので、<span class="u-wbr -lg"></span>
+                  気になった方は、解説ページを参考に自分で作ってもらえたらと思います。
                 </p>
                 <p class="c-btn__sub" lang="en"><a href="#" class="c-btn__sub-link">How to Make</a></p>
               </div>
               <!-- /.p-hero__text-area -->
             </div>
             <!-- /.olex__item -->
-            <div class="olex__item" data-cols="xxs:12 md:6">
+            <div class="olex__item" data-cols="xxs:12 lg:6">
               <div class="p-hero__bg">
                 <div class="olex l-container" data-enabled="xxs" data-align="min:center">
                   <div class="olex__item">
                     <picture class="p-hero__photo">
-                      <source type="image/webp" srcset="assets/img/hero/sp/01.jpg.webp, assets/img/hero/sp/01@2x.jpg.webp 2x" media="(max-width: 767px)">
-                      <img src="assets/img/hero/01.jpg" srcset="assets/img/hero/pc/01.jpg, assets/img/hero/pc/01@2x.jpg 2x" alt="" decoding="async">
+                      <img src="assets/img/hero/01.jpg.webp" srcset="assets/img/hero/pc/01.jpg.webp, assets/img/hero/pc/01@2x.jpg.webp 2x" alt="" decoding="async">
                     </picture>
                   </div>
                   <div class="olex__item">
                     <picture class="p-hero__photo">
-                      <source type="image/webp" srcset="assets/img/hero/sp/02.jpg.webp, assets/img/hero/sp/02@2x.jpg.webp 2x" media="(max-width: 767px)">
-                      <img src="assets/img/hero/pc/02.jpg" srcset="assets/img/hero/pc/02.jpg, assets/img/hero/pc/02@2x.jpg 2x" alt="" decoding="async">
+                      <img src="assets/img/hero/pc/02.jpg.webp" srcset="assets/img/hero/pc/02.jpg.webp, assets/img/hero/pc/02@2x.jpg.webp 2x" alt="" decoding="async">
                     </picture>
                   </div>
                   <div class="olex__item">
                     <picture class="p-hero__photo">
-                      <source type="image/webp" srcset="assets/img/hero/sp/03.jpg.webp, assets/img/hero/sp/03@2x.jpg.webp 2x" media="(max-width: 767px)">
-                      <img src="assets/img/hero/pc/03.jpg" srcset="assets/img/hero/pc/03.jpg, assets/img/hero/pc/03@2x.jpg 2x" alt="" decoding="async">
+                      <img src="assets/img/hero/pc/03.jpg.webp" srcset="assets/img/hero/pc/03.jpg.webp, assets/img/hero/pc/03@2x.jpg.webp 2x" alt="" decoding="async">
                     </picture>
                   </div>
                 </div>
@@ -124,11 +121,11 @@
     <section class="p-contents -bgGray">
       <div class="l-spacer" data-space="min:largeBottom xl:maxBottom">
         <div class="l-container">
-          <div class="l-spacer" data-space="min:xxlargeTop min:largeBottom lg:max">
+          <div class="l-spacer" data-space="min:large lg:max">
             <div class="l-spacer" data-space="min:xxsmallBottom xl:xsmallBottom">
-              <h3 id="overview" class="p-content__title js-h_Animate" lang="en">Overview</h3>
+              <h3 id="overview" class="p-content__title p-animate js-text-Animate" lang="en">Overview</h3>
             </div>
-            <p class="p-content__text">
+            <p class="p-content__text" lang="en">
               <em class="em">12カラム</em>を基準として<span class="u-wbr -md"></span>必要なカラム数を指定するグリッドシステム。<br>間隔を開けるも閉じるも、その大きさも選択できる。<br>位置揃えや順番の入れ替えも可能。<span class="u-wbr -md"></span>後は自分でカスタマイズして下さい。
             </p>
           </div>
@@ -137,10 +134,10 @@
               <div class="p-content__overview">
                 <div class="p-contents -bgBlack -overview">
                   <div class="p-content__overview-inner">
-                    <div class="l-container l-spacer" data-space="min:large md:maxBottom">
+                    <div class="l-container l-spacer" data-space="min:largeTop min:mediumBottom md:maxBottom">
                       <h4 class="p-content__title-sub -white" lang="en">Feature</h4>
                       <div class="l-spacer" data-space="min:xxsmallTop md:largeBottom">
-                        <p class="p-content__text-sub -white"><em class="em">Flexbox</em>を利用したグリッドシステムで、単なる横並びや12カラムをベースとしたグリッドレイアウトも可能です。<span class="u-wbr__xl"></span>グリッド間のスペースにはborderを利用していて間隔の調整が容易にできます。<span class="u-wbr__xl"></span>もちろんこのページのレイアウトは<em class="em">「Olex.css」</em>を使っているので、詳しくはデベロッパーツールで。</p>
+                        <p class="p-content__text-sub -white" lang="en"><em class="em">Flexbox</em>を利用したグリッドシステムで、単なる横並びや12カラムをベースとしたグリッドレイアウトも可能です。<span class="u-wbr__xl"></span>グリッド間のスペースにはborderを利用していて間隔の調整が容易にできます。<span class="u-wbr__xl"></span>もちろんこのページのレイアウトは<em class="em">「Olex.css」</em>を使っているので、詳しくはデベロッパーツールで。</p>
                       </div>
                     </div>
                   </div>
@@ -153,7 +150,7 @@
                   <div class="olex__item" data-cols="xxs:12 md:4 xl:4">
                     <dl class="p-card__body">
                       <dt lang="en"><img src="assets/img/icon/symbol/grid.png" srcset="assets/img/icon/symbol/grid.png, assets/img/icon/symbol/grid@2x.png 2x" alt=""><span class="p-card__item" lang="en">Grid</span></dt>
-                      <dd class="p-card__text">
+                      <dd class="p-card__text" lang="en">
                         12カラムを基準とした<span class="u-wbr"></span>グリッドシステム。
                       </dd>
                     </dl>
@@ -162,7 +159,7 @@
                   <div class="olex__item" data-cols="xxs:12 md:4 xl:4">
                     <dl class="p-card__body">
                       <dt lang="en"><img src="assets/img/icon/symbol/alignment.png" srcset="assets/img/icon/symbol/alignment.png, assets/img/icon/symbol/alignment@2x.png 2x" alt=""><span class="p-card__item" lang="en">Alignment</span></dt>
-                      <dd class="p-card__text">
+                      <dd class="p-card__text" lang="en">
                         各アイテムの位置を揃える<span class="u-wbr"></span>こともできる。
                       </dd>
                     </dl>
@@ -191,12 +188,12 @@
       <!-- /.l-spacer -->
     </section>
     <section class="p-contents -bgWhite">
-      <div class="l-spacer" data-space="min:large xl:max">
+      <div class="l-spacer" data-space="min:large">
         <div class="l-container">
-          <h3 id="grid" class="p-content__title js-h_Animate" lang="en">Grid</h3>
-          <div class="l-spacer" data-space="min:xxsmall xl:xsmallTop xl:maxBottom">
-            <p class="p-content__text">
-            スマホは<em class="em">2列</em>PCは<em class="em">4列</em>なども<span class="u-wbr -md"></span>属性値の付け替えでOK。<br>間隔を開けるも閉じるも、属性で調整。<br>間隔の大きさも拡張可能。
+          <h3 id="grid" class="p-content__title p-animate js-text-Animate" lang="en">Grid</h3>
+          <div class="l-spacer" data-space="min:xxsmall">
+            <p class="p-content__text" lang="en">
+            スマホは<em class="em">2列</em>PCは<em class="em">4列</em>なども属性値の付け替えでOK。<br>間隔を開けるも閉じるも、属性で調整。<br>間隔の大きさも拡張可能。
             </p>
           </div>
         </div>
@@ -206,54 +203,54 @@
             <div class="olex" data-dir="md:reverse" data-gutter="md:small xl:medium">
               <div class="olex__item p-grid__head" data-cols="xxs:12 md:4">
                 <div class="p-content p-grid">
-                  <div class="l-spacer" data-space="xl:xxlargeTop">
+                  <div class="l-spacer" data-space="min:smallTop">
                     <h4 class="p-content__title-sub" lang="en">Flexible</h4>
                   </div>
-                  <div class="l-spacer" data-space="min:xxsmall xl:medium">
-                    <p class="p-content__text-sub">スマホ、タブレット、PCで異なるカラムのレイアウトも容易に対応できます。 12カラムをベースとして、必要なカラム数を<em class="em">カスタムデータ属性</em>で指定するだけでレイアウトが可能。</p>
+                  <div class="l-spacer" data-space="min:xxsmall">
+                    <p class=" p-content__text-sub" lang="en">スマホ、タブレット、PCで異なるカラムのレイアウトも容易に対応できます。 12カラムをベースとして、必要なカラム数を<em class="em">カスタムデータ属性</em>で指定するだけでレイアウトが可能。</p>
                   </div>
                 </div>
               </div>
               <div class="olex__item p-grid__body" data-cols="xxs:12 md:8">
                 <ul class="olex">
                   <li class="olex__item" data-cols="xxs:6 lg:6">
-                    <figure class="p-list__photo"><img src="assets/image/flex/kyoto-flex01.jpg" srcset="assets/img/flex/kyoto-flex01.jpg, assets/img/flex/kyoto-flex01@2x.jpg 2x" alt="五重塔"></figure>
+                    <figure class="p-list__photo"><img src="assets/image/flex/kyoto-flex01.jpg.webp" srcset="assets/img/flex/kyoto-flex01.jpg.webp, assets/img/flex/kyoto-flex01@2x.jpg.webp 2x" alt="五重塔"></figure>
                   </li>
                   <li class="olex__item" data-cols="xxs:6 lg:6">
-                    <figure class="p-list__photo"><img src="assets/image/flex/kyoto-flex02.jpg" srcset="assets/img/flex/kyoto-flex02.jpg, assets/img/flex/kyoto-flex02@2x.jpg 2x" alt="清水寺"></figure>
+                    <figure class="p-list__photo"><img src="assets/image/flex/kyoto-flex02.jpg.webp" srcset="assets/img/flex/kyoto-flex02.jpg.webp, assets/img/flex/kyoto-flex02@2x.jpg.webp 2x" alt="清水寺"></figure>
                   </li>
                   <li class="olex__item" data-cols="xxs:6 lg:3">
-                    <figure class="p-list__photo"><img src="assets/image/flex/kyoto-flex03.jpg" srcset="assets/img/flex/kyoto-flex03.jpg, assets/img/flex/kyoto-flex03@2x.jpg 2x" alt="椋の木"></figure>
+                    <figure class="p-list__photo"><img src="assets/image/flex/kyoto-flex03.jpg.webp" srcset="assets/img/flex/kyoto-flex03.jpg.webp, assets/img/flex/kyoto-flex03@2x.jpg.webp 2x" alt="椋の木"></figure>
                   </li>
                   <li class="olex__item" data-cols="xxs:6 lg:3">
-                    <figure class="p-list__photo"><img src="assets/image/flex/kyoto-flex04.jpg" srcset="assets/img/flex/kyoto-flex04.jpg, assets/img/flex/kyoto-flex04@2x.jpg 2x" alt="提灯"></figure>
+                    <figure class="p-list__photo"><img src="assets/image/flex/kyoto-flex04.jpg.webp" srcset="assets/img/flex/kyoto-flex04.jpg.webp, assets/img/flex/kyoto-flex04@2x.jpg.webp 2x" alt="提灯"></figure>
                   </li>
                   <li class="olex__item" data-cols="xxs:6 lg:3">
-                    <figure class="p-list__photo"><img src="assets/image/flex/kyoto-flex05.jpg" srcset="assets/img/flex/kyoto-flex05.jpg, assets/img/flex/kyoto-flex05@2x.jpg 2x" alt="石塀小路"></figure>
+                    <figure class="p-list__photo"><img src="assets/image/flex/kyoto-flex05.jpg.webp" srcset="assets/img/flex/kyoto-flex05.jpg.webp, assets/img/flex/kyoto-flex05@2x.jpg.webp 2x" alt="石塀小路"></figure>
                   </li>
                   <li class="olex__item" data-cols="xxs:6 lg:3">
-                    <figure class="p-list__photo"><img src="assets/image/flex/kyoto-flex06.jpg" srcset="assets/img/flex/kyoto-flex06.jpg, assets/img/flex/kyoto-flex06@2x.jpg 2x" alt="手水舎"></figure>
+                    <figure class="p-list__photo"><img src="assets/image/flex/kyoto-flex06.jpg.webp" srcset="assets/img/flex/kyoto-flex06.jpg.webp, assets/img/flex/kyoto-flex06@2x.jpg.webp 2x" alt="手水舎"></figure>
                   </li>
                   <li class="olex__item" data-cols="xxs:12 lg:8">
-                    <figure class="p-list__photo"><img src="assets/img/flex/kyoto-flex07.jpg" srcset="assets/img/flex/kyoto-flex07.jpg, assets/img/flex/kyoto-flex07@2x.jpg 2x" alt="平等院"></figure>
+                    <figure class="p-list__photo"><img src="assets/img/flex/kyoto-flex07.jpg.webp" srcset="assets/img/flex/kyoto-flex07.jpg.webp, assets/img/flex/kyoto-flex07@2x.jpg.webp 2x" alt="平等院"></figure>
                   </li>
                   <li class="olex__item" data-cols="xxs:6 lg:4">
-                    <figure class="p-list__photo"><img src="assets/img/flex/kyoto-flex08.jpg" srcset="assets/img/flex/kyoto-flex08.jpg, assets/img/flex/kyoto-flex08@2x.jpg 2x" alt="花見小路"></figure>
+                    <figure class="p-list__photo"><img src="assets/img/flex/kyoto-flex08.jpg.webp" srcset="assets/img/flex/kyoto-flex08.jpg.webp, assets/img/flex/kyoto-flex08@2x.jpg.webp 2x" alt="花見小路"></figure>
                   </li>
                   <li class="olex__item" data-cols="xxs:6 lg:4">
-                    <figure class="p-list__photo"><img src="assets/img/flex/kyoto-flex09.jpg" srcset="assets/img/flex/kyoto-flex09.jpg, assets/img/flex/kyoto-flex09@2x.jpg 2x" alt="紅葉"></figure>
+                    <figure class="p-list__photo"><img src="assets/img/flex/kyoto-flex09.jpg.webp" srcset="assets/img/flex/kyoto-flex09.jpg.webp, assets/img/flex/kyoto-flex09@2x.jpg.webp 2x" alt="紅葉"></figure>
                   </li>
                   <li class="olex__item" data-cols="xxs:12 lg:8">
-                    <figure class="p-list__photo"><img src="assets/img/flex/kyoto-flex10.jpg" srcset="assets/img/flex/kyoto-flex10.jpg, assets/img/flex/kyoto-flex10@2x.jpg 2x" alt="十石橋"></figure>
+                    <figure class="p-list__photo"><img src="assets/img/flex/kyoto-flex10.jpg.webp" srcset="assets/img/flex/kyoto-flex10.jpg.webp, assets/img/flex/kyoto-flex10@2x.jpg.webp 2x" alt="十石橋"></figure>
                   </li>
                   <li class="olex__item" data-cols="xxs:4 lg:4">
-                    <figure class="p-list__photo"><img src="assets/img/flex/kyoto-flex11.jpg" srcset="assets/img/flex/kyoto-flex11.jpg, assets/img/flex/kyoto-flex11@2x.jpg 2x" alt="銀閣寺"></figure>
+                    <figure class="p-list__photo"><img src="assets/img/flex/kyoto-flex11.jpg.webp" srcset="assets/img/flex/kyoto-flex11.jpg.webp, assets/img/flex/kyoto-flex11@2x.jpg.webp 2x" alt="銀閣寺"></figure>
                   </li>
                   <li class="olex__item" data-cols="xxs:4 lg:4">
-                    <figure class="p-list__photo"><img src="assets/img/flex/kyoto-flex12.jpg" srcset="assets/img/flex/kyoto-flex12.jpg, assets/img/flex/kyoto-flex12@2x.jpg 2x" alt="和傘"></figure>
+                    <figure class="p-list__photo"><img src="assets/img/flex/kyoto-flex12.jpg.webp" srcset="assets/img/flex/kyoto-flex12.jpg.webp, assets/img/flex/kyoto-flex12@2x.jpg.webp 2x" alt="和傘"></figure>
                   </li>
                   <li class="olex__item" data-cols="xxs:4 lg:4">
-                    <figure class="p-list__photo"><img src="assets/img/flex/kyoto-flex13.jpg" srcset="assets/img/flex/kyoto-flex13.jpg, assets/img/flex/kyoto-flex13@2x.jpg 2x" alt="永観堂の臥龍廊"></figure>
+                    <figure class="p-list__photo"><img src="assets/img/flex/kyoto-flex13.jpg.webp" srcset="assets/img/flex/kyoto-flex13.jpg.webp, assets/img/flex/kyoto-flex13@2x.jpg.webp 2x" alt="永観堂の臥龍廊"></figure>
                   </li>
                 </ul>
               </div>
@@ -262,21 +259,21 @@
           </div>
           <!-- /.l-container -->
         </section>
-        <section class="p-contents l-spacer" data-space="min:largeTop">
+        <section class="p-contents l-spacer" data-space="min:mediumTop">
           <div class="l-container">
             <div class="olex" data-gutter="md:xsmall xl:medium">
               <div class="olex__item p-grid__head" data-cols="xxs:12 md:4">
                 <div class="p-content p-grid">
-                  <div class="l-spacer" data-space="xl:xxlargeTop">
+                  <div class="l-spacer">
                     <h4 class="p-content__title-sub" lang="en">Gutter</h4>
                   </div>
-                  <div class="l-spacer" data-space="min:xxsmall xl:medium">
-                    <p class="p-content__text-sub">各アイテム間のスペースも<em class="em">カスタムデータ属性</em>を指定するだけで、スペースの有無はもちろん、その大きさも選択できます。また、このスペースには border プロパティを使っているので、スペースのサイズを拡張するのも容易です。</p>
+                  <div class="l-spacer" data-space="min:xxsmall">
+                    <p class="p-content__text-sub" lang="en">各アイテム間のスペースも<em class="em">カスタムデータ属性</em>を指定するだけで、スペースの有無はもちろん、その大きさも選択できます。また、このスペースには border プロパティを使っているので、スペースのサイズを拡張するのも容易です。</p>
                   </div>
                 </div>
               </div>
               <div class="olex__item" data-cols="xxs:12 md:8">
-                <ul class="olex p-grid__body" data-gutter="xxs:xxsmall md:xsmall lg:medium">
+                <ul class="olex p-grid__body" data-gutter="xxs:small lg:medium">
                   <li class="olex__item" data-cols="xxs:6 lg:6">
                     <figure class="p-list__photo"><img src="assets/img/gutter/kyoto-gutter01.jpg" srcset="assets/img/gutter/kyoto-gutter01.jpg, assets/img/gutter/kyoto-gutter01@2x.jpg 2x" alt="ライトアップされた五重塔"></figure>
                   </li>
@@ -329,7 +326,7 @@
     <section class="p-contents -bgBlack">
       <div class="l-spacer" data-space="min:large xl:max">
         <div class="l-container">
-          <h3 id="alignment" class="p-content__title -white js-h_Animate" lang="en">Alignment</h3>
+          <h3 id="alignment" class="p-content__title -white p-animate js-text-Animate" lang="en">Alignment</h3>
           <div class="l-spacer" data-space="min:xxsmall xl:xsmallTop xl:maxBottom">
             <p class="p-content__text -white">
                     <em class="em">水平方向</em>の位置揃えや<span class="u-wbr -md"></span><em class="em">垂直方向</em>の位置揃えもできます。<br>
@@ -385,9 +382,9 @@
     <section class="p-contents -bgHarfGray">
       <div class="l-container">
         <div class="l-spacer" data-space="min:large xl:max">
-          <h3 id="direction" class="p-content__title js-h_Animate" lang="en">Direction</h3>
+          <h3 id="direction" class="p-content__title p-animate js-text-Animate" lang="en">Direction</h3>
           <div class="l-spacer" data-space="min:xxsmall xl:xsmallTop xl:maxBottom">
-            <p class="p-content__text">
+            <p class="p-content__text" lang="en">
               <em class="em">カラムの並び順</em>も変更可能。<br>カスタマイズ次第では、<span class="u-wbr -md"></span>個別に順番を入れ替えることだってできる。</p>
           </div>
           <div class="l-spacer" data-space="min:xxxsmallTop">
@@ -400,7 +397,7 @@
                           <img src="assets/img/icon/symbol/arrow-right.png" srcset="assets/img/icon/symbol/arrow-right.png, assets/img/icon/symbol/arrow-right@2x.png 2x" alt="">
                           </h4>
                   </div>
-                  <ol class="olex" data-gutter="xxs:xxsmall sm:xsmall md:xxsmall lg:xsmall xl:medium">
+                  <ol class="olex" data-gutter="xxs:small xl:medium">
                     <li class="olex__item" data-cols="xxs:2">
                       <span class="p-direction -normal" lang="en">1</span>
                     </li>
@@ -485,7 +482,7 @@
                             Reverse
                           </h4>
                   </div>
-                  <ol class="olex" data-gutter="xxs:xxsmall sm:xsmall md:xxsmall lg:xsmall xl:medium" data-dir="min:reverse">
+                  <ol class="olex" data-gutter="xxs:small xl:medium" data-dir="min:reverse">
                     <li class="olex__item" data-cols="xxs:2">
                       <span class="p-direction -reverse" lang="en">1</span>
                     </li>
@@ -601,7 +598,7 @@
         <!-- /.p-direction__photo -->
         <div class="p-content">
           <div class="l-spacer" data-space="min:smallTop">
-            <p class="p-direction__text">さぁ、あなたも自分の<span class="u-wbr -md"></span><em class="em">CSSグリッドシステム</em>を作ろう。</p>
+            <p class="p-direction__text p-animate js-text-Animate" lang="en">さぁ、あなたも自分のCSSグリッドシステムを作ろう。</p>
           </div>
           <!-- /.l-spacer -->
         </div>
@@ -614,7 +611,7 @@
     </section>
   </main>
   <footer class="p-footer -bgBlack">
-    <div class="l-spacer" data-space="min:smallBottom">
+    <div class="l-spacer" data-space="min:largeBottom">
       <div class="l-container">
         <div class="olex" data-align="min:center md:justify md:bottom">
           <div class="olex__item" data-cols="min:12 md:6" data-align="min:center md:start">
@@ -626,7 +623,7 @@
               <div class="olex">
                 <div class="l-content__inner">
                   <address class="p-footer__address" lang="en"><a href="mailto:olex@css.com" class="p-footer__address-mail">Follow Me</a></address>
-                  <ul class="olex" data-align="min:center" data-gutter="min:xsmall">
+                  <ul class="olex" data-align="min:center" data-gutter="min:xsmall lg:medium">
                     <li class="olex__item">
                       <a href="#" class="p-footer__social">
                         <img src="assets/img/icon/sns/twitter.png" srcset="assets/img/icon/sns/twitter.png, assets/img/icon/sns/twitter@2x.png 2x" alt="twitterのロゴ" width="24" height="24">
@@ -642,7 +639,7 @@
                 </div>
                 <!-- /.l-content__inner -->
               </div>
-              <div class="l-spacer" data-space="min:smallTop md:minTop">
+              <div class="l-spacer" data-space="min:mediumTop">
                 <p class="p-footer__copy"><small lang="en">&copy; 2021 Shibata Hironori</small></p>
               </div>
               <!-- /.l-spacer -->

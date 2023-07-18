@@ -2,7 +2,8 @@
 @use "sass:math";
 @use "../../../global" as *;
 
-.p-content__title {
+// heading
+.p-animate {
   & .char {
     opacity: 0;
   }
@@ -10,12 +11,11 @@
   &.is-animate {
     & .char {
       display: inline-block;
-      @include animation($name: heading-kf,
+      @include animation($name: text-kf,
         $duration: 0.4s,
-        $timing-function: ease-in-out,
         $fill-mode: both);
 
-      @for $i from 1 through 9 {
+      @for $i from 1 through 26 {
         &:nth-child(#{$i}) {
           animation-delay: $i * 0.08s;
         }
@@ -24,8 +24,30 @@
   }
 }
 
-// title-kf
-@keyframes heading-kf {
+// // last-copy
+// .p-direction__text {
+//   & .char {
+//     opacity: 0;
+//   }
+
+//   &.is-animate {
+//     & .char {
+//       display: inline-block;
+//       @include animation($name: text-kf,
+//         $duration: 0.4s,
+//         $fill-mode: both);
+
+//       @for $i from 1 through 26 {
+//         &:nth-child(#{$i}) {
+//           animation-delay: $i * 0.08s;
+//         }
+//       }
+//     }
+//   }
+// }
+
+// text-kf
+@keyframes text-kf {
   0% {
     opacity: 0;
     transform: translateY(-7%); // もとある位置から上に50%ずれた状態

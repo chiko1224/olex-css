@@ -7,20 +7,16 @@
 
   &__title.is-inview {
 
-    // 上からフェードイン
+    // rightからフェードイン
     & .char {
-      // 半角スペースを開けてるから子要素の指定になる
-      display: inline-block; // translateが無視されてしまう
-      // transformはインライン要素では効かない
-      @include animation($name: title-kf, //keyframesの名前を入れる
-        $duration: 0.7s, // アニメーションの間隔
-        $timing-function: ease-in-out,
-        $fill-mode: both // アニメーションの状態を維持する
-      );
+      display: inline-block;
+      @include animation($name: title-kf,
+        $duration: 0.5s,
+        $fill-mode: both);
 
       @for $i from 1 through 11 {
         &:nth-child(#{$i}) {
-          animation-delay: $i * 0.08s;
+          animation-delay: $i * 0.12s;
         }
       }
     }
@@ -28,7 +24,7 @@
 
   &__lead {
     opacity: 0;
-    animation: read-kf 1.2s ease-in 0.7s forwards;
+    animation: read-kf 1.2s ease-in 0.5s forwards;
   }
 }
 
@@ -37,13 +33,13 @@
 
   // 初めの状態
   0% {
-    opacity: 0; // 文字列が表示されていない状態にする
-    transform: translateY(-40%); // もとある位置から上に50%ずれた状態
+    opacity: 0;
+    transform: translateX(70%);
   }
 
   100% {
     opacity: 1;
-    transform: translateY(0); // 上から下の場所に降りてくる
+    transform: translateX(0);
   }
 }
 

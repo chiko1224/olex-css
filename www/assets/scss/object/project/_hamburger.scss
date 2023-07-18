@@ -11,11 +11,12 @@
   z-index: 10;
   width: 40px;
   height: 40px;
-  background-color: $black;
-  border: 2px solid $white;
+  background-color: $black; // 白
+  border: 2px solid $white; // 黒
 
   &:hover {
-    background-color: $white;
+    mix-blend-mode: normal;
+    // background-color: $white; // 黒
   }
 
 
@@ -29,13 +30,12 @@
     width: 18px;
     height: 2px;
     margin: auto;
-    background-color: $white;
-    transition: background-color 0.3s ease-in-out 0.3s;
+    background-color: $white; // 黒
+    transition: background-color 0.3s ease-in-out 0.1s;
 
     &:hover {
-      background-color: $black;
+      background-color: $black; // 白
     }
-
 
 
     &::before,
@@ -64,19 +64,23 @@
 
 // hamburger
 .is-active-btn.is-active-hamburger .p-hamburger__btn-line {
-  background-color: transparent;
+  background-color: inherit;
 
   &::before,
   &::after {
-    background-color: $white;
+    background-color: $white; // 黒
+
+    &:hover {
+      background-color: $black; // 白
+    }
   }
 
   &::before {
-    animation: active-overLine 0.8s ease-in-out forwards;
+    animation: active-overLine 0.5s ease-in-out forwards;
   }
 
   &::after {
-    animation: active-underLine 0.8s ease-in-out forwards;
+    animation: active-underLine 0.5s ease-in-out forwards;
   }
 }
 
@@ -119,11 +123,11 @@
 .is-active-btn .p-hamburger__btn-line {
 
   &::before {
-    animation: overLine 0.85s ease-in-out forwards;
+    animation: overLine 0.6s ease-in-out forwards;
   }
 
   &::after {
-    animation: underLine 0.85s ease-in-out forwards;
+    animation: underLine 0.6s ease-in-out forwards;
   }
 }
 

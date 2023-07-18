@@ -9,14 +9,8 @@
   display: block;
 }
 
-@include mq(md) {
-  .u-wbr.-md {
-    display: inline;
-  }
-}
-
 @include mq(lg) {
   .u-wbr.-lg {
-    display: inline;
+    display: block;
   }
 }
