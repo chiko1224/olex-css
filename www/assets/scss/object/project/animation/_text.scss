@@ -9,52 +9,61 @@
   }
 
   &.is-animate {
+
+    // heading
     & .char {
       display: inline-block;
       @include animation($name: text-kf,
-        $duration: 0.4s,
+        $duration: 0.2s,
+        $timing-function: liner,
         $fill-mode: both);
 
-      @for $i from 1 through 26 {
+      @for $i from 1 through 9 {
         &:nth-child(#{$i}) {
-          animation-delay: $i * 0.08s;
+          animation-delay: $i * 0.09s;
+        }
+      }
+    }
+
+    // last-copy
+    &.-copy {
+      & .char {
+        display: inline-block;
+        @include animation($name: copy-kf,
+          $duration: 0.4s,
+          $fill-mode: both);
+
+        @for $i from 1 through 27 {
+          &:nth-child(#{$i}) {
+            animation-delay: $i * 0.08s;
+          }
         }
       }
     }
   }
 }
 
-// // last-copy
-// .p-direction__text {
-//   & .char {
-//     opacity: 0;
-//   }
-
-//   &.is-animate {
-//     & .char {
-//       display: inline-block;
-//       @include animation($name: text-kf,
-//         $duration: 0.4s,
-//         $fill-mode: both);
-
-//       @for $i from 1 through 26 {
-//         &:nth-child(#{$i}) {
-//           animation-delay: $i * 0.08s;
-//         }
-//       }
-//     }
-//   }
-// }
-
 // text-kf
 @keyframes text-kf {
   0% {
     opacity: 0;
-    transform: translateY(-7%); // もとある位置から上に50%ずれた状態
+    transform: scale(0, 0);
   }
 
   100% {
     opacity: 1;
-    transform: translateY(0); // 上から下の場所に降りてくる
+    transform: scale(1, 1);
+  }
+}
+
+@keyframes copy-kf {
+  0% {
+    opacity: 0;
+    transform: translateY(-7%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

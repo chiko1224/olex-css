@@ -50,11 +50,11 @@ window.onload = function () {
   title.classList.add('is-inview');
 }
 
-// headingにclassを追加する
+// scrollして画面に現れたらanimation始まる
 window.addEventListener('scroll', function () {
 
-  var targets = document.querySelectorAll(".js-text-Animate");
-
+  var targets = document.querySelectorAll(".js-sceoll");
+  // 画面に現れたらclassを追加する
   for (var i = 0; i < targets.length; i++) {
     target = targets[i].getBoundingClientRect();
 
@@ -68,21 +68,22 @@ window.addEventListener('scroll', function () {
 });
 
 // headingを一文字ずつ分割してspanで包む
-var el = document.querySelectorAll('.js-text-Animate');
-// エスケープ
-function h(str) {
-  return String(str).replace(/&/g, "&amp;")
-    .replace(/"/g, "&quot;")
-    .replace(/</g, "&lt;")
-    .replace(/>/g, "&gt;")
-    .replace(/'/g, " &#39;")
-}
+var elements = document.querySelectorAll('.js-sprit');
+// // エスケープ
+// function h(str) {
+//   return String(str).replace(/&/g, "&amp;")
+//     .replace(/"/g, "&quot;")
+//     .replace(/</g, "&lt;")
+//     .replace(/>/g, "&gt;")
+//     .replace(/'/g, " &#39;")
+// }
 
-el.forEach(function (e) {
-  var str = e.textContent;
+elements.forEach(function (el) {
+  var str = el.textContent;
   var concatStr = '';
   for (let i = 0; i < str.length; i++) {
     concatStr = concatStr + '<span class="char">' + str[i] + '</span>';
   }
-  e.innerHTML = concatStr;
+  el.innerHTML = concatStr;
+  // el.SetHTML = concatStr;
 });

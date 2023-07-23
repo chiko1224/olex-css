@@ -6,7 +6,7 @@
 // -----------------
 .p-hero {
   &__title {
-    font-size: pxToRem(60);
+    font-size: pxToRem(46);
     letter-spacing: .04em;
     line-height: calc(54 / 44);
   }
@@ -38,6 +38,14 @@
     width: 100%;
     height: auto;
     filter: grayscale(100%);
+  }
+}
+
+@include mq(sm) {
+  .p-hero {
+    &__title {
+      font-size: pxToRem(60);
+    }
   }
 }
 
@@ -75,9 +83,7 @@
     }
 
     &__lead {
-      width: pxToRem(420);
-      padding: pxToRem(64) pxToRem(24) pxToRem(48) 0;
-      padding-right: pxToRem(24);
+      padding: pxToRem(64) pxToRem(28) pxToRem(48) 0;
     }
 
     &__text-area {

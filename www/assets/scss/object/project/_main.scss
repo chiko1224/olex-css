@@ -125,7 +125,7 @@ body {
   &__photo {
     position: relative;
     z-index: 3;
-    margin-top: -34px;
+    margin-top: -96px;
   }
 
   &__text {
@@ -137,19 +137,28 @@ body {
   }
 }
 
+@include mq(sm) {
+  .p-aligment {
+    height: pxToRem(114);
+  }
+}
+
 @include mq(md) {
   .p-contents {
-    // 半分グレイ
-    // &.-bgHarfGray::after {
-    //   content: "";
-    //   position: absolute;
-    //   z-index: -1;
-    //   top: 0;
-    //   right: 0;
-    //   bottom: 0;
-    //   width: 50%;
-    //   background-color: $gray;
-    // }
+    &.-overview {
+
+
+      &.-bgHarfGray::after {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 50%;
+        background-color: $gray;
+      }
+    }
   }
 
   .p-content {
@@ -180,11 +189,19 @@ body {
     }
   }
 
-  // .p-direction {
-  //   &__photo {
-  //     margin-top: -10px;
-  //   }
-  // }
+  .p-aligment {
+    height: pxToRem(162);
+
+    &__item.-hr {
+      padding: pxToRem(50) pxToRem(10);
+    }
+  }
+
+  .p-direction {
+    &__photo {
+      margin-top: -64px;
+    }
+  }
 }
 
 @include mq(lg) {
@@ -208,11 +225,6 @@ body {
     &__text {
       font-size: pxToRem(28);
     }
-
-    &__photo {
-      margin-top: -24px;
-    }
-
   }
 }
 
@@ -220,7 +232,7 @@ body {
   .p-contents {
     &.-overview {
       width: calc(.3965 * 100vw);
-      height: 620px;
+      height: 598px;
       margin-right: 0;
       margin-left: min(-5vw, calc(600px - 50vw));
     }
@@ -237,13 +249,12 @@ body {
 
       & .p-content__title-sub {
         position: absolute;
-        top: 120px;
         left: 0;
       }
 
       & .p-content__text-sub {
         position: absolute;
-        top: 220px;
+        // top: 220px;
         left: 0;
       }
     }
@@ -282,13 +293,17 @@ body {
     font-size: pxToRem(12);
 
     &__item.-hr {
-      padding: pxToRem(66) pxToRem(10);
+      padding: pxToRem(58) pxToRem(10);
     }
   }
 
   .p-direction {
     &__text {
       font-size: pxToRem(32);
+    }
+
+    &__photo {
+      margin-top: -48px;
     }
   }
 }

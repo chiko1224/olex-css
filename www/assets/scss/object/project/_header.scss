@@ -74,7 +74,7 @@
 @include mq(lg) {
   .p-header {
     &__content {
-      margin: pxToRem(48) 0 pxToRem(40);
+      margin: pxToRem(40) 0;
     }
 
     &__logo {
@@ -84,7 +84,6 @@
     &__nav-list {
       flex-direction: row;
       position: static;
-      // margin-right: pxToRem(-12);
       padding-top: 0;
       background-color: transparent;
       opacity: 1;
@@ -104,6 +103,14 @@
       font-size: pxToRem(32);
     }
 
+    &__nav-link {
+      font-size: pxToRem(14);
+    }
+  }
+}
+
+@include mq(xl) {
+  .p-header {
     &__nav-link {
       font-size: pxToRem(16);
     }

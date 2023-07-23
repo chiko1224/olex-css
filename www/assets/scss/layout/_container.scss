@@ -14,12 +14,12 @@ container
 }
 
 .l-container[data-enabled~="xxs"] {
-  width: 85%;
+  width: 87.5%;
   max-width: $contentWidth;
   margin: 0 auto;
 }
 
-@include mq(lg) {
+@include mq(xl) {
   .l-container[data-enabled~="xl"] {
     width: 87.5%;
     max-width: $contentWidth;

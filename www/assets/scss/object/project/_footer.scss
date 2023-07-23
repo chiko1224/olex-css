@@ -6,8 +6,8 @@
 // -----------------
 
 .p-footer {
-  margin-top: -350px;
-  padding-top: 350px;
+  margin-top: -320px;
+  padding-top: 320px;
   background-color: $darkGray;
   font-weight: bold;
   letter-spacing: .04em;
@@ -47,28 +47,21 @@
   }
 }
 
-@include mq(xs) {
-  .p-footer {
-    margin-top: -370px;
-    padding-top: 370px;
-  }
-}
-
 @include mq(sm) {
   .p-footer {
-    margin-top: -390px;
-    padding-top: 390px;
+    margin-top: -376px;
+    padding-top: 376px;
   }
 }
 
 @include mq(md) {
   .p-footer {
-    margin-top: -450px;
-    padding-top: 450px;
+    margin-top: -380px;
+    padding-top: 380px;
 
     &__address {
       margin-right: 1rem;
-      padding: pxToRem(4) 0;
+      padding-bottom: 0;
     }
 
     &__copy {
@@ -79,8 +72,8 @@
 
 @include mq(lg) {
   .p-footer {
-    margin-top: -550px;
-    padding-top: 550px;
+    margin-top: -540px;
+    padding-top: 540px;
 
     &__logo {
       font-size: pxToRem(48);
@@ -95,7 +88,7 @@
 
 @include mq(xl) {
   .p-footer {
-    margin-top: -750px;
-    padding-top: 750px;
+    margin-top: -700px;
+    padding-top: 700px;
   }
 }

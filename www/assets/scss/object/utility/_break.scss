@@ -9,7 +9,25 @@
   display: block;
 }
 
+@include mq(sm) {
+  .u-wbr.-sm {
+    display: inline;
+  }
+}
+
+@include mq(md) {
+  .u-wbr.-md {
+    display: inline;
+  }
+}
+
 @include mq(lg) {
+  .u-wbr.-lg {
+    display: inline;
+  }
+}
+
+@include mq(xl) {
   .u-wbr.-lg {
     display: block;
   }
