@@ -1,9 +1,12 @@
+// ローディング
+//
+
 //hambuger-button
 // 要素の取得
-const btn = document.querySelector('.js-btn');
-const drawer = document.querySelector('.js-drawer');
-const header = document.querySelector('.js-header');
-const links = document.querySelectorAll('.p-header__nav-item>a[href^="#"]');
+var btn = document.querySelector('.js-btn');
+var drawer = document.querySelector('.js-drawer');
+var header = document.querySelector('.js-header');
+var links = document.querySelectorAll('.p-header__nav-item>a[href^="#"]');
 // イベントの処理
 // ボタン自身にclassを追加
 btn.addEventListener('click', function () {
@@ -32,7 +35,7 @@ btn.addEventListener('click', function () {
   }
 });
 
-// nav-linkをクリックするとdrawerが閉じてリンクに飛ぶ
+// nav-linkをクリックするとdrawerが閉じてページ内リンクに飛ぶ
 for (var i = 0; i < links.length; i++) {
   var l = links[i];
   l.addEventListener('click', function () {
@@ -42,24 +45,24 @@ for (var i = 0; i < links.length; i++) {
 };
 
 
-// animation
-
+// text-animation
 // title
 window.onload = function () {
   var title = document.querySelector('.p-hero__title');
+  var loading = document.querySelector('.p-loading');
   title.classList.add('is-inview');
+  loading.classList.add('hidden');
 }
 
 // scrollして画面に現れたらanimation始まる
 window.addEventListener('scroll', function () {
-
   var targets = document.querySelectorAll(".js-sceoll");
   // 画面に現れたらclassを追加する
   for (var i = 0; i < targets.length; i++) {
     target = targets[i].getBoundingClientRect();
 
     var elTop = Math.floor(target.top);
-    var h = Math.floor(window.innerHeight * 0.97);
+    var h = Math.floor(window.innerHeight * 0.8);
 
     if (h > elTop) {
       targets[i].classList.add('is-animate');
@@ -69,20 +72,12 @@ window.addEventListener('scroll', function () {
 
 // headingを一文字ずつ分割してspanで包む
 var elements = document.querySelectorAll('.js-sprit');
-// // エスケープ
-// function h(str) {
-//   return String(str).replace(/&/g, "&amp;")
-//     .replace(/"/g, "&quot;")
-//     .replace(/</g, "&lt;")
-//     .replace(/>/g, "&gt;")
-//     .replace(/'/g, " &#39;")
-// }
 
 elements.forEach(function (el) {
   var str = el.textContent;
   var concatStr = '';
   for (let i = 0; i < str.length; i++) {
-    concatStr = concatStr + '<span class="char">' + str[i] + '</span>';
+    concatStr = concatStr + '<span>' + str[i] + '</span>';
   }
   el.innerHTML = concatStr;
   // el.SetHTML = concatStr;

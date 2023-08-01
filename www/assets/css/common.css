@@ -4600,10 +4600,10 @@ body .-white {
     opacity: 1;
   }
 }
-.p-animate .char {
+.p-animate span {
   opacity: 0;
 }
-.p-animate.is-animate .char {
+.p-animate.is-animate span {
   display: inline-block;
   -webkit-animation-name: text-kf;
           animation-name: text-kf;
@@ -4620,43 +4620,43 @@ body .-white {
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both;
 }
-.p-animate.is-animate .char:nth-child(1) {
+.p-animate.is-animate span:nth-child(1) {
   -webkit-animation-delay: 0.09s;
           animation-delay: 0.09s;
 }
-.p-animate.is-animate .char:nth-child(2) {
+.p-animate.is-animate span:nth-child(2) {
   -webkit-animation-delay: 0.18s;
           animation-delay: 0.18s;
 }
-.p-animate.is-animate .char:nth-child(3) {
+.p-animate.is-animate span:nth-child(3) {
   -webkit-animation-delay: 0.27s;
           animation-delay: 0.27s;
 }
-.p-animate.is-animate .char:nth-child(4) {
+.p-animate.is-animate span:nth-child(4) {
   -webkit-animation-delay: 0.36s;
           animation-delay: 0.36s;
 }
-.p-animate.is-animate .char:nth-child(5) {
+.p-animate.is-animate span:nth-child(5) {
   -webkit-animation-delay: 0.45s;
           animation-delay: 0.45s;
 }
-.p-animate.is-animate .char:nth-child(6) {
+.p-animate.is-animate span:nth-child(6) {
   -webkit-animation-delay: 0.54s;
           animation-delay: 0.54s;
 }
-.p-animate.is-animate .char:nth-child(7) {
+.p-animate.is-animate span:nth-child(7) {
   -webkit-animation-delay: 0.63s;
           animation-delay: 0.63s;
 }
-.p-animate.is-animate .char:nth-child(8) {
+.p-animate.is-animate span:nth-child(8) {
   -webkit-animation-delay: 0.72s;
           animation-delay: 0.72s;
 }
-.p-animate.is-animate .char:nth-child(9) {
+.p-animate.is-animate span:nth-child(9) {
   -webkit-animation-delay: 0.81s;
           animation-delay: 0.81s;
 }
-.p-animate.is-animate.-copy .char {
+.p-animate.is-animate.-copy span {
   display: inline-block;
   -webkit-animation-name: copy-kf;
           animation-name: copy-kf;
@@ -4673,111 +4673,111 @@ body .-white {
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both;
 }
-.p-animate.is-animate.-copy .char:nth-child(1) {
+.p-animate.is-animate.-copy span:nth-child(1) {
   -webkit-animation-delay: 0.08s;
           animation-delay: 0.08s;
 }
-.p-animate.is-animate.-copy .char:nth-child(2) {
+.p-animate.is-animate.-copy span:nth-child(2) {
   -webkit-animation-delay: 0.16s;
           animation-delay: 0.16s;
 }
-.p-animate.is-animate.-copy .char:nth-child(3) {
+.p-animate.is-animate.-copy span:nth-child(3) {
   -webkit-animation-delay: 0.24s;
           animation-delay: 0.24s;
 }
-.p-animate.is-animate.-copy .char:nth-child(4) {
+.p-animate.is-animate.-copy span:nth-child(4) {
   -webkit-animation-delay: 0.32s;
           animation-delay: 0.32s;
 }
-.p-animate.is-animate.-copy .char:nth-child(5) {
+.p-animate.is-animate.-copy span:nth-child(5) {
   -webkit-animation-delay: 0.4s;
           animation-delay: 0.4s;
 }
-.p-animate.is-animate.-copy .char:nth-child(6) {
+.p-animate.is-animate.-copy span:nth-child(6) {
   -webkit-animation-delay: 0.48s;
           animation-delay: 0.48s;
 }
-.p-animate.is-animate.-copy .char:nth-child(7) {
+.p-animate.is-animate.-copy span:nth-child(7) {
   -webkit-animation-delay: 0.56s;
           animation-delay: 0.56s;
 }
-.p-animate.is-animate.-copy .char:nth-child(8) {
+.p-animate.is-animate.-copy span:nth-child(8) {
   -webkit-animation-delay: 0.64s;
           animation-delay: 0.64s;
 }
-.p-animate.is-animate.-copy .char:nth-child(9) {
+.p-animate.is-animate.-copy span:nth-child(9) {
   -webkit-animation-delay: 0.72s;
           animation-delay: 0.72s;
 }
-.p-animate.is-animate.-copy .char:nth-child(10) {
+.p-animate.is-animate.-copy span:nth-child(10) {
   -webkit-animation-delay: 0.8s;
           animation-delay: 0.8s;
 }
-.p-animate.is-animate.-copy .char:nth-child(11) {
+.p-animate.is-animate.-copy span:nth-child(11) {
   -webkit-animation-delay: 0.88s;
           animation-delay: 0.88s;
 }
-.p-animate.is-animate.-copy .char:nth-child(12) {
+.p-animate.is-animate.-copy span:nth-child(12) {
   -webkit-animation-delay: 0.96s;
           animation-delay: 0.96s;
 }
-.p-animate.is-animate.-copy .char:nth-child(13) {
+.p-animate.is-animate.-copy span:nth-child(13) {
   -webkit-animation-delay: 1.04s;
           animation-delay: 1.04s;
 }
-.p-animate.is-animate.-copy .char:nth-child(14) {
+.p-animate.is-animate.-copy span:nth-child(14) {
   -webkit-animation-delay: 1.12s;
           animation-delay: 1.12s;
 }
-.p-animate.is-animate.-copy .char:nth-child(15) {
+.p-animate.is-animate.-copy span:nth-child(15) {
   -webkit-animation-delay: 1.2s;
           animation-delay: 1.2s;
 }
-.p-animate.is-animate.-copy .char:nth-child(16) {
+.p-animate.is-animate.-copy span:nth-child(16) {
   -webkit-animation-delay: 1.28s;
           animation-delay: 1.28s;
 }
-.p-animate.is-animate.-copy .char:nth-child(17) {
+.p-animate.is-animate.-copy span:nth-child(17) {
   -webkit-animation-delay: 1.36s;
           animation-delay: 1.36s;
 }
-.p-animate.is-animate.-copy .char:nth-child(18) {
+.p-animate.is-animate.-copy span:nth-child(18) {
   -webkit-animation-delay: 1.44s;
           animation-delay: 1.44s;
 }
-.p-animate.is-animate.-copy .char:nth-child(19) {
+.p-animate.is-animate.-copy span:nth-child(19) {
   -webkit-animation-delay: 1.52s;
           animation-delay: 1.52s;
 }
-.p-animate.is-animate.-copy .char:nth-child(20) {
+.p-animate.is-animate.-copy span:nth-child(20) {
   -webkit-animation-delay: 1.6s;
           animation-delay: 1.6s;
 }
-.p-animate.is-animate.-copy .char:nth-child(21) {
+.p-animate.is-animate.-copy span:nth-child(21) {
   -webkit-animation-delay: 1.68s;
           animation-delay: 1.68s;
 }
-.p-animate.is-animate.-copy .char:nth-child(22) {
+.p-animate.is-animate.-copy span:nth-child(22) {
   -webkit-animation-delay: 1.76s;
           animation-delay: 1.76s;
 }
-.p-animate.is-animate.-copy .char:nth-child(23) {
+.p-animate.is-animate.-copy span:nth-child(23) {
   -webkit-animation-delay: 1.84s;
           animation-delay: 1.84s;
 }
-.p-animate.is-animate.-copy .char:nth-child(24) {
+.p-animate.is-animate.-copy span:nth-child(24) {
   -webkit-animation-delay: 1.92s;
           animation-delay: 1.92s;
 }
-.p-animate.is-animate.-copy .char:nth-child(25) {
+.p-animate.is-animate.-copy span:nth-child(25) {
   -webkit-animation-delay: 2s;
           animation-delay: 2s;
 }
-.p-animate.is-animate.-copy .char:nth-child(26) {
+.p-animate.is-animate.-copy span:nth-child(26) {
   -webkit-animation-delay: 2.08s;
           animation-delay: 2.08s;
 }
-.p-animate.is-animate.-copy .char:nth-child(27) {
+.p-animate.is-animate.-copy span:nth-child(27) {
   -webkit-animation-delay: 2.16s;
           animation-delay: 2.16s;
 }
@@ -4829,6 +4829,110 @@ body .-white {
     opacity: 1;
     -webkit-transform: translateY(0);
             transform: translateY(0);
+  }
+}
+.p-loading {
+  position: fixed;
+  z-index: 20;
+  width: 100vw;
+  height: 100vh;
+  background-color: #fafafa;
+}
+.p-loading.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+.p-loading_animate {
+  color: #101010;
+  font-size: 2.5rem;
+  letter-spacing: 0.04em;
+  font-weight: 700;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+.p-loading_animate span {
+  display: inline-block;
+  opacity: 0;
+  -webkit-animation-name: loading-kf;
+          animation-name: loading-kf;
+  -webkit-animation-duration: 2.5s;
+          animation-duration: 2.5s;
+  -webkit-animation-timing-function: liner;
+          animation-timing-function: liner;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+.p-loading_animate span:nth-child(1) {
+  -webkit-animation-delay: 0.05s;
+          animation-delay: 0.05s;
+}
+.p-loading_animate span:nth-child(2) {
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s;
+}
+.p-loading_animate span:nth-child(3) {
+  -webkit-animation-delay: 0.15s;
+          animation-delay: 0.15s;
+}
+.p-loading_animate span:nth-child(4) {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+.p-loading_animate span:nth-child(5) {
+  -webkit-animation-delay: 0.25s;
+          animation-delay: 0.25s;
+}
+.p-loading_animate span:nth-child(6) {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+}
+.p-loading_animate span:nth-child(7) {
+  -webkit-animation-delay: 0.35s;
+          animation-delay: 0.35s;
+}
+.p-loading_animate span:nth-child(8) {
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+}
+
+@-webkit-keyframes loading-kf {
+  0% {
+    -webkit-transform: translateX(-10%);
+            transform: translateX(-10%);
+    opacity: 0;
+  }
+  25%, 65% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  80%, 100% {
+    opacity: 0;
+  }
+}
+
+@keyframes loading-kf {
+  0% {
+    -webkit-transform: translateX(-10%);
+            transform: translateX(-10%);
+    opacity: 0;
+  }
+  25%, 65% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  80%, 100% {
+    opacity: 0;
   }
 }
 /*=============================
