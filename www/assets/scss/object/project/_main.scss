@@ -66,6 +66,7 @@ body {
     &-sub {
       font-size: pxToRem(14);
       font-weight: bold;
+      letter-spacing: .04em;
       line-height: calc(28 / 14);
 
       &.-left {
@@ -120,20 +121,6 @@ body {
   &.-reverse {
     background-color: $whiteGray;
     font-size: 1rem;
-  }
-
-  &__photo {
-    position: relative;
-    z-index: 3;
-    margin-top: -96px;
-  }
-
-  &__text {
-    color: $white;
-    font-size: pxToRem(21);
-    font-weight: bold;
-    line-height: 2;
-    text-align: center;
   }
 }
 
@@ -196,13 +183,8 @@ body {
       padding: pxToRem(50) pxToRem(10);
     }
   }
-
-  .p-direction {
-    &__photo {
-      margin-top: -64px;
-    }
-  }
 }
+
 
 @include mq(lg) {
   .p-content {
@@ -221,11 +203,7 @@ body {
     }
   }
 
-  .p-direction {
-    &__text {
-      font-size: pxToRem(28);
-    }
-  }
+
 }
 
 @include mq(xl) {
@@ -282,7 +260,6 @@ body {
 
       &-sub {
         font-size: pxToRem(16);
-        letter-spacing: .04em;
         line-height: calc(32 / 16);
       }
     }

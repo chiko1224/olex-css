@@ -27,12 +27,9 @@
               <h2 class="screen-reader-text">サイトメニュー</h2>
               <div class="p-header__nav-btn">
                 <button type="button" class="p-hamburger__btn js-btn" aria-controls="header__nav" aria-expanded="false">
-                  <div class="p-hamburger__btn-inner">
-                    <span class="p-hamburger__btn-line">
-                      <span class="screen-reader-text">メニューを開閉する</span>
-                    </span>
-                  </div>
-                  <!-- /.p-hamburger__btn-inner -->
+                  <span class="p-hamburger__btn-line">
+                    <span class="screen-reader-text">メニューを開閉する</span>
+                  </span>
                 </button>
               </div>
               <!-- /.p-header-nav__btn -->
@@ -80,8 +77,17 @@
           <div class="olex">
             <div class="olex__item" data-cols="xxs:12 lg:6">
               <div class="p-hero__text-area">
-                <h2 class="p-hero__title" lang="en"><span class="char">O</span><span class="char">r</span><span class="char">e</span> <span class="char">n</span><span class="char">o</span><span class="u-wbr"></span><span><span class="char">F</span><span class="char">l</span><span class="char">e</span><span class="char">x</span><span class="char">i</span><span class="char">b</span><span class="char">l</span><span class="char">e</span> <span class="char">C</span><span class="char">S</span><span class="char">S</span></span><span class="u-wbr"></span><span><span class="char">G</span><span class="char">r</span><span class="char">i</span><span class="char">d</span> <span class="char">S</span><span class="char">y</span><span class="char">s</span><span class="char">t</span><span class="char">e</span><span class="char">m</span><span class="char">.</span></span></h2>
-                <p class="p-hero__lead" lang="en">
+                <h2 class="p-hero__title" lang="en">
+                  <span class="char">O</span><span class="char">r</span><span class="char">e</span>
+                  <span class="char">n</span><span class="char">o</span>
+                  <span class="u-wbr"><span class="char">F</span><span class="char">l</span><span class="char">e</span><span class="char">x</span><span class="char">i</span><span class="char">b</span><span class="char">l</span><span class="char">e</span>
+                  <span class="char">C</span><span class="char">S</span><span class="char">S</span>
+                  </span>
+                  <span class="u-wbr">
+                  <span class="char">G</span><span class="char">r</span><span class="char">i</span><span class="char">d</span>
+                  <span class="char">S</span><span class="char">y</span><span class="char">s</span><span class="char">t</span><span class="char">e</span><span class="char">m</span><span class="char">.</span></span>
+                </h2>
+                <p class="p-hero__lead">
                   <em class="em">俺流</em>のフレキシブルCSSグリッドシステム<em class="em">「Olex」</em>のデモページ。<br><em class="em">「Olex」</em>はFlexboxを利用した<span class="u-wbr -sm"></span>単なるグリッドシステムなので、<span class="u-wbr -lg"></span>
                   気になった方は、解説ページを参考に<span class="u-wbr -sm"></span>自分で作ってもらえたらと思います。
                 </p>
@@ -92,7 +98,7 @@
             <!-- /.olex__item -->
             <div class="olex__item" data-cols="xxs:12 lg:6">
               <div class="p-hero__bg">
-                <div class="olex l-container" data-enabled="xxs" data-align="min:center">
+                <div class="olex l-container" data-align="min:center">
                   <div class="olex__item">
                     <picture class="p-hero__photo">
                       <img src="assets/img/hero/01.jpg.webp" srcset="assets/img/hero/pc/01.jpg.webp, assets/img/hero/pc/01@2x.jpg.webp 2x" alt="" decoding="async">
@@ -126,9 +132,11 @@
         <div class="l-spacer" data-space="min:large xl:max">
           <div class="l-spacer" data-space="min:smallTop min:largeBottom xl:xxxsmallTop xl:maxBottom">
             <div class="l-spacer" data-space="min:xxsmallBottom xl:xsmallBottom">
-              <h3 id=" overview" class="p-content__title p-animate js-sceoll js-sprit" lang="en">Overview</h3>
+              <h3 id=" overview" class="p-content__title p-animate js-sceoll" lang="en">
+                <span>O</span><span>v</span><span>e</span><span>r</span><span>v</span><span>i</span><span>e</span><span>w</span>
+              </h3>
             </div>
-            <p class="p-content__text" lang="en">
+            <p class="p-content__text">
                 <em class="em">12カラム</em>を基準として<span class="u-wbr -md"></span>必要なカラム数を指定するグリッドシステム。<br>間隔を開けるも閉じるも、その大きさも選択できる。<br>位置揃えや順番の入れ替えも可能。<span class="u-wbr -md"></span>後は自分でカスタマイズして下さい。
               </p>
           </div>
@@ -143,7 +151,7 @@
                           <h4 class="p-content__title-sub -white" lang="en">Feature</h4>
                         </div>
                         <!-- /.l-spacer -->
-                        <p class="p-content__text-sub -white" lang="en"><em class="em">Flexbox</em>を利用したグリッドシステムで、単なる横並びや12カラムをベースとしたグリッドレイアウトも可能です。グリッド間のスペースにはborderを利用していて間隔の調整が容易にできます。もちろんこのページのレイアウトは<em class="em">「Olex.css」</em>を使っているので、詳しくはデベロッパーツールで。</p>
+                        <p class="p-content__text-sub -white"><em class="em">Flexbox</em>を利用したグリッドシステムで、単なる横並びや12カラムをベースとしたグリッドレイアウトも可能です。グリッド間のスペースにはborderを利用していて間隔の調整が容易にできます。もちろんこのページのレイアウトは<em class="em">「Olex.css」</em>を使っているので、詳しくはデベロッパーツールで。</p>
                       </div>
                       <!-- /.l-spacer -->
                     </div>
@@ -162,7 +170,7 @@
                   <div class="olex__item" data-cols="xxs:12 md:4 xl:4">
                     <dl class="p-card__body">
                       <dt lang="en"><img src="assets/img/icon/symbol/grid.png" srcset="assets/img/icon/symbol/grid.png, assets/img/icon/symbol/grid@2x.png 2x" alt=""><span class="p-card__item" lang="en">Grid</span></dt>
-                      <dd class="p-card__text" lang="en">
+                      <dd class="p-card__text">
                         12カラムを基準とした<span class="u-wbr"></span>グリッドシステム。
                       </dd>
                     </dl>
@@ -171,7 +179,7 @@
                   <div class="olex__item" data-cols="xxs:12 md:4 xl:4">
                     <dl class="p-card__body">
                       <dt lang="en"><img src="assets/img/icon/symbol/alignment.png" srcset="assets/img/icon/symbol/alignment.png, assets/img/icon/symbol/alignment@2x.png 2x" alt=""><span class="p-card__item" lang="en">Alignment</span></dt>
-                      <dd class="p-card__text" lang="en">
+                      <dd class="p-card__text">
                         各アイテムの位置を揃える<span class="u-wbr"></span>こともできる。
                       </dd>
                     </dl>
@@ -204,10 +212,12 @@
         <div class="l-container">
           <div class="l-spacer" data-space="xl:xxxsmallTop">
             <div class="l-spacer" data-space="min:xxsmallBottom xl:xsmallBottom">
-              <h3 id="grid" class="p-content__title p-animate js-sceoll js-sprit" lang="en">Grid</h3>
+              <h3 id="grid" class="p-content__title p-animate js-sceoll" lang="en">
+                <span>G</span><span>r</span><span>i</span><span>d</span>
+              </h3>
             </div>
             <!-- /.l-spacer -->
-            <p class="p-content__text" lang="en">
+            <p class="p-content__text">
               スマホは<em class="em">2列</em>PCは<em class="em">4列</em>なども<span class="u-wbr -sm"></span>属性値の付け替えでOK。<br>間隔を開けるも閉じるも、属性で調整。<br>間隔の大きさも拡張可能。
               </p>
           </div>
@@ -223,7 +233,7 @@
                     <div class="l-spacer" data-space="min:xxxsmallBottom md:largeTop xl:xxlargeTop xl:xsmallBottom">
                       <h4 class="p-content__title-sub" lang="en">Flexible</h4>
                     </div>
-                    <p class=" p-content__text-sub" lang="en">スマホ、タブレット、PCで異なるカラムのレイアウトも容易に対応できます。 12カラムをベースとして、必要なカラム数を<em class="em">カスタムデータ属性</em>で指定するだけでレイアウトが可能。</p>
+                    <p class="p-content__text-sub">スマホ、タブレット、PCで異なるカラムのレイアウトも容易に対応できます。 12カラムをベースとして、必要なカラム数を<em class="em">カスタムデータ属性</em>で指定するだけでレイアウトが可能。</p>
                   </div>
                 </div>
                 <div class="olex__item p-grid__body" data-cols="xxs:12 md:8">
@@ -290,7 +300,7 @@
                       <h4 class="p-content__title-sub" lang="en">Gutter</h4>
                     </div>
                     <!-- /.l-spacer -->
-                    <p class="p-content__text-sub" lang="en">各アイテム間のスペースも<em class="em">カスタムデータ属性</em>を指定するだけで、スペースの有無はもちろん、その大きさも選択できます。また、このスペースには border プロパティを使っているので、スペースのサイズを拡張するのも容易です。</p>
+                    <p class="p-content__text-sub">各アイテム間のスペースも<em class="em">カスタムデータ属性</em>を指定するだけで、スペースの有無はもちろん、その大きさも選択できます。また、このスペースには border プロパティを使っているので、スペースのサイズを拡張するのも容易です。</p>
                   </div>
                 </div>
                 <div class="olex__item" data-cols="xxs:12 md:8">
@@ -354,7 +364,9 @@
         <div class="l-container">
           <div class="l-spacer" data-space="xl:xxxsmallTop">
             <div class="l-spacer" data-space="min:xxsmallBottom xl:xsmallBottom">
-              <h3 id="alignment" class="p-content__title -white p-animate js-sceoll js-sprit" lang="en">Alignment</h3>
+              <h3 id="alignment" class="p-content__title -white p-animate js-sceoll" lang="en">
+                <span>A</span><span>l</span><span>i</span><span>g</span><span>n</span><span>m</span><span>e</span><span>n</span><span>t</span>
+              </h3>
             </div>
             <!-- /.l-spacer -->
             <p class="p-content__text -white">
@@ -366,39 +378,39 @@
           <div class="l-spacer" data-space="min:xxsmallTop min:largeBottom md:largeTop xl:max">
             <ul class="olex" data-gutter="min:xxsmall sm:xsmall md:medium">
               <li class="olex__item p-aligment" data-cols="xxs:4 xl:2" data-align="min:start">
-                <div class="p-aligment__item -hr" lang="en">
+                <div class="p-aligment__item -hr">
                   <img src="assets/img/icon/symbol/left.png" srcset="assets/img/icon/symbol/left.png, assets/img/icon/symbol/left@2x.png 2x" alt="左揃えを表示するシンボル" whidth="20" height="20">
-                  <br>Left
+                  <p lang="en">Left</p>
                 </div>
               </li>
               <li class="olex__item p-aligment" data-cols="xxs:4 xl:2" data-align="min:center">
                 <div class="p-aligment__item -hr" lang="en">
                   <img src="assets/img/icon/symbol/center.png" srcset="assets/img/icon/symbol/center.png, assets/img/icon/symbol/center@2x.png 2x" alt="中央揃えを表示するシンボル" whidth="20" height="20">
-                  <br>Center
+                  <p lang="en">Center</p>
                 </div>
               </li>
               <li class="olex__item p-aligment" data-cols="xxs:4 xl:2" data-align="min:end">
                 <div class="p-aligment__item -hr" lang="en">
                   <img src="assets/img/icon/symbol/right.png" srcset="assets/img/icon/symbol/right.png, assets/img/icon/symbol/right@2x.png 2x" alt="右揃えを表示するシンボル" whidth="20" height="20">
-                  <br>Right
+                  <p lang="en">Right</p>
                 </div>
               </li>
               <li class="olex__item p-aligment" data-cols="xxs:4 xl:2" data-align="min:top">
                 <div class="p-aligment__item" lang="en">
                   <img src="assets/img/icon/symbol/top.png" srcset="assets/img/icon/symbol/top.png, assets/img/icon/symbol/top@2x.png 2x" alt="上揃えを表示するシンボル" whidth="20" height="20">
-                  <br>Top
+                  <p lang="en">Top</p>
                 </div>
               </li>
               <li class="olex__item p-aligment" data-cols="xxs:4 xl:2" data-align="min:middle">
                 <div class="p-aligment__item" lang="en">
                   <img src="assets/img/icon/symbol/middle.png" srcset="assets/img/icon/symbol/middle.png, assets/img/icon/symbol/middle@2x.png 2x" alt="天地中央を表示するシンボル" whidth="20" height="20">
-                  <br>Middle
+                  <p lang="en">Middle</p>
                 </div>
               </li>
               <li class="olex__item p-aligment" data-cols="xxs:4 xl:2" data-align="min:bottom">
                 <div class="p-aligment__item" lang="en">
                   <img src="assets/img/icon/symbol/bottom.png" srcset="assets/img/icon/symbol/bottom.png, assets/img/icon/symbol/bottom@2x.png 2x" alt="下揃えを表示するシンボル" whidth="20" height="20">
-                  <br>Bottom
+                  <p lang="en">Bottom</p>
                 </div>
               </li>
             </ul>
@@ -413,20 +425,22 @@
       <div class="l-container">
         <div class="l-spacer" data-space="min:large xl:maxTop">
           <div class="l-spacer" data-space="min:xxsmallBottom xl:xsmallBottom">
-            <h3 id="direction" class="p-content__title p-animate js-sceoll js-sprit" lang="en">Direction</h3>
+            <h3 id="direction" class="p-content__title p-animate js-sceoll" lang="en">
+              <span>D</span><span>i</span><span>r</span><span>e</span><span>c</span><span>t</span><span>i</span><span>o</span><span>n</span>
+            </h3>
           </div>
           <!-- /.l-spacer -->
-          <p class="p-content__text" lang="en">
+          <p class="p-content__text">
               <em class="em">カラムの並び順</em>も変更可能。<br>カスタマイズ次第では、<span class="u-wbr -md"></span>個別に順番を入れ替えることだってできる。</p>
-          <div class="l-spacer" data-space="min:smallTop min:largeBottom xl:maxTop xl:xxlargeBottom">
+          <div class="l-spacer" data-space="min:smallTop min:maxBottom xl:maxTop">
             <div class="olex" data-gutter="min:xsmall md:small xl:medium">
               <div class="olex__item" data-cols="xxs:12 md:6">
                 <section class="p-content__direction">
                   <div class="l-spacer" data-space="min:minBottom xl:xxsmallBottom">
                     <h4 class="p-content__title-sub -left" lang="en">
-                            Normal
-                            <img src="assets/img/icon/symbol/arrow-right.png" srcset="assets/img/icon/symbol/arrow-right.png, assets/img/icon/symbol/arrow-right@2x.png 2x" alt="">
-                            </h4>
+                      Normal
+                      <img src="assets/img/icon/symbol/arrow-right.png" srcset="assets/img/icon/symbol/arrow-right.png, assets/img/icon/symbol/arrow-right@2x.png 2x" alt="">
+                    </h4>
                   </div>
                   <!-- /.l-spacer -->
                   <ol class="olex" data-gutter="xxs:xxsmall sm:xsmall lg:small xl:medium">
@@ -597,7 +611,14 @@
           <!-- /.l-spacer -->
         </div>
         <!-- /.l-spacer -->
-        <div class="p-direction__photo">
+      </div>
+      <!-- /.l-container -->
+    </section>
+  </main>
+  <footer class="p-footer -bgBlack">
+    <div class="l-spacer" data-space="min:mediumTop min:largeBottom md:xxlargeTop">
+      <div class="l-container">
+        <div class="p-footer__photo">
           <div class="olex" data-align="min:justify">
             <div class="olex__item" data-cols="xxs:2">
               <figure class="p-list__photo">
@@ -629,20 +650,18 @@
         </div>
         <!-- /.p-direction__photo -->
         <div class="p-content">
-          <div class="l-spacer" data-space="min:small xl:xxlarge">
-            <p class="p-direction__text p-animate -copy js-sceoll"><span class="char">さ</span><span class="char">ぁ</span><span class="char">、</span><span class="char">あ</span><span class="char">な</span><span class="char">た</span><span class="char">も</span><span class="char">自</span><span class="char">分</span><span class="char">の</span><span class="u-wbr -md"></span><span class="char">C</span><span class="char">S</span><span class="char">S</span><span class="char">グ</span><span class="char">リ</span><span class="char">ッ</span><span class="char">ド</span><span class="char">シ</span><span class="char">ス</span><span class="char">テ</span><span class="char">ム</span><span class="char">を</span><span class="char">作</span><span class="char">ろ</span><span class="char">う</span><span class="char">。</span></p>
+          <div class="l-spacer" data-space="min:smallTop xl:xxlargeTop">
+            <p class="p-footer__text p-animate -copy js-sceoll">
+              <span>さ</span><span>ぁ</span><span>、</span><span>あ</span><span>な</span><span>た</span><span>も</span><span>自</span><span>分</span><span>の</span><br class="sp-br"><span>C</span><span>S</span><span>S</span><span>グ</span><span>リ</span><span>ッ</span><span>ド</span><span>シ</span><span>ス</span><span>テ</span><span>ム</span><span>を</span><span>作</span><span>ろ</span><span>う</span><span>。</span>
+            </p>
           </div>
           <!-- /.l-spacer -->
         </div>
         <!-- /.p-content -->
-        <p class="c-btn__primary" lang="en"><a href="#" class="c-btn__primary-link">How to Make</a></p>
-      </div>
-      <!-- /.l-container -->
-    </section>
-  </main>
-  <footer class="p-footer -bgBlack">
-    <div class="l-spacer" data-space="min:mediumTop min:largeBottom md:xxlargeTop">
-      <div class="l-container">
+        <div class="l-spacer" data-space="min:small md:large xl:xxlarge">
+          <p class="c-btn__primary" lang="en"><a href="#" class="c-btn__primary-link">How to Make</a></p>
+        </div>
+        <!-- /.l-spacer -->
         <div class="olex" data-align="min:center md:justify md:bottom">
           <div class="olex__item" data-cols="min:12 md:6" data-align="min:center md:start">
             <p class="p-footer__logo" lang="en">Olex.css</p>

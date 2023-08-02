@@ -31,7 +31,6 @@
       @include animation($name: loading-kf,
         $duration: 2.5s,
         $timing-function: liner,
-        // $delay: 2s,
         $iteration-count: infinite,
         $fill-mode: forwards);
 
@@ -46,7 +45,7 @@
 
 @keyframes loading-kf {
   0% {
-    transform: translateX(-10%);
+    transform: translateY(-5%);
     opacity: 0;
   }
 
@@ -54,7 +53,7 @@
   25%,
   65% {
     opacity: 1;
-    transform: translateX(0);
+    transform: translateY(0);
   }
 
   80%,

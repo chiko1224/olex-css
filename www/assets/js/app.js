@@ -71,14 +71,14 @@ window.addEventListener('scroll', function () {
 });
 
 // headingを一文字ずつ分割してspanで包む
-var elements = document.querySelectorAll('.js-sprit');
+// var elements = document.querySelectorAll('.js-sprit');
 
-elements.forEach(function (el) {
-  var str = el.textContent;
-  var concatStr = '';
-  for (let i = 0; i < str.length; i++) {
-    concatStr = concatStr + '<span>' + str[i] + '</span>';
-  }
-  el.innerHTML = concatStr;
-  // el.SetHTML = concatStr;
-});
+// elements.forEach(function (el) {
+//   var str = el.textContent;
+//   var concatStr = '';
+//   for (let i = 0; i < str.length; i++) {
+//     concatStr = concatStr + '<span>' + str[i] + '</span>';
+//   }
+//   el.innerHTML = concatStr;
+//   // el.SetHTML = concatStr;
+// });

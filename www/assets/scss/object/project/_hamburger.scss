@@ -9,14 +9,19 @@
   position: relative;
   display: inline-block;
   z-index: 10;
+  padding: 0;
+  border: 0;
   width: 40px;
   height: 40px;
   background-color: $black; // 白
   border: 2px solid $white; // 黒
+  box-shadow: 0 0 3rem transparent;
+  transition: box-shadow 0.5s ease-in-out;
 
-  &:hover {
-    mix-blend-mode: normal;
-    // background-color: $white; // 黒
+  &:hover,
+  &:focus {
+    box-shadow: 0 0 .5rem rgba(230, 230, 230, 0.3);
+    background-color: $white; // 黒
   }
 
 
@@ -31,12 +36,6 @@
     height: 2px;
     margin: auto;
     background-color: $white; // 黒
-    transition: background-color 0.3s ease-in-out 0.1s;
-
-    &:hover {
-      background-color: $black; // 白
-    }
-
 
     &::before,
     &::after {
@@ -60,31 +59,42 @@
       top: 5px;
     }
   }
+
+  &:hover>.p-hamburger__btn-line,
+  &:hover>.p-hamburger__btn-line::before,
+  &:hover>.p-hamburger__btn-line::after {
+    background-color: $black; // 白
+  }
+
+
 }
 
 // hamburger
-.is-active-btn.is-active-hamburger .p-hamburger__btn-line {
-  background-color: inherit;
+.is-active-btn.is-active-hamburger {
+  .p-hamburger__btn-line {
+    background-color: inherit;
 
-  &::before,
-  &::after {
-    background-color: $white; // 黒
+    &::before,
+    &::after {
+      background-color: $white; // 黒
+    }
 
-    &:hover {
-      background-color: $black; // 白
+    &::before {
+      animation: active-topLine 0.5s ease-in-out forwards;
+    }
+
+    &::after {
+      animation: active-bottomLine 0.5s ease-in-out forwards;
     }
   }
 
-  &::before {
-    animation: active-overLine 0.5s ease-in-out forwards;
-  }
-
-  &::after {
-    animation: active-underLine 0.5s ease-in-out forwards;
+  &:hover>.p-hamburger__btn-line::before,
+  &:hover>.p-hamburger__btn-line::after {
+    background-color: $black;
   }
 }
 
-@keyframes active-overLine {
+@keyframes active-topLine {
 
   0% {
     transform: rotate(0);
@@ -102,7 +112,7 @@
   }
 }
 
-@keyframes active-underLine {
+@keyframes active-bottomLine {
 
   0% {
     transform: rotate(0);
@@ -123,16 +133,16 @@
 .is-active-btn .p-hamburger__btn-line {
 
   &::before {
-    animation: overLine 0.6s ease-in-out forwards;
+    animation: topLine 0.6s ease-in-out forwards;
   }
 
   &::after {
-    animation: underLine 0.6s ease-in-out forwards;
+    animation: bottomLine 0.6s ease-in-out forwards;
   }
 }
 
 // ハンバーガー閉じる時
-@keyframes overLine {
+@keyframes topLine {
 
   0%,
   50% {
@@ -146,7 +156,7 @@
   }
 }
 
-@keyframes underLine {
+@keyframes bottomLine {
 
   0%,
   50% {

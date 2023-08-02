@@ -21,7 +21,7 @@ container
 
 @include mq(xl) {
   .l-container[data-enabled~="xl"] {
-    width: 87.5%;
+    width: 85%;
     max-width: $contentWidth;
     margin: 0 auto;
   }
