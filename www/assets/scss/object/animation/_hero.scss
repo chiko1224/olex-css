@@ -10,7 +10,7 @@
     // rightからフェードイン
     & .char {
       display: inline-block;
-      @include animation($name: title-kf,
+      @include animation($name: title,
         $duration: 0.5s,
         $fill-mode: both);
 
@@ -24,12 +24,12 @@
 
   &__lead {
     opacity: 0;
-    animation: read-kf 1.2s ease-in 0.5s forwards;
+    animation: read 1.2s ease-in 1s forwards;
   }
 }
 
 // title-kf
-@keyframes title-kf {
+@keyframes title {
 
   // 初めの状態
   0% {
@@ -44,8 +44,7 @@
 }
 
 // read-kf
-
-@keyframes read-kf {
+@keyframes read {
   0% {
     opacity: 0;
   }

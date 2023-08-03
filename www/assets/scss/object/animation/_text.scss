@@ -13,7 +13,7 @@
     // heading
     & span {
       display: inline-block;
-      @include animation($name: text-kf,
+      @include animation($name: text,
         $duration: 0.2s,
         $timing-function: liner,
         $fill-mode: both);
@@ -29,7 +29,7 @@
     &.-copy {
       & span {
         display: inline-block;
-        @include animation($name: copy-kf,
+        @include animation($name: copy,
           $duration: 0.4s,
           $fill-mode: both);
 
@@ -44,7 +44,7 @@
 }
 
 // text-kf
-@keyframes text-kf {
+@keyframes text {
   0% {
     opacity: 0;
     transform: scale(0, 0);
@@ -56,14 +56,14 @@
   }
 }
 
-@keyframes copy-kf {
+@keyframes copy {
   0% {
     opacity: 0;
-    transform: scale(0, 0);
+    transform: translateY(-7%);
   }
 
   100% {
     opacity: 1;
-    transform: scale(1, 1);
+    transform: translateY(0);
   }
 }

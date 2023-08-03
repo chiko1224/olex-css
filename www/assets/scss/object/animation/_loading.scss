@@ -9,8 +9,13 @@
   width: 100vw;
   height: 100vh;
   background-color: $whiteGray;
+  animation: fadeOut 0.2s linear 3s both;
 
-  &.hidden {
+  .is-useJs & {
+    animation: none;
+  }
+
+  .is-loaded & {
     opacity: 0;
     visibility: hidden;
   }
@@ -27,37 +32,44 @@
 
     & span {
       display: inline-block;
-      opacity: 0;
-      @include animation($name: loading-kf,
-        $duration: 2.5s,
+      @include animation($name: loading,
+        $duration: 3s,
         $timing-function: liner,
         $iteration-count: infinite,
+        $delay: 1s,
         $fill-mode: forwards);
 
       @for $i from 1 through 8 {
         &:nth-child(#{$i}) {
-          animation-delay: $i * .05s;
+          animation-delay: $i * .16s;
         }
       }
     }
   }
 }
 
-@keyframes loading-kf {
+@keyframes fadeOut {
   0% {
-    transform: translateY(-5%);
-    opacity: 0;
+    opacity: 1;
   }
 
+  100% {
+    opacity: 0;
+  }
+}
 
-  25%,
-  65% {
-    opacity: 1;
+@keyframes loading {
+
+  0% {
     transform: translateY(0);
   }
 
-  80%,
+  10% {
+    transform: translateY(-13%);
+  }
+
+  20%,
   100% {
-    opacity: 0;
+    transform: translateY(0);
   }
 }

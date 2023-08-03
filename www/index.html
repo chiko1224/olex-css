@@ -4,11 +4,11 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
   <title>Olex.css|flexを使ったグリッドシステム</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/common.css">
-  <!-- <script src="assets/js/gsap.min.js" defer></script> -->
   <script src="assets/js/app.js" defer></script>
 </head>
 <body>
@@ -25,14 +25,13 @@
           <div class="olex__item">
             <nav class="l-header__nav p-header__nav">
               <h2 class="screen-reader-text">サイトメニュー</h2>
-              <div class="p-header__nav-btn">
-                <button type="button" class="p-hamburger__btn js-btn" aria-controls="header__nav" aria-expanded="false">
+              <button type="button" class="p-hamburger" aria-controls="header__nav" aria-expanded="false">
+                <div class="p-hamburger__btn js-hamburger">
                   <span class="p-hamburger__btn-line">
                     <span class="screen-reader-text">メニューを開閉する</span>
                   </span>
-                </button>
-              </div>
-              <!-- /.p-header-nav__btn -->
+                </div>
+              </button>
               <a href="#main" class="screen-reader-text">本文までスキップ</a>
               <!-- <div class="p-header__nav-content"> -->
               <ul id="header__nav" class="olex l-header__nav-list p-header__nav-list js-drawer" lang="en" data-align="lg:middle lg:end" data-gutter="md:xxsmall lg:medium">
@@ -101,17 +100,20 @@
                 <div class="olex l-container" data-align="min:center">
                   <div class="olex__item">
                     <picture class="p-hero__photo">
-                      <img src="assets/img/hero/01.jpg.webp" srcset="assets/img/hero/pc/01.jpg.webp, assets/img/hero/pc/01@2x.jpg.webp 2x" alt="" decoding="async">
+                      <source srcset="assets/img/hero/01.webp, assets/img/hero/01@2x.webp 2x" type="image/webp">
+                      <img src="assets/img/hero/01.jpg" srcset="assets/img/hero/01.jpg, assets/img/hero/01@2x.jpg 2x" alt="" decoding="async">
                     </picture>
                   </div>
                   <div class="olex__item">
                     <picture class="p-hero__photo">
-                      <img src="assets/img/hero/pc/02.jpg.webp" srcset="assets/img/hero/pc/02.jpg.webp, assets/img/hero/pc/02@2x.jpg.webp 2x" alt="" decoding="async">
+                      <source srcset="assets/img/hero/02.webp, assets/img/hero/02@2x.webp 2x" type="image/webp">
+                      <img src="assets/img/hero/02.jpg" srcset="assets/img/hero/02.jpg, assets/img/hero/02@2x.jpg 2x" alt="" decoding="async">
                     </picture>
                   </div>
                   <div class="olex__item">
                     <picture class="p-hero__photo">
-                      <img src="assets/img/hero/pc/03.jpg.webp" srcset="assets/img/hero/pc/03.jpg.webp, assets/img/hero/pc/03@2x.jpg.webp 2x" alt="" decoding="async">
+                      <source srcset="assets/img/hero/03.webp, assets/img/hero/03@2x.webp 2x" type="image/webp">
+                      <img src="assets/img/hero/03.jpg" srcset="assets/img/hero/03.jpg, assets/img/hero/03@2x.jpg 2x" alt="" decoding="async">
                     </picture>
                   </div>
                 </div>
@@ -240,43 +242,108 @@
                   <div class="l-spacer" data-space="min:xxsmallTop md:smallTop xl:noneTop">
                     <ul class="olex">
                       <li class="olex__item" data-cols="xxs:6 lg:6">
-                        <figure class="p-list__photo"><img src="assets/image/flex/kyoto-flex01.jpg.webp" srcset="assets/img/flex/kyoto-flex01.jpg.webp, assets/img/flex/kyoto-flex01@2x.jpg.webp 2x" alt="五重塔" decoding="async"></figure>
+                        <figure class="p-list__photo">
+                          <picture>
+                            <source srcset="assets/img/flex/kyoto-flex01.webp, assets/img/flex/kyoto-flex01@2x.webp 2x" type="image/webp">
+                            <img src="assets/image/flex/kyoto-flex01.jpg" srcset="assets/img/flex/kyoto-flex01.jpg, assets/img/flex/kyoto-flex01@2x.jpg 2x" alt="五重塔" decoding="async">
+                          </picture>
+                        </figure>
                       </li>
                       <li class="olex__item" data-cols="xxs:6 lg:6">
-                        <figure class="p-list__photo"><img src="assets/image/flex/kyoto-flex02.jpg.webp" srcset="assets/img/flex/kyoto-flex02.jpg.webp, assets/img/flex/kyoto-flex02@2x.jpg.webp 2x" alt="清水寺" decoding="async"></figure>
+                        <figure class="p-list__photo">
+                          <picture>
+                            <source srcset="assets/img/flex/kyoto-flex02.webp, assets/img/flex/kyoto-flex02@2x.webp 2x" type="image/webp">
+                            <img src="assets/image/flex/kyoto-flex02.jpg" srcset="assets/img/flex/kyoto-flex02.jpg, assets/img/flex/kyoto-flex02@2x.jpg 2x" alt="清水寺" decoding="async">
+                          </picture>
+                        </figure>
                       </li>
                       <li class="olex__item" data-cols="xxs:6 lg:3">
-                        <figure class="p-list__photo"><img src="assets/image/flex/kyoto-flex03.jpg.webp" srcset="assets/img/flex/kyoto-flex03.jpg.webp, assets/img/flex/kyoto-flex03@2x.jpg.webp 2x" alt="椋の木" decoding="async"></figure>
+                        <figure class="p-list__photo">
+                          <picture>
+                            <source srcset="assets/img/flex/kyoto-flex03.webp, assets/img/flex/kyoto-flex03@2x.webp 2x" type="image/webp">
+                            <img src="assets/image/flex/kyoto-flex03.jpg" srcset="assets/img/flex/kyoto-flex03.jpg, assets/img/flex/kyoto-flex03@2x.jpg 2x" alt="椋の木" decoding="async">
+                          </picture>
+                        </figure>
                       </li>
                       <li class="olex__item" data-cols="xxs:6 lg:3">
-                        <figure class="p-list__photo"><img src="assets/image/flex/kyoto-flex04.jpg.webp" srcset="assets/img/flex/kyoto-flex04.jpg.webp, assets/img/flex/kyoto-flex04@2x.jpg.webp 2x" alt="提灯" decoding="async"></figure>
+                        <figure class="p-list__photo">
+                          <picture>
+                            <source srcset="assets/img/flex/kyoto-flex04.webp, assets/img/flex/kyoto-flex04@2x.webp 2x" type="image/webp">
+                            <img src="assets/image/flex/kyoto-flex04.jpg" srcset="assets/img/flex/kyoto-flex04.jpg, assets/img/flex/kyoto-flex04@2x.jpg 2x" alt="提灯" decoding="async">
+                          </picture>
+                        </figure>
                       </li>
                       <li class="olex__item" data-cols="xxs:6 lg:3">
-                        <figure class="p-list__photo"><img src="assets/image/flex/kyoto-flex05.jpg.webp" srcset="assets/img/flex/kyoto-flex05.jpg.webp, assets/img/flex/kyoto-flex05@2x.jpg.webp 2x" alt="石塀小路" decoding="async"></figure>
+                        <figure class="p-list__photo">
+                          <picture>
+                            <source srcset="assets/img/flex/kyoto-flex05.webp, assets/img/flex/kyoto-flex05@2x.webp 2x" type="image/webp">
+                            <img src="assets/image/flex/kyoto-flex05.jpg" srcset="assets/img/flex/kyoto-flex05.jpg, assets/img/flex/kyoto-flex05@2x.jpg 2x" alt="石塀小路" decoding="async">
+                          </picture>
+                        </figure>
                       </li>
                       <li class="olex__item" data-cols="xxs:6 lg:3">
-                        <figure class="p-list__photo"><img src="assets/image/flex/kyoto-flex06.jpg.webp" srcset="assets/img/flex/kyoto-flex06.jpg.webp, assets/img/flex/kyoto-flex06@2x.jpg.webp 2x" alt="手水舎" decoding="async"></figure>
+                        <figure class="p-list__photo">
+                          <picture>
+                            <source srcset="assets/img/flex/kyoto-flex06.webp, assets/img/flex/kyoto-flex06@2x.webp 2x" type="image/webp">
+                            <img src="assets/image/flex/kyoto-flex06.jpg" srcset="assets/img/flex/kyoto-flex06.jpg, assets/img/flex/kyoto-flex06@2x.jpg 2x" alt="手水舎" decoding="async">
+                          </picture>
+                        </figure>
                       </li>
                       <li class="olex__item" data-cols="xxs:12 lg:8">
-                        <figure class="p-list__photo"><img src="assets/img/flex/kyoto-flex07.jpg.webp" srcset="assets/img/flex/kyoto-flex07.jpg.webp, assets/img/flex/kyoto-flex07@2x.jpg.webp 2x" alt="平等院" decoding="async"></figure>
+                        <figure class="p-list__photo">
+                          <picture>
+                            <source srcset="assets/img/flex/kyoto-flex07.webp, assets/img/flex/kyoto-flex07@2x.webp 2x" type="image/webp">
+                            <img src="assets/img/flex/kyoto-flex07.jpg" srcset="assets/img/flex/kyoto-flex07.jpg, assets/img/flex/kyoto-flex07@2x.jpg 2x" alt="平等院" decoding="async">
+                          </picture>
+                        </figure>
                       </li>
                       <li class="olex__item" data-cols="xxs:6 lg:4">
-                        <figure class="p-list__photo"><img src="assets/img/flex/kyoto-flex08.jpg.webp" srcset="assets/img/flex/kyoto-flex08.jpg.webp, assets/img/flex/kyoto-flex08@2x.jpg.webp 2x" alt="花見小路" decoding="async"></figure>
+                        <figure class="p-list__photo">
+                          <picture>
+                            <source srcset="assets/img/flex/kyoto-flex08.webp, assets/img/flex/kyoto-flex08@2x.webp 2x" type="image/webp">
+                            <img src="assets/img/flex/kyoto-flex08.jpg" srcset="assets/img/flex/kyoto-flex08.jpg, assets/img/flex/kyoto-flex08@2x.jpg 2x" alt="花見小路" decoding="async">
+                          </picture>
+                        </figure>
                       </li>
                       <li class="olex__item" data-cols="xxs:6 lg:4">
-                        <figure class="p-list__photo"><img src="assets/img/flex/kyoto-flex09.jpg.webp" srcset="assets/img/flex/kyoto-flex09.jpg.webp, assets/img/flex/kyoto-flex09@2x.jpg.webp 2x" alt="紅葉" decoding="async"></figure>
+                        <figure class="p-list__photo">
+                          <picture>
+                            <source srcset="assets/img/flex/kyoto-flex09.webp, assets/img/flex/kyoto-flex09@2x.webp 2x" type="image/webp">
+                            <img src="assets/img/flex/kyoto-flex09.jpg" srcset="assets/img/flex/kyoto-flex09.jpg, assets/img/flex/kyoto-flex09@2x.jpg 2x" alt="紅葉" decoding="async">
+                          </picture>
+                        </figure>
                       </li>
                       <li class="olex__item" data-cols="xxs:12 lg:8">
-                        <figure class="p-list__photo"><img src="assets/img/flex/kyoto-flex10.jpg.webp" srcset="assets/img/flex/kyoto-flex10.jpg.webp, assets/img/flex/kyoto-flex10@2x.jpg.webp 2x" alt="十石橋" decoding="async"></figure>
+                        <figure class="p-list__photo">
+                          <picture>
+                            <source srcset="assets/img/flex/kyoto-flex10.webp, assets/img/flex/kyoto-flex10@2x.webp 2x" type="image/webp">
+                            <img src="assets/img/flex/kyoto-flex10.jpg" srcset="assets/img/flex/kyoto-flex10.jpg, assets/img/flex/kyoto-flex10@2x.jpg 2x" alt="十石橋" decoding="async">
+                          </picture>
+                        </figure>
                       </li>
                       <li class="olex__item" data-cols="xxs:4 lg:4">
-                        <figure class="p-list__photo"><img src="assets/img/flex/kyoto-flex11.jpg.webp" srcset="assets/img/flex/kyoto-flex11.jpg.webp, assets/img/flex/kyoto-flex11@2x.jpg.webp 2x" alt="銀閣寺" decoding="async"></figure>
+                        <figure class="p-list__photo">
+                          <picture>
+                            <source srcset="assets/img/flex/kyoto-flex11.webp, assets/img/flex/kyoto-flex11@2x.webp 2x" type="image/webp">
+                            <img src="assets/img/flex/kyoto-flex11.jpg" srcset="assets/img/flex/kyoto-flex11.jpg, assets/img/flex/kyoto-flex11@2x.jpg 2x" alt="銀閣寺" decoding="async">
+                          </picture>
+                        </figure>
                       </li>
                       <li class="olex__item" data-cols="xxs:4 lg:4">
-                        <figure class="p-list__photo"><img src="assets/img/flex/kyoto-flex12.jpg.webp" srcset="assets/img/flex/kyoto-flex12.jpg.webp, assets/img/flex/kyoto-flex12@2x.jpg.webp 2x" alt="和傘" decoding="async"></figure>
+                        <figure class="p-list__photo">
+                          <picture>
+                            <source srcset="assets/img/flex/kyoto-flex12.webp, assets/img/flex/kyoto-flex12@2x.webp 2x" type="image/webp">
+                            <img src="assets/img/flex/kyoto-flex12.jpg" srcset="assets/img/flex/kyoto-flex12.jpg, assets/img/flex/kyoto-flex12@2x.jpg 2x" alt="和傘" decoding="async">
+                          </picture>
+                        </figure>
                       </li>
                       <li class="olex__item" data-cols="xxs:4 lg:4">
-                        <figure class="p-list__photo"><img src="assets/img/flex/kyoto-flex13.jpg.webp" srcset="assets/img/flex/kyoto-flex13.jpg.webp, assets/img/flex/kyoto-flex13@2x.jpg.webp 2x" alt="永観堂の臥龍廊" decoding="async"></figure>
+                        <figure class="p-list__photo">
+                          <picture>
+                            <source srcset="assets/img/flex/kyoto-flex13.webp, assets/img/flex/kyoto-flex13@2x.webp 2x" type="image/webp">
+                            <img src="assets/img/flex/kyoto-flex13.jpg" srcset="assets/img/flex/kyoto-flex13.jpg, assets/img/flex/kyoto-flex13@2x.jpg 2x" alt="永観堂の臥龍廊" decoding="async">
+                          </picture>
+                        </figure>
                       </li>
                     </ul>
                   </div>
@@ -307,43 +374,108 @@
                   <div class="l-spacer" data-space="min:xxsmallTop md:xxxsmallTop xl:noneTop">
                     <ul class="olex p-grid__body" data-gutter="xxs:xxsmall sm:xsmall lg:medium">
                       <li class="olex__item" data-cols="xxs:6 lg:6">
-                        <figure class="p-list__photo"><img src="assets/img/gutter/kyoto-gutter01.jpg.webp" srcset="assets/img/gutter/kyoto-gutter01.jpg.webp, assets/img/gutter/kyoto-gutter01@2x.jpg.webp 2x" alt="ライトアップされた五重塔" decoding="async"></figure>
+                        <figure class="p-list__photo">
+                          <picture>
+                            <source srcset="assets/img/gutter/kyoto-gutter01.webp, assets/img/gutter/kyoto-gutter01@2x.webp 2x" type="image/webp">
+                            <img src="assets/img/gutter/kyoto-gutter01.jpg" srcset="assets/img/gutter/kyoto-gutter01.jpg, assets/img/gutter/kyoto-gutter01@2x.jpg 2x" alt="ライトアップされた五重塔" decoding="async">
+                          </picture>
+                        </figure>
                       </li>
                       <li class="olex__item" data-cols="xxs:6 lg:6">
-                        <figure class="p-list__photo"><img src="assets/img/gutter/kyoto-gutter02.jpg.webp" srcset="assets/img/gutter/kyoto-gutter02.jpg.webp, assets/img/gutter/kyoto-gutter02@2x.jpg.webp 2x" alt="夕日に照らされた清水寺" decoding="async"></figure>
+                        <figure class="p-list__photo">
+                          <picture>
+                            <source srcset="assets/img/gutter/kyoto-gutter02.webp, assets/img/gutter/kyoto-gutter02@2x.webp 2x 2x" type="image/webp">
+                            <img src="assets/img/gutter/kyoto-gutter02.jpg" srcset="assets/img/gutter/kyoto-gutter02.jpg, assets/img/gutter/kyoto-gutter02@2x.jpg 2x" alt="夕日に照らされた清水寺" decoding="async">
+                          </picture>
+                        </figure>
                       </li>
                       <li class="olex__item" data-cols="xxs:6 lg:3">
-                        <figure class="p-list__photo"><img src="assets/img/gutter/kyoto-gutter03.jpg.webp" srcset="assets/img/gutter/kyoto-gutter03.jpg.webp, assets/img/gutter/kyoto-gutter03@2x.jpg.webp 2x" alt="石庭" decoding="async"></figure>
+                        <figure class="p-list__photo">
+                          <picture>
+                            <source srcset="assets/img/gutter/kyoto-gutter03.webp, assets/img/gutter/kyoto-gutter03@2x.webp 2x" type="image/webp">
+                            <img src="assets/img/gutter/kyoto-gutter03.jpg" srcset="assets/img/gutter/kyoto-gutter03.jpg, assets/img/gutter/kyoto-gutter03@2x.jpg 2x" alt="石庭" decoding="async">
+                          </picture>
+                        </figure>
                       </li>
                       <li class="olex__item" data-cols="xxs:6 lg:3">
-                        <figure class="p-list__photo"><img src="assets/img/gutter/kyoto-gutter04.jpg.webp" srcset="assets/img/gutter/kyoto-gutter04.jpg.webp, assets/img/gutter/kyoto-gutter04@2x.jpg.webp 2x" alt="嵐山の竹林" decoding="async"></figure>
+                        <figure class="p-list__photo">
+                          <picture>
+                            <source srcset="assets/img/gutter/kyoto-gutter04.webp, assets/img/gutter/kyoto-gutter04@2x.webp 2x" type="image/webp">
+                            <img src="assets/img/gutter/kyoto-gutter04.jpg" srcset="assets/img/gutter/kyoto-gutter04.jpg, assets/img/gutter/kyoto-gutter04@2x.jpg 2x" alt="嵐山の竹林" decoding="async">
+                          </picture>
+                        </figure>
                       </li>
                       <li class="olex__item" data-cols="xxs:6 lg:3">
-                        <figure class="p-list__photo"><img src="assets/img/gutter/kyoto-gutter05.jpg.webp" srcset="assets/img/gutter/kyoto-gutter05.jpg.webp, assets/img/gutter/kyoto-gutter05@2x.jpg.webp 2x" alt="寺の庭園" decoding="async"></figure>
+                        <figure class="p-list__photo">
+                          <picture>
+                            <source srcset="assets/img/gutter/kyoto-gutter05.webp, assets/img/gutter/kyoto-gutter05@2x.webp 2x" type="image/webp">
+                            <img src="assets/img/gutter/kyoto-gutter05.jpg" srcset="assets/img/gutter/kyoto-gutter05.jpg, assets/img/gutter/kyoto-gutter05@2x.jpg 2x" alt="寺の庭園" decoding="async">
+                          </picture>
+                        </figure>
                       </li>
                       <li class="olex__item" data-cols="xxs:6 lg:3">
-                        <figure class="p-list__photo"><img src="assets/img/gutter/kyoto-gutter06.jpg.webp" srcset="assets/img/gutter/kyoto-gutter06.jpg.webp, assets/img/gutter/kyoto-gutter06@2x.jpg.webp 2x" alt="稲荷伏見の鳥居" decoding="async"></figure>
+                        <figure class="p-list__photo">
+                          <picture>
+                            <source srcset="assets/img/gutter/kyoto-gutter06.webp, assets/img/gutter/kyoto-gutter06@2x.webp 2x" type="image/webp">
+                            <img src="assets/img/gutter/kyoto-gutter06.jpg" srcset="assets/img/gutter/kyoto-gutter06.jpg, assets/img/gutter/kyoto-gutter06@2x.jpg 2x" alt="稲荷伏見の鳥居" decoding="async">
+                          </picture>
+                        </figure>
                       </li>
                       <li class="olex__item" data-cols="xxs:12 lg:8">
-                        <figure class="p-list__photo"><img src="assets/img/gutter/kyoto-gutter07.jpg.webp" srcset="assets/img/gutter/kyoto-gutter07.jpg.webp, assets/img/gutter/kyoto-gutter07@2x.jpg.webp 2x" alt="朝焼けの五重塔" decoding="async"></figure>
+                        <figure class="p-list__photo">
+                          <picture>
+                            <source srcset="assets/img/gutter/kyoto-gutter07.webp, assets/img/gutter/kyoto-gutter07@2x.webp 2x" type="image/webp">
+                            <img src="assets/img/gutter/kyoto-gutter07.jpg" srcset="assets/img/gutter/kyoto-gutter07.jpg, assets/img/gutter/kyoto-gutter07@2x.jpg 2x" alt="朝焼けの五重塔" decoding="async">
+                          </picture>
+                        </figure>
                       </li>
                       <li class="olex__item" data-cols="xxs:6 lg:4">
-                        <figure class="p-list__photo"><img src="assets/img/gutter/kyoto-gutter08.jpg.webp" srcset="assets/img/gutter/kyoto-gutter08.jpg.webp, assets/img/gutter/kyoto-gutter08@2x.jpg.webp 2x" alt="晴れの日の渡月橋" decoding="async"></figure>
+                        <figure class="p-list__photo">
+                          <picture>
+                            <source srcset="assets/img/gutter/kyoto-gutter08.webp, assets/img/gutter/kyoto-gutter08@2x.webp 2x" type="image/webp">
+                            <img src="assets/img/gutter/kyoto-gutter08.jpg" srcset="assets/img/gutter/kyoto-gutter08.jpg, assets/img/gutter/kyoto-gutter08@2x.jpg 2x" alt="晴れの日の渡月橋" decoding="async">
+                          </picture>
+                        </figure>
                       </li>
                       <li class="olex__item" data-cols="xxs:6 lg:4">
-                        <figure class="p-list__photo"><img src="assets/img/gutter/kyoto-gutter09.jpg.webp" srcset="assets/img/gutter/kyoto-gutter09.jpg.webp, assets/img/gutter/kyoto-gutter09@2x.jpg.webp 2x" alt="桜の見える川" decoding="async"></figure>
+                        <figure class="p-list__photo">
+                          <picture>
+                            <source srcset="assets/img/gutter/kyoto-gutter09.webp, assets/img/gutter/kyoto-gutter09@2x.webp 2x" type="image/webp">
+                            <img src="assets/img/gutter/kyoto-gutter09.jpg" srcset="assets/img/gutter/kyoto-gutter09.jpg, assets/img/gutter/kyoto-gutter09@2x.jpg 2x" alt="桜の見える川" decoding="async">
+                          </picture>
+                        </figure>
                       </li>
                       <li class="olex__item" data-cols="xxs:12 lg:8">
-                        <figure class="p-list__photo"><img src="assets/img/gutter/kyoto-gutter10.jpg.webp" srcset="assets/img/gutter/kyoto-gutter10.jpg.webp, assets/img/gutter/kyoto-gutter10@2x.jpg.webp 2x" alt="金閣寺" decoding="async"></figure>
+                        <figure class="p-list__photo">
+                          <picture>
+                            <source srcset="assets/img/gutter/kyoto-gutter10.webp, assets/img/gutter/kyoto-gutter10@2x.webp 2x" type="image/webp">
+                            <img src="assets/img/gutter/kyoto-gutter10.jpg" srcset="assets/img/gutter/kyoto-gutter10.jpg, assets/img/gutter/kyoto-gutter10@2x.jpg 2x" alt="金閣寺" decoding="async">
+                          </picture>
+                        </figure>
                       </li>
                       <li class="olex__item" data-cols="xxs:4 lg:4">
-                        <figure class="p-list__photo"><img src="assets/img/gutter/kyoto-gutter11.jpg.webp" srcset="assets/img/gutter/kyoto-gutter11.jpg.webp, assets/img/gutter/kyoto-gutter11@2x.jpg.webp 2x" alt="京都の景色を一望できる" decoding="async"></figure>
+                        <figure class="p-list__photo">
+                          <picture>
+                            <source srcset="assets/img/gutter/kyoto-gutter11.webp, assets/img/gutter/kyoto-gutter11@2x.webp 2x" type="image/webp">
+                            <img src="assets/img/gutter/kyoto-gutter11.jpg" srcset="assets/img/gutter/kyoto-gutter11.jpg, assets/img/gutter/kyoto-gutter11@2x.jpg 2x" alt="京都の景色を一望できる" decoding="async">
+                          </picture>
+                        </figure>
                       </li>
                       <li class="olex__item" data-cols="xxs:4 lg:4">
-                        <figure class="p-list__photo"><img src="assets/img/gutter/kyoto-gutter12.jpg.webp" srcset="assets/img/gutter/kyoto-gutter12.jpg.webp, assets/img/gutter/kyoto-gutter12@2x.jpg.webp 2x" alt="法観寺" decoding="async"></figure>
+                        <figure class="p-list__photo">
+                          <picture>
+                            <source srcset="assets/img/gutter/kyoto-gutter12.webp, assets/img/gutter/kyoto-gutter12@2x.webp 2x" type="image/webp">
+                            <img src="assets/img/gutter/kyoto-gutter12.jpg" srcset="assets/img/gutter/kyoto-gutter12.jpg, assets/img/gutter/kyoto-gutter12@2x.jpg 2x" alt="法観寺" decoding="async">
+                          </picture>
+                        </figure>
                       </li>
                       <li class="olex__item" data-cols="xxs:4 lg:4">
-                        <figure class="p-list__photo"><img src="assets/img/gutter/kyoto-gutter13.jpg.webp" srcset="assets/img/gutter/kyoto-gutter13.jpg.webp, assets/img/gutter/kyoto-gutter13@2x.jpg.webp 2x" alt="平等院" decoding="async"></figure>
+                        <figure class="p-list__photo">
+                          <picture>
+                            <source srcset="assets/img/gutter/kyoto-gutter13.webp, assets/img/gutter/kyoto-gutter13@2x.webp 2x" type="image/webp">
+                            <img src="assets/img/gutter/kyoto-gutter13.jpg" srcset="assets/img/gutter/kyoto-gutter13.jpg, assets/img/gutter/kyoto-gutter13@2x.jpg 2x" alt="平等院" decoding="async">
+                          </picture>
+                        </figure>
                       </li>
                     </ul>
                   </div>
@@ -622,27 +754,42 @@
           <div class="olex" data-align="min:justify">
             <div class="olex__item" data-cols="xxs:2">
               <figure class="p-list__photo">
-                <img src="assets/img/grid/kyoto01.jpg.webp" srcset="assets/img/grid/kyoto01.jpg.webp, assets/img/grid/kyoto01@2x.jpg.webp 2x" alt="" decoding="async">
+                <picture>
+                  <source srcset="assets/img/grid/kyoto01.webp, assets/img/grid/kyoto01@2x.webp 2x" type="image/webp">
+                  <img src="assets/img/grid/kyoto01.jpg" srcset="assets/img/grid/kyoto01.jpg, assets/img/grid/kyoto01@2x.jpg 2x" alt="" decoding="async">
+                </picture>
               </figure>
             </div>
             <div class="olex__item" data-cols="xxs:2">
               <figure class="p-list__photo">
-                <img src="assets/img/grid/kyoto02.jpg.webp" srcset="assets/img/grid/kyoto02.jpg.webp, assets/img/grid/kyoto02@2x.jpg.webp 2x" alt="" decoding="async">
+                <picture>
+                  <source srcset="assets/img/grid/kyoto02.webp, assets/img/grid/kyoto02@2x.webp 2x" type="image/webp">
+                  <img src="assets/img/grid/kyoto02.jpg" srcset="assets/img/grid/kyoto02.jpg, assets/img/grid/kyoto02@2x.jpg 2x" alt="" decoding="async">
+                </picture>
               </figure>
             </div>
             <div class="olex__item" data-cols="xxs:2">
               <figure class="p-list__photo">
-                <img src="assets/img/grid/kyoto03.jpg.webp" srcset="assets/img/grid/kyoto03.jpg.webp, assets/img/grid/kyoto03@2x.jpg.webp 2x" alt="" decoding="async">
+                <picture>
+                  <source srcset="assets/img/grid/kyoto03.webp, assets/img/grid/kyoto03@2x.webp 2x" type="image/webp">
+                  <img src="assets/img/grid/kyoto03.jpg" srcset="assets/img/grid/kyoto03.jpg, assets/img/grid/kyoto03@2x.jpg 2x" alt="" decoding="async">
+                </picture>
               </figure>
             </div>
             <div class="olex__item" data-cols="xxs:2">
               <figure class="p-list__photo">
-                <img src="assets/img/grid/kyoto04.jpg.webp" srcset="assets/img/grid/kyoto04.jpg.webp, assets/img/grid/kyoto04@2x.jpg.webp 2x" alt="" decoding="async">
+                <picture>
+                  <source srcset="assets/img/grid/kyoto04.webp, assets/img/grid/kyoto04@2x.webp 2x" type="image/webp">
+                  <img src="assets/img/grid/kyoto04.jpg" srcset="assets/img/grid/kyoto04.jpg, assets/img/grid/kyoto04@2x.jpg 2x" alt="" decoding="async">
+                </picture>
               </figure>
             </div>
             <div class="olex__item" data-cols="xxs:2">
               <figure class="p-list__photo">
-                <img src="assets/img/grid/kyoto05.jpg.webp" srcset="assets/img/grid/kyoto05.jpg.webp, assets/img/grid/kyoto05@2x.jpg.webp 2x" alt="" decoding="async">
+                <picture>
+                  <source srcset="assets/img/grid/kyoto05.webp, assets/img/grid/kyoto05@2x.webp 2x" type="image/webp">
+                  <img src="assets/img/grid/kyoto05.jpg" srcset="assets/img/grid/kyoto05.jpg, assets/img/grid/kyoto05@2x.jpg 2x" alt="" decoding="async">
+                </picture>
               </figure>
             </div>
           </div>
