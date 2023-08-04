@@ -1,0 +1,21 @@
+@charset 'UTF-8';
+@use "sass:math";
+@use "../../global" as *;
+
+.p-list__photo {
+  &.is-color img {
+    @include animation ($name: color,
+      $duration: 0.7s,
+      $fill-mode: both);
+  }
+}
+
+@keyframes color {
+  0% {
+    filter: grayscale(100%);
+  }
+
+  100% {
+    filter: grayscale(0);
+  }
+}

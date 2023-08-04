@@ -58,16 +58,16 @@ body {
   }
 
   &__text {
-    font-size: pxToRem(14);
+    font-size: pxToRem(12);
     font-weight: bold;
-    line-height: calc(28 / 14);
+    line-height: calc(30 / 14);
     text-align: center;
 
     &-sub {
-      font-size: pxToRem(14);
+      font-size: pxToRem(12);
       font-weight: bold;
       letter-spacing: .04em;
-      line-height: calc(28 / 14);
+      line-height: calc(30 / 14);
 
       &.-left {
         text-align: left;
@@ -80,10 +80,13 @@ body {
   }
 }
 
-.p-list__photo img {
-  width: 100%;
-  filter: grayscale(100%);
+.p-list__photo {
+  & img {
+    width: 100%;
+    filter: grayscale(100%);
+  }
 }
+
 
 .p-aligment {
   height: pxToRem(108);
@@ -102,6 +105,7 @@ body {
 
     &.-hr {
       width: pxToRem(56);
+      height: 100%;
       padding: pxToRem(30) pxToRem(10);
     }
   }
@@ -121,6 +125,20 @@ body {
   &.-reverse {
     background-color: $whiteGray;
     font-size: 1rem;
+  }
+}
+
+@include mq(xxs) {
+  .p-content {
+    &__text {
+      font-size: pxToRem(14);
+      line-height: calc(28 / 14);
+
+      &-sub {
+        font-size: pxToRem(14);
+        line-height: calc(28 / 14);
+      }
+    }
   }
 }
 
@@ -180,7 +198,7 @@ body {
     height: pxToRem(162);
 
     &__item.-hr {
-      padding: pxToRem(50) pxToRem(10);
+      padding: pxToRem(48) pxToRem(10);
     }
   }
 }
@@ -232,7 +250,6 @@ body {
 
       & .p-content__text-sub {
         position: absolute;
-        // top: 220px;
         left: 0;
       }
     }
@@ -270,7 +287,7 @@ body {
     font-size: pxToRem(12);
 
     &__item.-hr {
-      padding: pxToRem(58) pxToRem(10);
+      padding: pxToRem(56) pxToRem(6);
     }
   }
 

@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="flexをベースとしたolexを使用したグリッドシステムでレイアウトしました。">
   <meta name="robots" content="noindex, nofollow">
   <title>Olex.css|flexを使ったグリッドシステム</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
@@ -25,13 +26,13 @@
           <div class="olex__item">
             <nav class="l-header__nav p-header__nav">
               <h2 class="screen-reader-text">サイトメニュー</h2>
-              <button type="button" class="p-hamburger" aria-controls="header__nav" aria-expanded="false">
-                <div class="p-hamburger__btn js-hamburger">
+              <div class="p-hamburger">
+                <button type="button" class="p-hamburger__btn js-hamburger" aria-controls="header__nav" aria-expanded="false">
                   <span class="p-hamburger__btn-line">
                     <span class="screen-reader-text">メニューを開閉する</span>
                   </span>
-                </div>
-              </button>
+                </button>
+              </div>
               <a href="#main" class="screen-reader-text">本文までスキップ</a>
               <!-- <div class="p-header__nav-content"> -->
               <ul id="header__nav" class="olex l-header__nav-list p-header__nav-list js-drawer" lang="en" data-align="lg:middle lg:end" data-gutter="md:xxsmall lg:medium">
@@ -49,8 +50,8 @@
                 </li>
                 <li class="olex__item p-header__nav-item">
                   <p class="c-btn__primary -drawer" lang="en">
-                              <a href="#" class="c-btn__primary-link -drawer">How to Make</a>
-                            </p>
+                  <a href="#" class="c-btn__primary-link -drawer">How to Make</a>
+                  </p>
                 </li>
               </ul>
               <!-- </div> -->
@@ -134,7 +135,7 @@
         <div class="l-spacer" data-space="min:large xl:max">
           <div class="l-spacer" data-space="min:smallTop min:largeBottom xl:xxxsmallTop xl:maxBottom">
             <div class="l-spacer" data-space="min:xxsmallBottom xl:xsmallBottom">
-              <h3 id=" overview" class="p-content__title p-animate js-sceoll" lang="en">
+              <h3 id="overview" class="p-content__title p-animate js-scroll" lang="en">
                 <span>O</span><span>v</span><span>e</span><span>r</span><span>v</span><span>i</span><span>e</span><span>w</span>
               </h3>
             </div>
@@ -166,10 +167,10 @@
               <!-- /.p-content__overview -->
             </div>
             <!-- /.olex__item-->
-            <div class="olex__item" data-cols="xxs:12 md:12 xl:9">
+            <div class="olex__item" data-cols="min:12 xxs:12 md:12 xl:9">
               <div class="p-card">
                 <div class="olex" data-gutter="min:medium">
-                  <div class="olex__item" data-cols="xxs:12 md:4 xl:4">
+                  <div class="olex__item" data-cols="min:12 xxs:12 md:4 xl:4">
                     <dl class="p-card__body">
                       <dt lang="en"><img src="assets/img/icon/symbol/grid.png" srcset="assets/img/icon/symbol/grid.png, assets/img/icon/symbol/grid@2x.png 2x" alt=""><span class="p-card__item" lang="en">Grid</span></dt>
                       <dd class="p-card__text">
@@ -178,7 +179,7 @@
                     </dl>
                   </div>
                   <!-- /.olex__item -->
-                  <div class="olex__item" data-cols="xxs:12 md:4 xl:4">
+                  <div class="olex__item" data-cols="min:12 xxs:12 md:4 xl:4">
                     <dl class="p-card__body">
                       <dt lang="en"><img src="assets/img/icon/symbol/alignment.png" srcset="assets/img/icon/symbol/alignment.png, assets/img/icon/symbol/alignment@2x.png 2x" alt=""><span class="p-card__item" lang="en">Alignment</span></dt>
                       <dd class="p-card__text">
@@ -187,7 +188,7 @@
                     </dl>
                   </div>
                   <!-- /.olex__item -->
-                  <div class="olex__item" data-cols="xxs:12 md:4 xl:4">
+                  <div class="olex__item" data-cols="min:12 xxs:12 md:4 xl:4">
                     <dl class="p-card__body">
                       <dt><img src="assets/img/icon/symbol/direction.png" srcset="assets/img/icon/symbol/direction.png, assets/img/icon/symbol/direction@2x.png 2x" alt=""><span class="p-card__item" lang="en">Direction</span></dt>
                       <dd class="p-card__text">
@@ -210,11 +211,11 @@
       <!-- /.l-container -->
     </section>
     <section class="p-contents -bgWhite">
-      <div class="l-spacer" data-space="min:largeTop min:largeBottom xl:maxTop">
+      <div class="l-spacer" data-space="min:largeTop xxs:largeBottom xl:maxTop">
         <div class="l-container">
           <div class="l-spacer" data-space="xl:xxxsmallTop">
             <div class="l-spacer" data-space="min:xxsmallBottom xl:xsmallBottom">
-              <h3 id="grid" class="p-content__title p-animate js-sceoll" lang="en">
+              <h3 id="grid" class="p-content__title p-animate js-scroll" lang="en">
                 <span>G</span><span>r</span><span>i</span><span>d</span>
               </h3>
             </div>
@@ -230,7 +231,7 @@
           <div class="l-container">
             <div class="l-spacer" data-space="min:xxsmallTop md:xxxsmallTop xl:maxTop">
               <div class="olex" data-dir="md:reverse" data-gutter="md:small xl:medium">
-                <div class="olex__item p-grid__head" data-cols="xxs:12 md:4">
+                <div class="olex__item p-grid__head" data-cols="min:12 md:4">
                   <div class="p-content p-grid">
                     <div class="l-spacer" data-space="min:xxxsmallBottom md:largeTop xl:xxlargeTop xl:xsmallBottom">
                       <h4 class="p-content__title-sub" lang="en">Flexible</h4>
@@ -238,112 +239,138 @@
                     <p class="p-content__text-sub">スマホ、タブレット、PCで異なるカラムのレイアウトも容易に対応できます。 12カラムをベースとして、必要なカラム数を<em class="em">カスタムデータ属性</em>で指定するだけでレイアウトが可能。</p>
                   </div>
                 </div>
-                <div class="olex__item p-grid__body" data-cols="xxs:12 md:8">
+                <div class="olex__item p-grid__body" data-cols="min:12 md:8">
                   <div class="l-spacer" data-space="min:xxsmallTop md:smallTop xl:noneTop">
                     <ul class="olex">
-                      <li class="olex__item" data-cols="xxs:6 lg:6">
-                        <figure class="p-list__photo">
-                          <picture>
-                            <source srcset="assets/img/flex/kyoto-flex01.webp, assets/img/flex/kyoto-flex01@2x.webp 2x" type="image/webp">
-                            <img src="assets/image/flex/kyoto-flex01.jpg" srcset="assets/img/flex/kyoto-flex01.jpg, assets/img/flex/kyoto-flex01@2x.jpg 2x" alt="五重塔" decoding="async">
-                          </picture>
-                        </figure>
+                      <li class="olex__item" data-cols="min:12 xxs:6 lg:6">
+                        <div class="l-spacer" data-space="min:xxxsmallBottom xxs:none">
+                          <figure class="p-list__photo js-color">
+                            <picture>
+                              <source srcset="assets/img/flex/kyoto-flex01.webp, assets/img/flex/kyoto-flex01@2x.webp 2x" type="image/webp">
+                              <img src="assets/image/flex/kyoto-flex01.jpg" srcset="assets/img/flex/kyoto-flex01.jpg, assets/img/flex/kyoto-flex01@2x.jpg 2x" alt="五重塔" decoding="async">
+                            </picture>
+                          </figure>
+                        </div>
                       </li>
-                      <li class="olex__item" data-cols="xxs:6 lg:6">
-                        <figure class="p-list__photo">
-                          <picture>
-                            <source srcset="assets/img/flex/kyoto-flex02.webp, assets/img/flex/kyoto-flex02@2x.webp 2x" type="image/webp">
-                            <img src="assets/image/flex/kyoto-flex02.jpg" srcset="assets/img/flex/kyoto-flex02.jpg, assets/img/flex/kyoto-flex02@2x.jpg 2x" alt="清水寺" decoding="async">
-                          </picture>
-                        </figure>
+                      <li class="olex__item" data-cols="min:12 xxs:6 lg:6">
+                        <div class="l-spacer" data-space="min:xxxsmallBottom xxs:none">
+                          <figure class="p-list__photo js-color">
+                            <picture>
+                              <source srcset="assets/img/flex/kyoto-flex02.webp, assets/img/flex/kyoto-flex02@2x.webp 2x" type="image/webp">
+                              <img src="assets/image/flex/kyoto-flex02.jpg" srcset="assets/img/flex/kyoto-flex02.jpg, assets/img/flex/kyoto-flex02@2x.jpg 2x" alt="清水寺" decoding="async">
+                            </picture>
+                          </figure>
+                        </div>
                       </li>
-                      <li class="olex__item" data-cols="xxs:6 lg:3">
-                        <figure class="p-list__photo">
-                          <picture>
-                            <source srcset="assets/img/flex/kyoto-flex03.webp, assets/img/flex/kyoto-flex03@2x.webp 2x" type="image/webp">
-                            <img src="assets/image/flex/kyoto-flex03.jpg" srcset="assets/img/flex/kyoto-flex03.jpg, assets/img/flex/kyoto-flex03@2x.jpg 2x" alt="椋の木" decoding="async">
-                          </picture>
-                        </figure>
+                      <li class="olex__item" data-cols="min:12 xxs:6 lg:3">
+                        <div class="l-spacer" data-space="min:xxxsmallBottom xxs:none">
+                          <figure class="p-list__photo js-color">
+                            <picture>
+                              <source srcset="assets/img/flex/kyoto-flex03.webp, assets/img/flex/kyoto-flex03@2x.webp 2x" type="image/webp">
+                              <img src="assets/image/flex/kyoto-flex03.jpg" srcset="assets/img/flex/kyoto-flex03.jpg, assets/img/flex/kyoto-flex03@2x.jpg 2x" alt="椋の木" decoding="async">
+                            </picture>
+                          </figure>
+                        </div>
                       </li>
-                      <li class="olex__item" data-cols="xxs:6 lg:3">
-                        <figure class="p-list__photo">
-                          <picture>
-                            <source srcset="assets/img/flex/kyoto-flex04.webp, assets/img/flex/kyoto-flex04@2x.webp 2x" type="image/webp">
-                            <img src="assets/image/flex/kyoto-flex04.jpg" srcset="assets/img/flex/kyoto-flex04.jpg, assets/img/flex/kyoto-flex04@2x.jpg 2x" alt="提灯" decoding="async">
-                          </picture>
-                        </figure>
+                      <li class="olex__item" data-cols="min:12 xxs:6 lg:3">
+                        <div class="l-spacer" data-space="min:xxxsmallBottom xxs:none">
+                          <figure class="p-list__photo js-color">
+                            <picture>
+                              <source srcset="assets/img/flex/kyoto-flex04.webp, assets/img/flex/kyoto-flex04@2x.webp 2x" type="image/webp">
+                              <img src="assets/image/flex/kyoto-flex04.jpg" srcset="assets/img/flex/kyoto-flex04.jpg, assets/img/flex/kyoto-flex04@2x.jpg 2x" alt="提灯" decoding="async">
+                            </picture>
+                          </figure>
+                        </div>
                       </li>
-                      <li class="olex__item" data-cols="xxs:6 lg:3">
-                        <figure class="p-list__photo">
-                          <picture>
-                            <source srcset="assets/img/flex/kyoto-flex05.webp, assets/img/flex/kyoto-flex05@2x.webp 2x" type="image/webp">
-                            <img src="assets/image/flex/kyoto-flex05.jpg" srcset="assets/img/flex/kyoto-flex05.jpg, assets/img/flex/kyoto-flex05@2x.jpg 2x" alt="石塀小路" decoding="async">
-                          </picture>
-                        </figure>
+                      <li class="olex__item" data-cols="min:12 xxs:6 lg:3">
+                        <div class="l-spacer" data-space="min:xxxsmallBottom xxs:none">
+                          <figure class="p-list__photo js-color">
+                            <picture>
+                              <source srcset="assets/img/flex/kyoto-flex05.webp, assets/img/flex/kyoto-flex05@2x.webp 2x" type="image/webp">
+                              <img src="assets/image/flex/kyoto-flex05.jpg" srcset="assets/img/flex/kyoto-flex05.jpg, assets/img/flex/kyoto-flex05@2x.jpg 2x" alt="石塀小路" decoding="async">
+                            </picture>
+                          </figure>
+                        </div>
                       </li>
-                      <li class="olex__item" data-cols="xxs:6 lg:3">
-                        <figure class="p-list__photo">
-                          <picture>
-                            <source srcset="assets/img/flex/kyoto-flex06.webp, assets/img/flex/kyoto-flex06@2x.webp 2x" type="image/webp">
-                            <img src="assets/image/flex/kyoto-flex06.jpg" srcset="assets/img/flex/kyoto-flex06.jpg, assets/img/flex/kyoto-flex06@2x.jpg 2x" alt="手水舎" decoding="async">
-                          </picture>
-                        </figure>
+                      <li class="olex__item" data-cols="min:12 xxs:6 lg:3">
+                        <div class="l-spacer" data-space="min:xxxsmallBottom xxs:none">
+                          <figure class="p-list__photo js-color">
+                            <picture>
+                              <source srcset="assets/img/flex/kyoto-flex06.webp, assets/img/flex/kyoto-flex06@2x.webp 2x" type="image/webp">
+                              <img src="assets/image/flex/kyoto-flex06.jpg" srcset="assets/img/flex/kyoto-flex06.jpg, assets/img/flex/kyoto-flex06@2x.jpg 2x" alt="手水舎" decoding="async">
+                            </picture>
+                          </figure>
+                        </div>
                       </li>
-                      <li class="olex__item" data-cols="xxs:12 lg:8">
-                        <figure class="p-list__photo">
-                          <picture>
-                            <source srcset="assets/img/flex/kyoto-flex07.webp, assets/img/flex/kyoto-flex07@2x.webp 2x" type="image/webp">
-                            <img src="assets/img/flex/kyoto-flex07.jpg" srcset="assets/img/flex/kyoto-flex07.jpg, assets/img/flex/kyoto-flex07@2x.jpg 2x" alt="平等院" decoding="async">
-                          </picture>
-                        </figure>
+                      <li class="olex__item" data-cols="min:12 lg:8">
+                        <div class="l-spacer" data-space="min:xxxsmallBottom xxs:none">
+                          <figure class="p-list__photo js-color">
+                            <picture>
+                              <source srcset="assets/img/flex/kyoto-flex07.webp, assets/img/flex/kyoto-flex07@2x.webp 2x" type="image/webp">
+                              <img src="assets/img/flex/kyoto-flex07.jpg" srcset="assets/img/flex/kyoto-flex07.jpg, assets/img/flex/kyoto-flex07@2x.jpg 2x" alt="平等院" decoding="async">
+                            </picture>
+                          </figure>
+                        </div>
                       </li>
-                      <li class="olex__item" data-cols="xxs:6 lg:4">
-                        <figure class="p-list__photo">
-                          <picture>
-                            <source srcset="assets/img/flex/kyoto-flex08.webp, assets/img/flex/kyoto-flex08@2x.webp 2x" type="image/webp">
-                            <img src="assets/img/flex/kyoto-flex08.jpg" srcset="assets/img/flex/kyoto-flex08.jpg, assets/img/flex/kyoto-flex08@2x.jpg 2x" alt="花見小路" decoding="async">
-                          </picture>
-                        </figure>
+                      <li class="olex__item" data-cols="min:12 xxs:6 lg:4">
+                        <div class="l-spacer" data-space="min:xxxsmallBottom xxs:none">
+                          <figure class="p-list__photo js-color">
+                            <picture>
+                              <source srcset="assets/img/flex/kyoto-flex08.webp, assets/img/flex/kyoto-flex08@2x.webp 2x" type="image/webp">
+                              <img src="assets/img/flex/kyoto-flex08.jpg" srcset="assets/img/flex/kyoto-flex08.jpg, assets/img/flex/kyoto-flex08@2x.jpg 2x" alt="花見小路" decoding="async">
+                            </picture>
+                          </figure>
+                        </div>
                       </li>
-                      <li class="olex__item" data-cols="xxs:6 lg:4">
-                        <figure class="p-list__photo">
-                          <picture>
-                            <source srcset="assets/img/flex/kyoto-flex09.webp, assets/img/flex/kyoto-flex09@2x.webp 2x" type="image/webp">
-                            <img src="assets/img/flex/kyoto-flex09.jpg" srcset="assets/img/flex/kyoto-flex09.jpg, assets/img/flex/kyoto-flex09@2x.jpg 2x" alt="紅葉" decoding="async">
-                          </picture>
-                        </figure>
+                      <li class="olex__item" data-cols="min:12 xxs:6 lg:4">
+                        <div class="l-spacer" data-space="min:xxxsmallBottom xxs:none">
+                          <figure class="p-list__photo js-color">
+                            <picture>
+                              <source srcset="assets/img/flex/kyoto-flex09.webp, assets/img/flex/kyoto-flex09@2x.webp 2x" type="image/webp">
+                              <img src="assets/img/flex/kyoto-flex09.jpg" srcset="assets/img/flex/kyoto-flex09.jpg, assets/img/flex/kyoto-flex09@2x.jpg 2x" alt="紅葉" decoding="async">
+                            </picture>
+                          </figure>
+                        </div>
                       </li>
-                      <li class="olex__item" data-cols="xxs:12 lg:8">
-                        <figure class="p-list__photo">
-                          <picture>
-                            <source srcset="assets/img/flex/kyoto-flex10.webp, assets/img/flex/kyoto-flex10@2x.webp 2x" type="image/webp">
-                            <img src="assets/img/flex/kyoto-flex10.jpg" srcset="assets/img/flex/kyoto-flex10.jpg, assets/img/flex/kyoto-flex10@2x.jpg 2x" alt="十石橋" decoding="async">
-                          </picture>
-                        </figure>
+                      <li class="olex__item" data-cols="min:12 lg:8">
+                        <div class="l-spacer" data-space="min:xxxsmallBottom xxs:none">
+                          <figure class="p-list__photo js-color">
+                            <picture>
+                              <source srcset="assets/img/flex/kyoto-flex10.webp, assets/img/flex/kyoto-flex10@2x.webp 2x" type="image/webp">
+                              <img src="assets/img/flex/kyoto-flex10.jpg" srcset="assets/img/flex/kyoto-flex10.jpg, assets/img/flex/kyoto-flex10@2x.jpg 2x" alt="十石橋" decoding="async">
+                            </picture>
+                          </figure>
+                        </div>
                       </li>
-                      <li class="olex__item" data-cols="xxs:4 lg:4">
-                        <figure class="p-list__photo">
-                          <picture>
-                            <source srcset="assets/img/flex/kyoto-flex11.webp, assets/img/flex/kyoto-flex11@2x.webp 2x" type="image/webp">
-                            <img src="assets/img/flex/kyoto-flex11.jpg" srcset="assets/img/flex/kyoto-flex11.jpg, assets/img/flex/kyoto-flex11@2x.jpg 2x" alt="銀閣寺" decoding="async">
-                          </picture>
-                        </figure>
+                      <li class="olex__item" data-cols="min:12 xxs:4 lg:4">
+                        <div class="l-spacer" data-space="min:xxxsmallBottom xxs:none">
+                          <figure class="p-list__photo js-color">
+                            <picture>
+                              <source srcset="assets/img/flex/kyoto-flex11.webp, assets/img/flex/kyoto-flex11@2x.webp 2x" type="image/webp">
+                              <img src="assets/img/flex/kyoto-flex11.jpg" srcset="assets/img/flex/kyoto-flex11.jpg, assets/img/flex/kyoto-flex11@2x.jpg 2x" alt="銀閣寺" decoding="async">
+                            </picture>
+                          </figure>
+                        </div>
                       </li>
-                      <li class="olex__item" data-cols="xxs:4 lg:4">
-                        <figure class="p-list__photo">
-                          <picture>
-                            <source srcset="assets/img/flex/kyoto-flex12.webp, assets/img/flex/kyoto-flex12@2x.webp 2x" type="image/webp">
-                            <img src="assets/img/flex/kyoto-flex12.jpg" srcset="assets/img/flex/kyoto-flex12.jpg, assets/img/flex/kyoto-flex12@2x.jpg 2x" alt="和傘" decoding="async">
-                          </picture>
-                        </figure>
+                      <li class="olex__item" data-cols="min:12 xxs:4 lg:4">
+                        <div class="l-spacer" data-space="min:xxxsmallBottom xxs:none">
+                          <figure class="p-list__photo js-color">
+                            <picture>
+                              <source srcset="assets/img/flex/kyoto-flex12.webp, assets/img/flex/kyoto-flex12@2x.webp 2x" type="image/webp">
+                              <img src="assets/img/flex/kyoto-flex12.jpg" srcset="assets/img/flex/kyoto-flex12.jpg, assets/img/flex/kyoto-flex12@2x.jpg 2x" alt="和傘" decoding="async">
+                            </picture>
+                          </figure>
+                        </div>
                       </li>
-                      <li class="olex__item" data-cols="xxs:4 lg:4">
-                        <figure class="p-list__photo">
-                          <picture>
-                            <source srcset="assets/img/flex/kyoto-flex13.webp, assets/img/flex/kyoto-flex13@2x.webp 2x" type="image/webp">
-                            <img src="assets/img/flex/kyoto-flex13.jpg" srcset="assets/img/flex/kyoto-flex13.jpg, assets/img/flex/kyoto-flex13@2x.jpg 2x" alt="永観堂の臥龍廊" decoding="async">
-                          </picture>
-                        </figure>
+                      <li class="olex__item" data-cols="min:12 xxs:4 lg:4">
+                        <div class="l-spacer" data-space="min:xxxsmallBottom xxs:none">
+                          <figure class="p-list__photo js-color">
+                            <picture>
+                              <source srcset="assets/img/flex/kyoto-flex13.webp, assets/img/flex/kyoto-flex13@2x.webp 2x" type="image/webp">
+                              <img src="assets/img/flex/kyoto-flex13.jpg" srcset="assets/img/flex/kyoto-flex13.jpg, assets/img/flex/kyoto-flex13@2x.jpg 2x" alt="永観堂の臥龍廊" decoding="async">
+                            </picture>
+                          </figure>
+                        </div>
                       </li>
                     </ul>
                   </div>
@@ -361,7 +388,7 @@
           <div class="l-container">
             <div class="l-spacer" data-space="min:largeTop xl:maxTop">
               <div class="olex" data-gutter="md:xsmall xl:medium">
-                <div class="olex__item p-grid__head" data-cols="xxs:12 md:4">
+                <div class="olex__item p-grid__head" data-cols="min:12 md:4">
                   <div class="p-content p-grid">
                     <div class="l-spacer" data-space="min:xxxsmallBottom md:mediumTop xl:xxlargeTop xl:mediumBottom">
                       <h4 class="p-content__title-sub" lang="en">Gutter</h4>
@@ -370,112 +397,138 @@
                     <p class="p-content__text-sub">各アイテム間のスペースも<em class="em">カスタムデータ属性</em>を指定するだけで、スペースの有無はもちろん、その大きさも選択できます。また、このスペースには border プロパティを使っているので、スペースのサイズを拡張するのも容易です。</p>
                   </div>
                 </div>
-                <div class="olex__item" data-cols="xxs:12 md:8">
+                <div class="olex__item" data-cols="min:12 md:8">
                   <div class="l-spacer" data-space="min:xxsmallTop md:xxxsmallTop xl:noneTop">
                     <ul class="olex p-grid__body" data-gutter="xxs:xxsmall sm:xsmall lg:medium">
-                      <li class="olex__item" data-cols="xxs:6 lg:6">
-                        <figure class="p-list__photo">
-                          <picture>
-                            <source srcset="assets/img/gutter/kyoto-gutter01.webp, assets/img/gutter/kyoto-gutter01@2x.webp 2x" type="image/webp">
-                            <img src="assets/img/gutter/kyoto-gutter01.jpg" srcset="assets/img/gutter/kyoto-gutter01.jpg, assets/img/gutter/kyoto-gutter01@2x.jpg 2x" alt="ライトアップされた五重塔" decoding="async">
-                          </picture>
-                        </figure>
+                      <li class="olex__item" data-cols="min:12 xxs:6 lg:6">
+                        <div class="l-spacer" data-space="min:xxxsmallBottom xxs:none">
+                          <figure class="p-list__photo js-color">
+                            <picture>
+                              <source srcset="assets/img/gutter/kyoto-gutter01.webp, assets/img/gutter/kyoto-gutter01@2x.webp 2x" type="image/webp">
+                              <img src="assets/img/gutter/kyoto-gutter01.jpg" srcset="assets/img/gutter/kyoto-gutter01.jpg, assets/img/gutter/kyoto-gutter01@2x.jpg 2x" alt="ライトアップされた五重塔" decoding="async">
+                            </picture>
+                          </figure>
+                        </div>
                       </li>
-                      <li class="olex__item" data-cols="xxs:6 lg:6">
-                        <figure class="p-list__photo">
-                          <picture>
-                            <source srcset="assets/img/gutter/kyoto-gutter02.webp, assets/img/gutter/kyoto-gutter02@2x.webp 2x 2x" type="image/webp">
-                            <img src="assets/img/gutter/kyoto-gutter02.jpg" srcset="assets/img/gutter/kyoto-gutter02.jpg, assets/img/gutter/kyoto-gutter02@2x.jpg 2x" alt="夕日に照らされた清水寺" decoding="async">
-                          </picture>
-                        </figure>
+                      <li class="olex__item" data-cols="min:12 xxs:6 lg:6">
+                        <div class="l-spacer" data-space="min:xxxsmallBottom xxs:none">
+                          <figure class="p-list__photo js-color">
+                            <picture>
+                              <source srcset="assets/img/gutter/kyoto-gutter02.webp, assets/img/gutter/kyoto-gutter02@2x.webp 2x" type="image/webp">
+                              <img src="assets/img/gutter/kyoto-gutter02.jpg" srcset="assets/img/gutter/kyoto-gutter02.jpg, assets/img/gutter/kyoto-gutter02@2x.jpg 2x" alt="夕日に照らされた清水寺" decoding="async">
+                            </picture>
+                          </figure>
+                        </div>
                       </li>
-                      <li class="olex__item" data-cols="xxs:6 lg:3">
-                        <figure class="p-list__photo">
-                          <picture>
-                            <source srcset="assets/img/gutter/kyoto-gutter03.webp, assets/img/gutter/kyoto-gutter03@2x.webp 2x" type="image/webp">
-                            <img src="assets/img/gutter/kyoto-gutter03.jpg" srcset="assets/img/gutter/kyoto-gutter03.jpg, assets/img/gutter/kyoto-gutter03@2x.jpg 2x" alt="石庭" decoding="async">
-                          </picture>
-                        </figure>
+                      <li class="olex__item" data-cols="min:12 xxs:6 lg:3">
+                        <div class="l-spacer" data-space="min:xxxsmallBottom xxs:none">
+                          <figure class="p-list__photo js-color">
+                            <picture>
+                              <source srcset="assets/img/gutter/kyoto-gutter03.webp, assets/img/gutter/kyoto-gutter03@2x.webp 2x" type="image/webp">
+                              <img src="assets/img/gutter/kyoto-gutter03.jpg" srcset="assets/img/gutter/kyoto-gutter03.jpg, assets/img/gutter/kyoto-gutter03@2x.jpg 2x" alt="石庭" decoding="async">
+                            </picture>
+                          </figure>
+                        </div>
                       </li>
-                      <li class="olex__item" data-cols="xxs:6 lg:3">
-                        <figure class="p-list__photo">
-                          <picture>
-                            <source srcset="assets/img/gutter/kyoto-gutter04.webp, assets/img/gutter/kyoto-gutter04@2x.webp 2x" type="image/webp">
-                            <img src="assets/img/gutter/kyoto-gutter04.jpg" srcset="assets/img/gutter/kyoto-gutter04.jpg, assets/img/gutter/kyoto-gutter04@2x.jpg 2x" alt="嵐山の竹林" decoding="async">
-                          </picture>
-                        </figure>
+                      <li class="olex__item" data-cols="min:12 xxs:6 lg:3">
+                        <div class="l-spacer" data-space="min:xxxsmallBottom xxs:none">
+                          <figure class="p-list__photo js-color">
+                            <picture>
+                              <source srcset="assets/img/gutter/kyoto-gutter04.webp, assets/img/gutter/kyoto-gutter04@2x.webp 2x" type="image/webp">
+                              <img src="assets/img/gutter/kyoto-gutter04.jpg" srcset="assets/img/gutter/kyoto-gutter04.jpg, assets/img/gutter/kyoto-gutter04@2x.jpg 2x" alt="嵐山の竹林" decoding="async">
+                            </picture>
+                          </figure>
+                        </div>
                       </li>
-                      <li class="olex__item" data-cols="xxs:6 lg:3">
-                        <figure class="p-list__photo">
-                          <picture>
-                            <source srcset="assets/img/gutter/kyoto-gutter05.webp, assets/img/gutter/kyoto-gutter05@2x.webp 2x" type="image/webp">
-                            <img src="assets/img/gutter/kyoto-gutter05.jpg" srcset="assets/img/gutter/kyoto-gutter05.jpg, assets/img/gutter/kyoto-gutter05@2x.jpg 2x" alt="寺の庭園" decoding="async">
-                          </picture>
-                        </figure>
+                      <li class="olex__item" data-cols="min:12 xxs:6 lg:3">
+                        <div class="l-spacer" data-space="min:xxxsmallBottom xxs:none">
+                          <figure class="p-list__photo js-color">
+                            <picture>
+                              <source srcset="assets/img/gutter/kyoto-gutter05.webp, assets/img/gutter/kyoto-gutter05@2x.webp 2x" type="image/webp">
+                              <img src="assets/img/gutter/kyoto-gutter05.jpg" srcset="assets/img/gutter/kyoto-gutter05.jpg, assets/img/gutter/kyoto-gutter05@2x.jpg 2x" alt="寺の庭園" decoding="async">
+                            </picture>
+                          </figure>
+                        </div>
                       </li>
-                      <li class="olex__item" data-cols="xxs:6 lg:3">
-                        <figure class="p-list__photo">
-                          <picture>
-                            <source srcset="assets/img/gutter/kyoto-gutter06.webp, assets/img/gutter/kyoto-gutter06@2x.webp 2x" type="image/webp">
-                            <img src="assets/img/gutter/kyoto-gutter06.jpg" srcset="assets/img/gutter/kyoto-gutter06.jpg, assets/img/gutter/kyoto-gutter06@2x.jpg 2x" alt="稲荷伏見の鳥居" decoding="async">
-                          </picture>
-                        </figure>
+                      <li class="olex__item" data-cols="min:12 xxs:6 lg:3">
+                        <div class="l-spacer" data-space="min:xxxsmallBottom xxs:none">
+                          <figure class="p-list__photo js-color">
+                            <picture>
+                              <source srcset="assets/img/gutter/kyoto-gutter06.webp, assets/img/gutter/kyoto-gutter06@2x.webp 2x" type="image/webp">
+                              <img src="assets/img/gutter/kyoto-gutter06.jpg" srcset="assets/img/gutter/kyoto-gutter06.jpg, assets/img/gutter/kyoto-gutter06@2x.jpg 2x" alt="稲荷伏見の鳥居" decoding="async">
+                            </picture>
+                          </figure>
+                        </div>
                       </li>
-                      <li class="olex__item" data-cols="xxs:12 lg:8">
-                        <figure class="p-list__photo">
-                          <picture>
-                            <source srcset="assets/img/gutter/kyoto-gutter07.webp, assets/img/gutter/kyoto-gutter07@2x.webp 2x" type="image/webp">
-                            <img src="assets/img/gutter/kyoto-gutter07.jpg" srcset="assets/img/gutter/kyoto-gutter07.jpg, assets/img/gutter/kyoto-gutter07@2x.jpg 2x" alt="朝焼けの五重塔" decoding="async">
-                          </picture>
-                        </figure>
+                      <li class="olex__item" data-cols="min:12 lg:8">
+                        <div class="l-spacer" data-space="min:xxxsmallBottom xxs:none">
+                          <figure class="p-list__photo js-color">
+                            <picture>
+                              <source srcset="assets/img/gutter/kyoto-gutter07.webp, assets/img/gutter/kyoto-gutter07@2x.webp 2x" type="image/webp">
+                              <img src="assets/img/gutter/kyoto-gutter07.jpg" srcset="assets/img/gutter/kyoto-gutter07.jpg, assets/img/gutter/kyoto-gutter07@2x.jpg 2x" alt="朝焼けの五重塔" decoding="async">
+                            </picture>
+                          </figure>
+                        </div>
                       </li>
-                      <li class="olex__item" data-cols="xxs:6 lg:4">
-                        <figure class="p-list__photo">
-                          <picture>
-                            <source srcset="assets/img/gutter/kyoto-gutter08.webp, assets/img/gutter/kyoto-gutter08@2x.webp 2x" type="image/webp">
-                            <img src="assets/img/gutter/kyoto-gutter08.jpg" srcset="assets/img/gutter/kyoto-gutter08.jpg, assets/img/gutter/kyoto-gutter08@2x.jpg 2x" alt="晴れの日の渡月橋" decoding="async">
-                          </picture>
-                        </figure>
+                      <li class="olex__item" data-cols="min:12 xxs:6 lg:4">
+                        <div class="l-spacer" data-space="min:xxxsmallBottom xxs:none">
+                          <figure class="p-list__photo js-color">
+                            <picture>
+                              <source srcset="assets/img/gutter/kyoto-gutter08.webp, assets/img/gutter/kyoto-gutter08@2x.webp 2x" type="image/webp">
+                              <img src="assets/img/gutter/kyoto-gutter08.jpg" srcset="assets/img/gutter/kyoto-gutter08.jpg, assets/img/gutter/kyoto-gutter08@2x.jpg 2x" alt="晴れの日の渡月橋" decoding="async">
+                            </picture>
+                          </figure>
+                        </div>
                       </li>
-                      <li class="olex__item" data-cols="xxs:6 lg:4">
-                        <figure class="p-list__photo">
-                          <picture>
-                            <source srcset="assets/img/gutter/kyoto-gutter09.webp, assets/img/gutter/kyoto-gutter09@2x.webp 2x" type="image/webp">
-                            <img src="assets/img/gutter/kyoto-gutter09.jpg" srcset="assets/img/gutter/kyoto-gutter09.jpg, assets/img/gutter/kyoto-gutter09@2x.jpg 2x" alt="桜の見える川" decoding="async">
-                          </picture>
-                        </figure>
+                      <li class="olex__item" data-cols="min:12 xxs:6 lg:4">
+                        <div class="l-spacer" data-space="min:xxxsmallBottom xxs:none">
+                          <figure class="p-list__photo js-color">
+                            <picture>
+                              <source srcset="assets/img/gutter/kyoto-gutter09.webp, assets/img/gutter/kyoto-gutter09@2x.webp 2x" type="image/webp">
+                              <img src="assets/img/gutter/kyoto-gutter09.jpg" srcset="assets/img/gutter/kyoto-gutter09.jpg, assets/img/gutter/kyoto-gutter09@2x.jpg 2x" alt="桜の見える川" decoding="async">
+                            </picture>
+                          </figure>
+                        </div>
                       </li>
-                      <li class="olex__item" data-cols="xxs:12 lg:8">
-                        <figure class="p-list__photo">
-                          <picture>
-                            <source srcset="assets/img/gutter/kyoto-gutter10.webp, assets/img/gutter/kyoto-gutter10@2x.webp 2x" type="image/webp">
-                            <img src="assets/img/gutter/kyoto-gutter10.jpg" srcset="assets/img/gutter/kyoto-gutter10.jpg, assets/img/gutter/kyoto-gutter10@2x.jpg 2x" alt="金閣寺" decoding="async">
-                          </picture>
-                        </figure>
+                      <li class="olex__item" data-cols="min:12 lg:8">
+                        <div class="l-spacer" data-space="min:xxxsmallBottom xxs:none">
+                          <figure class="p-list__photo js-color">
+                            <picture>
+                              <source srcset="assets/img/gutter/kyoto-gutter10.webp, assets/img/gutter/kyoto-gutter10@2x.webp 2x" type="image/webp">
+                              <img src="assets/img/gutter/kyoto-gutter10.jpg" srcset="assets/img/gutter/kyoto-gutter10.jpg, assets/img/gutter/kyoto-gutter10@2x.jpg 2x" alt="金閣寺" decoding="async">
+                            </picture>
+                          </figure>
+                        </div>
                       </li>
-                      <li class="olex__item" data-cols="xxs:4 lg:4">
-                        <figure class="p-list__photo">
-                          <picture>
-                            <source srcset="assets/img/gutter/kyoto-gutter11.webp, assets/img/gutter/kyoto-gutter11@2x.webp 2x" type="image/webp">
-                            <img src="assets/img/gutter/kyoto-gutter11.jpg" srcset="assets/img/gutter/kyoto-gutter11.jpg, assets/img/gutter/kyoto-gutter11@2x.jpg 2x" alt="京都の景色を一望できる" decoding="async">
-                          </picture>
-                        </figure>
+                      <li class="olex__item" data-cols="min:12 xxs:4 lg:4">
+                        <div class="l-spacer" data-space="min:xxxsmallBottom xxs:none">
+                          <figure class="p-list__photo js-color">
+                            <picture>
+                              <source srcset="assets/img/gutter/kyoto-gutter11.webp, assets/img/gutter/kyoto-gutter11@2x.webp 2x" type="image/webp">
+                              <img src="assets/img/gutter/kyoto-gutter11.jpg" srcset="assets/img/gutter/kyoto-gutter11.jpg, assets/img/gutter/kyoto-gutter11@2x.jpg 2x" alt="京都の景色を一望できる" decoding="async">
+                            </picture>
+                          </figure>
+                        </div>
                       </li>
-                      <li class="olex__item" data-cols="xxs:4 lg:4">
-                        <figure class="p-list__photo">
-                          <picture>
-                            <source srcset="assets/img/gutter/kyoto-gutter12.webp, assets/img/gutter/kyoto-gutter12@2x.webp 2x" type="image/webp">
-                            <img src="assets/img/gutter/kyoto-gutter12.jpg" srcset="assets/img/gutter/kyoto-gutter12.jpg, assets/img/gutter/kyoto-gutter12@2x.jpg 2x" alt="法観寺" decoding="async">
-                          </picture>
-                        </figure>
+                      <li class="olex__item" data-cols="min:12 xxs:4 lg:4">
+                        <div class="l-spacer" data-space="min:xxxsmallBottom xxs:none">
+                          <figure class="p-list__photo js-color">
+                            <picture>
+                              <source srcset="assets/img/gutter/kyoto-gutter12.webp, assets/img/gutter/kyoto-gutter12@2x.webp 2x" type="image/webp">
+                              <img src="assets/img/gutter/kyoto-gutter12.jpg" srcset="assets/img/gutter/kyoto-gutter12.jpg, assets/img/gutter/kyoto-gutter12@2x.jpg 2x" alt="法観寺" decoding="async">
+                            </picture>
+                          </figure>
+                        </div>
                       </li>
-                      <li class="olex__item" data-cols="xxs:4 lg:4">
-                        <figure class="p-list__photo">
-                          <picture>
-                            <source srcset="assets/img/gutter/kyoto-gutter13.webp, assets/img/gutter/kyoto-gutter13@2x.webp 2x" type="image/webp">
-                            <img src="assets/img/gutter/kyoto-gutter13.jpg" srcset="assets/img/gutter/kyoto-gutter13.jpg, assets/img/gutter/kyoto-gutter13@2x.jpg 2x" alt="平等院" decoding="async">
-                          </picture>
-                        </figure>
+                      <li class="olex__item" data-cols="min:12 xxs:4 lg:4">
+                        <div class="l-spacer" data-space="min:xxxsmallBottom xxs:none">
+                          <figure class="p-list__photo js-color">
+                            <picture>
+                              <source srcset="assets/img/gutter/kyoto-gutter13.webp, assets/img/gutter/kyoto-gutter13@2x.webp 2x" type="image/webp">
+                              <img src="assets/img/gutter/kyoto-gutter13.jpg" srcset="assets/img/gutter/kyoto-gutter13.jpg, assets/img/gutter/kyoto-gutter13@2x.jpg 2x" alt="平等院" decoding="async">
+                            </picture>
+                          </figure>
+                        </div>
                       </li>
                     </ul>
                   </div>
@@ -496,7 +549,7 @@
         <div class="l-container">
           <div class="l-spacer" data-space="xl:xxxsmallTop">
             <div class="l-spacer" data-space="min:xxsmallBottom xl:xsmallBottom">
-              <h3 id="alignment" class="p-content__title -white p-animate js-sceoll" lang="en">
+              <h3 id="alignment" class="p-content__title -white p-animate js-scroll" lang="en">
                 <span>A</span><span>l</span><span>i</span><span>g</span><span>n</span><span>m</span><span>e</span><span>n</span><span>t</span>
               </h3>
             </div>
@@ -509,39 +562,39 @@
           <!-- /.l-spacer -->
           <div class="l-spacer" data-space="min:xxsmallTop min:largeBottom md:largeTop xl:max">
             <ul class="olex" data-gutter="min:xxsmall sm:xsmall md:medium">
-              <li class="olex__item p-aligment" data-cols="xxs:4 xl:2" data-align="min:start">
+              <li class="olex__item p-aligment" data-cols="min:4 xxs:4 xl:2" data-align="min:start">
                 <div class="p-aligment__item -hr">
-                  <img src="assets/img/icon/symbol/left.png" srcset="assets/img/icon/symbol/left.png, assets/img/icon/symbol/left@2x.png 2x" alt="左揃えを表示するシンボル" whidth="20" height="20">
+                  <img src="assets/img/icon/symbol/left.png" srcset="assets/img/icon/symbol/left.png, assets/img/icon/symbol/left@2x.png 2x" alt="左揃えを表示するシンボル" width="20" height="20">
                   <p lang="en">Left</p>
                 </div>
               </li>
-              <li class="olex__item p-aligment" data-cols="xxs:4 xl:2" data-align="min:center">
+              <li class="olex__item p-aligment" data-cols="min:4 xxs:4 xl:2" data-align="min:center">
                 <div class="p-aligment__item -hr" lang="en">
-                  <img src="assets/img/icon/symbol/center.png" srcset="assets/img/icon/symbol/center.png, assets/img/icon/symbol/center@2x.png 2x" alt="中央揃えを表示するシンボル" whidth="20" height="20">
+                  <img src="assets/img/icon/symbol/center.png" srcset="assets/img/icon/symbol/center.png, assets/img/icon/symbol/center@2x.png 2x" alt="中央揃えを表示するシンボル" width="20" height="20">
                   <p lang="en">Center</p>
                 </div>
               </li>
-              <li class="olex__item p-aligment" data-cols="xxs:4 xl:2" data-align="min:end">
+              <li class="olex__item p-aligment" data-cols="min:4 xxs:4 xl:2" data-align="min:end">
                 <div class="p-aligment__item -hr" lang="en">
-                  <img src="assets/img/icon/symbol/right.png" srcset="assets/img/icon/symbol/right.png, assets/img/icon/symbol/right@2x.png 2x" alt="右揃えを表示するシンボル" whidth="20" height="20">
+                  <img src="assets/img/icon/symbol/right.png" srcset="assets/img/icon/symbol/right.png, assets/img/icon/symbol/right@2x.png 2x" alt="右揃えを表示するシンボル" width="20" height="20">
                   <p lang="en">Right</p>
                 </div>
               </li>
-              <li class="olex__item p-aligment" data-cols="xxs:4 xl:2" data-align="min:top">
+              <li class="olex__item p-aligment" data-cols="min:4 xxs:4 xl:2" data-align="min:top">
                 <div class="p-aligment__item" lang="en">
-                  <img src="assets/img/icon/symbol/top.png" srcset="assets/img/icon/symbol/top.png, assets/img/icon/symbol/top@2x.png 2x" alt="上揃えを表示するシンボル" whidth="20" height="20">
+                  <img src="assets/img/icon/symbol/top.png" srcset="assets/img/icon/symbol/top.png, assets/img/icon/symbol/top@2x.png 2x" alt="上揃えを表示するシンボル" width="20" height="20">
                   <p lang="en">Top</p>
                 </div>
               </li>
-              <li class="olex__item p-aligment" data-cols="xxs:4 xl:2" data-align="min:middle">
+              <li class="olex__item p-aligment" data-cols="min:4 xxs:4 xl:2" data-align="min:middle">
                 <div class="p-aligment__item" lang="en">
-                  <img src="assets/img/icon/symbol/middle.png" srcset="assets/img/icon/symbol/middle.png, assets/img/icon/symbol/middle@2x.png 2x" alt="天地中央を表示するシンボル" whidth="20" height="20">
+                  <img src="assets/img/icon/symbol/middle.png" srcset="assets/img/icon/symbol/middle.png, assets/img/icon/symbol/middle@2x.png 2x" alt="天地中央を表示するシンボル" width="20" height="20">
                   <p lang="en">Middle</p>
                 </div>
               </li>
-              <li class="olex__item p-aligment" data-cols="xxs:4 xl:2" data-align="min:bottom">
+              <li class="olex__item p-aligment" data-cols="min:4 xxs:4 xl:2" data-align="min:bottom">
                 <div class="p-aligment__item" lang="en">
-                  <img src="assets/img/icon/symbol/bottom.png" srcset="assets/img/icon/symbol/bottom.png, assets/img/icon/symbol/bottom@2x.png 2x" alt="下揃えを表示するシンボル" whidth="20" height="20">
+                  <img src="assets/img/icon/symbol/bottom.png" srcset="assets/img/icon/symbol/bottom.png, assets/img/icon/symbol/bottom@2x.png 2x" alt="下揃えを表示するシンボル" width="20" height="20">
                   <p lang="en">Bottom</p>
                 </div>
               </li>
@@ -555,9 +608,9 @@
     </section>
     <section class="p-contents -bgHarfGray">
       <div class="l-container">
-        <div class="l-spacer" data-space="min:large xl:maxTop">
+        <div class="l-spacer" data-space="min:largeTop min:mediumBottom xxs:largeBottom xl:maxTop">
           <div class="l-spacer" data-space="min:xxsmallBottom xl:xsmallBottom">
-            <h3 id="direction" class="p-content__title p-animate js-sceoll" lang="en">
+            <h3 id="direction" class="p-content__title p-animate js-scroll" lang="en">
               <span>D</span><span>i</span><span>r</span><span>e</span><span>c</span><span>t</span><span>i</span><span>o</span><span>n</span>
             </h3>
           </div>
@@ -566,7 +619,7 @@
               <em class="em">カラムの並び順</em>も変更可能。<br>カスタマイズ次第では、<span class="u-wbr -md"></span>個別に順番を入れ替えることだってできる。</p>
           <div class="l-spacer" data-space="min:smallTop min:maxBottom xl:maxTop">
             <div class="olex" data-gutter="min:xsmall md:small xl:medium">
-              <div class="olex__item" data-cols="xxs:12 md:6">
+              <div class="olex__item" data-cols="min:12 md:6">
                 <section class="p-content__direction">
                   <div class="l-spacer" data-space="min:minBottom xl:xxsmallBottom">
                     <h4 class="p-content__title-sub -left" lang="en">
@@ -575,84 +628,84 @@
                     </h4>
                   </div>
                   <!-- /.l-spacer -->
-                  <ol class="olex" data-gutter="xxs:xxsmall sm:xsmall lg:small xl:medium">
-                    <li class="olex__item" data-cols="xxs:2">
+                  <ol class="olex" data-gutter="min:xxsmall sm:xsmall lg:small xl:medium">
+                    <li class="olex__item" data-cols="min:3 xxs:2">
                       <span class="p-direction -normal" lang="en">1</span>
                     </li>
-                    <li class="olex__item" data-cols="xxs:2">
+                    <li class="olex__item" data-cols="min:3 xxs:2">
                       <span class="p-direction -normal" lang="en">2</span>
                     </li>
-                    <li class="olex__item" data-cols="xxs:2">
+                    <li class="olex__item" data-cols="min:3 xxs:2">
                       <span class="p-direction -normal" lang="en">3</span>
                     </li>
-                    <li class="olex__item" data-cols="xxs:2">
+                    <li class="olex__item" data-cols="min:3 xxs:2">
                       <span class="p-direction -normal" lang="en">4</span>
                     </li>
-                    <li class="olex__item" data-cols="xxs:2">
+                    <li class="olex__item" data-cols="min:3 xxs:2">
                       <span class="p-direction -normal" lang="en">5</span>
                     </li>
-                    <li class="olex__item" data-cols="xxs:2">
+                    <li class="olex__item" data-cols="min:3 xxs:2">
                       <span class="p-direction -normal" lang="en">6</span>
                     </li>
-                    <li class="olex__item" data-cols="xxs:2">
+                    <li class="olex__item" data-cols="min:3 xxs:2">
                       <span class="p-direction -normal" lang="en">7</span>
                     </li>
-                    <li class="olex__item" data-cols="xxs:2">
+                    <li class="olex__item" data-cols="min:3 xxs:2">
                       <span class="p-direction -normal" lang="en">8</span>
                     </li>
-                    <li class="olex__item" data-cols="xxs:2">
+                    <li class="olex__item" data-cols="min:3  xxs:2">
                       <span class="p-direction -normal" lang="en">9</span>
                     </li>
-                    <li class="olex__item" data-cols="xxs:2">
+                    <li class="olex__item" data-cols="min:3 xxs:2">
                       <span class="p-direction -normal" lang="en">10</span>
                     </li>
-                    <li class="olex__item" data-cols="xxs:2">
+                    <li class="olex__item" data-cols="min:3 xxs:2">
                       <span class="p-direction -normal" lang="en">11</span>
                     </li>
-                    <li class="olex__item" data-cols="xxs:2">
+                    <li class="olex__item" data-cols="min:3 xxs:2">
                       <span class="p-direction -normal" lang="en">12</span>
                     </li>
-                    <li class="olex__item" data-cols="xxs:2">
+                    <li class="olex__item" data-cols="min:3 xxs:2">
                       <span class="p-direction -normal" lang="en">13</span>
                     </li>
-                    <li class="olex__item" data-cols="xxs:2">
+                    <li class="olex__item" data-cols="min:3 xxs:2">
                       <span class="p-direction -normal" lang="en">14</span>
                     </li>
-                    <li class="olex__item" data-cols="xxs:2">
+                    <li class="olex__item" data-cols="min:3 xxs:2">
                       <span class="p-direction -normal" lang="en">15</span>
                     </li>
-                    <li class="olex__item" data-cols="xxs:2">
+                    <li class="olex__item" data-cols="min:3 xxs:2">
                       <span class="p-direction -normal" lang="en">16</span>
                     </li>
-                    <li class="olex__item" data-cols="xxs:2">
+                    <li class="olex__item" data-cols="min:3 xxs:2">
                       <span class="p-direction -normal" lang="en">17</span>
                     </li>
-                    <li class="olex__item" data-cols="xxs:2">
+                    <li class="olex__item" data-cols="min:3 xxs:2">
                       <span class="p-direction -normal" lang="en">18</span>
                     </li>
-                    <li class="olex__item" data-cols="xxs:2">
+                    <li class="olex__item" data-cols="min:3 xxs:2">
                       <span class="p-direction -normal" lang="en">19</span>
                     </li>
-                    <li class="olex__item" data-cols="xxs:2">
+                    <li class="olex__item" data-cols="min:3 xxs:2">
                       <span class="p-direction -normal" lang="en">20</span>
                     </li>
-                    <li class="olex__item" data-cols="xxs:2">
+                    <li class="olex__item" data-cols="min:3 xxs:2">
                       <span class="p-direction -normal" lang="en">21</span>
                     </li>
-                    <li class="olex__item" data-cols="xxs:2">
+                    <li class="olex__item" data-cols="min:3 xxs:2">
                       <span class="p-direction -normal" lang="en">22</span>
                     </li>
-                    <li class="olex__item" data-cols="xxs:2">
+                    <li class="olex__item" data-cols="min:3 xxs:2">
                       <span class="p-direction -normal" lang="en">23</span>
                     </li>
-                    <li class="olex__item" data-cols="xxs:2">
+                    <li class="olex__item" data-cols="min:3 xxs:2">
                       <span class="p-direction -normal" lang="en">24</span>
                     </li>
                   </ol>
                 </section>
               </div>
               <!-- /.olex__item -->
-              <div class="olex__item" data-cols="xxs:12 md:6">
+              <div class="olex__item" data-cols="min:12 md:6">
                 <section class="p-content__direction">
                   <div class="l-spacer" data-space="min:minBottom xl:xxsmallBottom">
                     <h4 class="p-content__title-sub -right" lang="en">
@@ -660,77 +713,77 @@
                             Reverse
                           </h4>
                   </div>
-                  <ol class="olex" data-gutter="xxs:xxsmall sm:xsmall lg:small xl:medium" data-dir="min:reverse">
-                    <li class="olex__item" data-cols="xxs:2">
+                  <ol class="olex" data-gutter="min:xxsmall sm:xsmall lg:small xl:medium" data-dir="min:reverse">
+                    <li class="olex__item" data-cols="min:3 xxs:2">
                       <span class="p-direction -reverse" lang="en">1</span>
                     </li>
-                    <li class="olex__item" data-cols="xxs:2">
+                    <li class="olex__item" data-cols="min:3 xxs:2">
                       <span class="p-direction -reverse" lang="en">2</span>
                     </li>
-                    <li class="olex__item" data-cols="xxs:2">
+                    <li class="olex__item" data-cols="min:3 xxs:2">
                       <span class="p-direction -reverse" lang="en">3</span>
                     </li>
-                    <li class="olex__item" data-cols="xxs:2">
+                    <li class="olex__item" data-cols="min:3 xxs:2">
                       <span class="p-direction -reverse" lang="en">4</span>
                     </li>
-                    <li class="olex__item" data-cols="xxs:2">
+                    <li class="olex__item" data-cols="min:3 xxs:2">
                       <span class="p-direction -reverse" lang="en">5</span>
                     </li>
-                    <li class="olex__item" data-cols="xxs:2">
+                    <li class="olex__item" data-cols="min:3 xxs:2">
                       <span class="p-direction -reverse" lang="en">6</span>
                     </li>
-                    <li class="olex__item" data-cols="xxs:2">
+                    <li class="olex__item" data-cols="min:3 xxs:2">
                       <span class="p-direction -reverse" lang="en">7</span>
                     </li>
-                    <li class="olex__item" data-cols="xxs:2">
+                    <li class="olex__item" data-cols="min:3 xxs:2">
                       <span class="p-direction -reverse" lang="en">8</span>
                     </li>
-                    <li class="olex__item" data-cols="xxs:2">
+                    <li class="olex__item" data-cols="min:3 xxs:2">
                       <span class="p-direction -reverse" lang="en">9</span>
                     </li>
-                    <li class="olex__item" data-cols="xxs:2">
+                    <li class="olex__item" data-cols="min:3 xxs:2">
                       <span class="p-direction -reverse" lang="en">10</span>
                     </li>
-                    <li class="olex__item" data-cols="xxs:2">
+                    <li class="olex__item" data-cols="min:3 xxs:2">
                       <span class="p-direction -reverse" lang="en">11</span>
                     </li>
-                    <li class="olex__item" data-cols="xxs:2">
+                    <li class="olex__item" data-cols="min:3 xxs:2">
                       <span class="p-direction -reverse" lang="en">12</span>
                     </li>
-                    <li class="olex__item" data-cols="xxs:2">
+                    <li class="olex__item" data-cols="min:3 xxs:2">
                       <span class="p-direction -reverse" lang="en">13</span>
                     </li>
-                    <li class="olex__item" data-cols="xxs:2">
+                    <li class="olex__item" data-cols="min:3 xxs:2">
                       <span class="p-direction -reverse" lang="en">14</span>
                     </li>
-                    <li class="olex__item" data-cols="xxs:2">
+                    <li class="olex__item" data-cols="min:3 xxs:2">
                       <span class="p-direction -reverse" lang="en">15</span>
                     </li>
-                    <li class="olex__item" data-cols="xxs:2">
+                    <li class="olex__item" data-cols="min:3 xxs:2">
                       <span class="p-direction -reverse" lang="en">16</span>
                     </li>
-                    <li class="olex__item" data-cols="xxs:2">
+                    <li class="olex__item" data-cols="min:3 xxs:2">
                       <span class="p-direction -reverse" lang="en">17</span>
                     </li>
-                    <li class="olex__item" data-cols="xxs:2">
+                    <li class="olex__item" data-cols="min:3 xxs:2">
                       <span class="p-direction -reverse" lang="en">18</span>
                     </li>
-                    <li class="olex__item" data-cols="xxs:2">
+                    <li class="olex__item" data-cols="min:3 xxs:2">
                       <span class="p-direction -reverse" lang="en">19</span>
                     </li>
-                    <li class="olex__item" data-cols="xxs:2">
+                    <li class="olex__item" data-cols="min:3 xxs:2">
                       <span class="p-direction -reverse" lang="en">20</span>
                     </li>
-                    <li class="olex__item" data-cols="xxs:2">
+                    <li class="olex__item" data-cols="min:3 xxs:2">
                       <span class="p-direction -reverse" lang="en">21</span>
                     </li>
-                    <li class="olex__item" data-cols="xxs:2">
+                    <li class="olex__item" data-cols="min:3 xxs:2">
                       <span class="p-direction -reverse" lang="en">22</span>
                     </li>
-                    <li class="olex__item" data-cols="xxs:2">
+                    <li class="olex__item" data-cols="min:3 xxs:2">
                       <span class="p-direction -reverse" lang="en">23</span>
                     </li>
-                    <li class="olex__item" data-cols="xxs:2">
+                    <li class="olex__item" data-cols="min:3 xxs:2">
                       <span class="p-direction -reverse" lang="en">24</span>
                     </li>
                   </ol>
@@ -752,40 +805,40 @@
       <div class="l-container">
         <div class="p-footer__photo">
           <div class="olex" data-align="min:justify">
-            <div class="olex__item" data-cols="xxs:2">
-              <figure class="p-list__photo">
+            <div class="olex__item" data-cols="min:2 xxs:2">
+              <figure class="p-list__photo js-color">
                 <picture>
                   <source srcset="assets/img/grid/kyoto01.webp, assets/img/grid/kyoto01@2x.webp 2x" type="image/webp">
                   <img src="assets/img/grid/kyoto01.jpg" srcset="assets/img/grid/kyoto01.jpg, assets/img/grid/kyoto01@2x.jpg 2x" alt="" decoding="async">
                 </picture>
               </figure>
             </div>
-            <div class="olex__item" data-cols="xxs:2">
-              <figure class="p-list__photo">
+            <div class="olex__item" data-cols="min:2 xxs:2">
+              <figure class="p-list__photo js-color">
                 <picture>
                   <source srcset="assets/img/grid/kyoto02.webp, assets/img/grid/kyoto02@2x.webp 2x" type="image/webp">
                   <img src="assets/img/grid/kyoto02.jpg" srcset="assets/img/grid/kyoto02.jpg, assets/img/grid/kyoto02@2x.jpg 2x" alt="" decoding="async">
                 </picture>
               </figure>
             </div>
-            <div class="olex__item" data-cols="xxs:2">
-              <figure class="p-list__photo">
+            <div class="olex__item" data-cols="min:2 xxs:2">
+              <figure class="p-list__photo js-color">
                 <picture>
                   <source srcset="assets/img/grid/kyoto03.webp, assets/img/grid/kyoto03@2x.webp 2x" type="image/webp">
                   <img src="assets/img/grid/kyoto03.jpg" srcset="assets/img/grid/kyoto03.jpg, assets/img/grid/kyoto03@2x.jpg 2x" alt="" decoding="async">
                 </picture>
               </figure>
             </div>
-            <div class="olex__item" data-cols="xxs:2">
-              <figure class="p-list__photo">
+            <div class="olex__item" data-cols="min:2 xxs:2">
+              <figure class="p-list__photo js-color">
                 <picture>
                   <source srcset="assets/img/grid/kyoto04.webp, assets/img/grid/kyoto04@2x.webp 2x" type="image/webp">
                   <img src="assets/img/grid/kyoto04.jpg" srcset="assets/img/grid/kyoto04.jpg, assets/img/grid/kyoto04@2x.jpg 2x" alt="" decoding="async">
                 </picture>
               </figure>
             </div>
-            <div class="olex__item" data-cols="xxs:2">
-              <figure class="p-list__photo">
+            <div class="olex__item" data-cols="min:2 xxs:2">
+              <figure class="p-list__photo js-color">
                 <picture>
                   <source srcset="assets/img/grid/kyoto05.webp, assets/img/grid/kyoto05@2x.webp 2x" type="image/webp">
                   <img src="assets/img/grid/kyoto05.jpg" srcset="assets/img/grid/kyoto05.jpg, assets/img/grid/kyoto05@2x.jpg 2x" alt="" decoding="async">
@@ -798,7 +851,7 @@
         <!-- /.p-direction__photo -->
         <div class="p-content">
           <div class="l-spacer" data-space="min:smallTop xl:xxlargeTop">
-            <p class="p-footer__text p-animate -copy js-sceoll">
+            <p class="p-footer__text-copy p-animate -copy js-scroll">
               <span>さ</span><span>ぁ</span><span>、</span><span>あ</span><span>な</span><span>た</span><span>も</span><span>自</span><span>分</span><span>の</span><br class="sp-br"><span>C</span><span>S</span><span>S</span><span>グ</span><span>リ</span><span>ッ</span><span>ド</span><span>シ</span><span>ス</span><span>テ</span><span>ム</span><span>を</span><span>作</span><span>ろ</span><span>う</span><span>。</span>
             </p>
           </div>

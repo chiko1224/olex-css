@@ -28,10 +28,8 @@
   }
 }
 
-// title-kf
+// title
 @keyframes title {
-
-  // 初めの状態
   0% {
     opacity: 0;
     transform: translateX(70%);
@@ -43,7 +41,7 @@
   }
 }
 
-// read-kf
+// read
 @keyframes read {
   0% {
     opacity: 0;

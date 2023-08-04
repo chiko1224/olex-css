@@ -6,7 +6,7 @@
 // -----------------
 .p-hero {
   &__title {
-    font-size: pxToRem(46);
+    font-size: pxToRem(32);
     letter-spacing: .04em;
     line-height: calc(54 / 44);
   }
@@ -18,7 +18,6 @@
     letter-spacing: .04em;
     line-height: calc(28 / 14);
   }
-
 
   &__bg {
     margin: 0 -5vw;
@@ -38,6 +37,13 @@
     width: 100%;
     height: auto;
     filter: grayscale(100%);
+  }
+}
+
+
+@include mq(xxs) {
+  .p-hero__title {
+    font-size: pxToRem(46);
   }
 }
 

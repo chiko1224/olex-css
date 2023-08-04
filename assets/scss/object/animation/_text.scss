@@ -8,7 +8,7 @@
     opacity: 0;
   }
 
-  &.is-animate {
+  &.is-scroll {
 
     // heading
     & span {
@@ -43,7 +43,7 @@
   }
 }
 
-// text-kf
+// text
 @keyframes text {
   0% {
     opacity: 0;

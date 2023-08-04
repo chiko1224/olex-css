@@ -5,7 +5,7 @@
 // loding
 .p-loading {
   position: fixed;
-  z-index: 20;
+  z-index: 10;
   width: 100vw;
   height: 100vh;
   background-color: $whiteGray;
@@ -22,7 +22,7 @@
 
   &_animate {
     color: $darkGray;
-    font-size: pxToRem(40);
+    font-size: pxToRem(30);
     letter-spacing: .04em;
     font-weight: 700;
     position: absolute;
@@ -71,5 +71,11 @@
   20%,
   100% {
     transform: translateY(0);
+  }
+}
+
+@include mq(xxs) {
+  .p-loading_animate {
+    font-size: pxToRem(40);
   }
 }

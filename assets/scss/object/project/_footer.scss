@@ -4,8 +4,6 @@
 
 // Footer
 // -----------------
-
-
 .p-footer {
   background-color: $darkGray;
   font-weight: bold;
@@ -14,12 +12,12 @@
   &__photo {
     position: relative;
     z-index: 3;
-    margin-top: -188px;
+    margin-top: -140px;
   }
 
-  &__text {
+  &__text-copy {
     color: $white;
-    font-size: pxToRem(21);
+    font-size: pxToRem(18);
     font-weight: bold;
     line-height: 2;
     text-align: center;
@@ -61,6 +59,15 @@
   }
 }
 
+@include mq(xxs) {
+  .p-footer {
+    &__text-copy {
+      font-size: pxToRem(20);
+    }
+  }
+}
+
+
 @include mq(md) {
   .p-footer {
     &__photo {
@@ -79,14 +86,12 @@
 }
 
 @include mq(lg) {
-
-
   .p-footer {
     &__photo {
       margin-top: -200px;
     }
 
-    &__text {
+    &__text-copy {
       font-size: pxToRem(28);
     }
 
@@ -103,7 +108,7 @@
 
 @include mq(xl) {
   .p-footer {
-    &__text {
+    &__text-copy {
       font-size: pxToRem(32);
     }
   }

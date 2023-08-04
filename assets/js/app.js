@@ -63,7 +63,7 @@ drawer();
 // scrollして画面に現れたらanimation始まる
 const scroll = function () {
   window.addEventListener('scroll', function () {
-    let targets = document.querySelectorAll(".js-sceoll");
+    const targets = document.querySelectorAll(".js-scroll");
     // 画面に現れたらclassを追加する
     for (let i = 0; i < targets.length; i++) {
       target = targets[i].getBoundingClientRect();
@@ -72,9 +72,21 @@ const scroll = function () {
       let h = Math.floor(window.innerHeight * 0.8);
 
       if (h > eleTop) {
-        targets[i].classList.add('is-animate');
-      }
-    }
+        targets[i].classList.add('is-scroll');
+      };
+    };
+
+    const photos = document.querySelectorAll(".js-color");
+    for (let i = 0; i < photos.length; i++) {
+      photo = photos[i].getBoundingClientRect();
+
+      let eleTop = Math.floor(photo.top);
+      let h = Math.floor(window.innerHeight * 0.5);
+
+      if (h > eleTop) {
+        photos[i].classList.add('is-color');
+      };
+    };
   });
 };
 scroll();
