@@ -60,53 +60,47 @@ const drawer = function () {
 };
 drawer();
 
-// scrollして画面に現れたらanimation始まる
-// const scroll = function () {
-//   window.addEventListener('scroll', function () {
-//     const targets = document.querySelectorAll(".js-scroll");
-//     // 画面に現れたらclassを追加する
-//     for (let i = 0; i < targets.length; i++) {
-//       target = targets[i].getBoundingClientRect();
+// title挙動
+const scrollEvent = function () {
+  const targets = document.querySelectorAll('.js-scroll');
 
-//       let eleTop = Math.floor(target.top);
-//       let h = Math.floor(window.innerHeight * 0.8);
+  let options = {
+    rootMargin: '0px',
+    threshold: 0.5
+  };
+  let observer = new IntersectionObserver(scrollEvent, options);
 
-//       if (h > eleTop) {
-//         targets[i].classList.add('is-scroll');
-//       };
-//     };
-
-//     const photos = document.querySelectorAll(".js-color");
-//     for (let i = 0; i < photos.length; i++) {
-//       photo = photos[i].getBoundingClientRect();
-
-//       let eleTop = Math.floor(photo.top);
-//       let h = Math.floor(window.innerHeight * 0.5);
-
-//       if (h > eleTop) {
-//         photos[i].classList.add('is-color');
-//       };
-//     };
-//   });
-// };
-// scroll();
-let targets = document.querySelectorAll('.js-scroll');
-
-let options = {
-  rootMargin: '0px',
-  threshold: 0.5
-}
-
-let observer = new IntersectionObserver(scrollEvent, options);
-
-targets.forEach(function (target) {
-  observer.observe(target);
-});
-
-function scrollEvent(entries) {
-  entries.forEach(function (entry) {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('is-scroll');
-    }
+  targets.forEach(function (target) {
+    observer.observe(target);
   });
+
+  function scrollEvent(entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-scroll');
+      };
+    });
+  };
 };
+scrollEvent();
+
+const photoColor = function () {
+  const photos = document.querySelectorAll('.js-color');
+  let options = {
+    rootMargin: '0px',
+    threshold: 0.5
+  };
+  let observer = new IntersectionObserver(scrollEvent, options);
+
+  photos.forEach(function (target) {
+    observer.observe(target);
+  });
+  function scrollEvent(entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-color');
+      };
+    });
+  };
+};
+photoColor();

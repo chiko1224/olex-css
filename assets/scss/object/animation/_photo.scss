@@ -19,3 +19,11 @@
     filter: grayscale(0);
   }
 }
+
+@include mq(lg) {
+  .p-list__photo {
+    &.is-color img {
+      animation: none;
+    }
+  }
+}
