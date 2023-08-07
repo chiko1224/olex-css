@@ -4,12 +4,15 @@
 
 // Card
 // -----------------
+.p-cards {
+  margin-top: -98px;
+}
+
 .p-card {
   position: relative;
   z-index: 2;
-  margin-top: -98px;
 
-  &__body {
+  &__item {
     width: 100%;
     margin: 0 auto;
     padding: pxToRem(70) 0;
@@ -17,7 +20,7 @@
     text-align: center;
   }
 
-  &__item {
+  &__title>span {
     display: block;
     margin: 0 auto;
     padding-top: pxToRem(33);
@@ -36,20 +39,24 @@
 }
 
 @include mq(md) {
-  .p-card {
+  .p-cards {
     margin-top: -90px;
+  }
 
-    &__body {
+  .p-card {
+    &__item {
       padding: pxToRem(48) 0;
     }
   }
 }
 
 @include mq(lg) {
-  .p-card {
+  .p-cards {
     margin-top: -118px;
+  }
 
-    &__body {
+  .p-card {
+    &__item {
       padding: pxToRem(60) 0;
     }
   }
@@ -57,9 +64,11 @@
 
 
 @include mq(xl) {
-  .p-card {
+  .p-cards {
     margin-top: -60px;
+  }
 
+  .p-card {
     &__item {
       width: 100%;
     }
