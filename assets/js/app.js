@@ -57,8 +57,20 @@ const drawer = function () {
       header.classList.remove('is-active-header');
     });
   };
+  // pc幅になったらdrawerが消える
+  window.addEventListener('resize', function () {
+    const windowWidth = document.documentElement.clientWidth;
+    const lg = 992;
+    if (windowWidth > lg) {
+      drawer.classList.remove('is-active');
+      header.classList.remove('is-active-header');
+    }
+  });
 };
 drawer();
+
+
+
 
 // title挙動
 const scrollEvent = function () {
