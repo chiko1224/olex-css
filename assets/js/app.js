@@ -70,15 +70,12 @@ const drawer = function () {
 drawer();
 
 
-
-
-// title挙動
-const scrollEvent = function () {
+// Intersection Observer
+const createObserver = function () {
   const targets = document.querySelectorAll('.js-scroll');
-
   let options = {
-    rootMargin: '0px',
-    threshold: 0.5
+    rootMargin: '0px 0px -20% 0px',
+    threshold: 0
   };
   let observer = new IntersectionObserver(scrollEvent, options);
 
@@ -93,26 +90,17 @@ const scrollEvent = function () {
       };
     });
   };
+}
+// title-IntersectionObserver
+const scrollEvent = function () {
+  createObserver();
 };
 scrollEvent();
 
+// photo-IntersectionObserver
 const photoColor = function () {
-  const photos = document.querySelectorAll('.js-color');
-  let options = {
-    rootMargin: '0px',
-    threshold: 0.5
-  };
-  let observer = new IntersectionObserver(scrollEvent, options);
-
-  photos.forEach(function (target) {
-    observer.observe(target);
-  });
-  function scrollEvent(entries) {
-    entries.forEach(function (entry) {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('is-color');
-      };
-    });
-  };
+  if (window.matchMedia("(max-width: 992px)").matches) {
+    createObserver();
+  }
 };
 photoColor();

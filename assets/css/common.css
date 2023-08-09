@@ -4981,7 +4981,7 @@ body .-white {
     font-size: 2.5rem;
   }
 }
-.p-list__photo.is-color img {
+.p-list__photo.is-scroll img {
   -webkit-animation-name: color;
           animation-name: color;
   -webkit-animation-duration: 0.7s;
@@ -5020,7 +5020,7 @@ body .-white {
   }
 }
 @media screen and (min-width: 992px) {
-  .p-list__photo.is-color img {
+  .p-list__photo.is-scroll img {
     -webkit-animation: none;
             animation: none;
   }

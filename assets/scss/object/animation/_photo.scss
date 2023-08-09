@@ -3,7 +3,7 @@
 @use "../../global" as *;
 
 .p-list__photo {
-  &.is-color img {
+  &.is-scroll img {
     @include animation ($name: color,
       $duration: 0.7s,
       $fill-mode: both);
@@ -22,7 +22,7 @@
 
 @include mq(lg) {
   .p-list__photo {
-    &.is-color img {
+    &.is-scroll img {
       animation: none;
     }
   }
